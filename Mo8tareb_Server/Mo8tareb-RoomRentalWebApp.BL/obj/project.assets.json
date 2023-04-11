@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Mo8tareb-RoomRentalWebApp.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Mo8tareb-RoomRentalWebApp.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mo8tareb-RoomRentalWebApp.DAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mo8tareb-RoomRentalWebApp.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Mo8tareb-RoomRentalWebApp.DAL/Mo8tareb-RoomRentalWebApp.DAL.csproj",
+      "msbuildProject": "../Mo8tareb-RoomRentalWebApp.DAL/Mo8tareb-RoomRentalWebApp.DAL.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Mo8tareb-RoomRentalWebApp.DAL >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mohan\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ITI\\API Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+      "projectName": "Mo8tareb-RoomRentalWebApp.BL",
+      "projectPath": "D:\\ITI\\API Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+      "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\API Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb-RoomRentalWebApp.BL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "D:\\ITI\\API Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
+              "projectPath": "D:\\ITI\\API Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
