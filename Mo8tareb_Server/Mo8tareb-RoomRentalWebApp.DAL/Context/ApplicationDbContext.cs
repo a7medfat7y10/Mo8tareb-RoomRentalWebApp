@@ -19,6 +19,19 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
         public ApplicationDbContext(DbContextOptions options) : base(options)
         { }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
 
+
+        public virtual DbSet<AppUser> AppUsers { get; set; }
+        public virtual DbSet<Owner> Owners { get; set; }
+        public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<RoomService> RoomServices { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
     }
 }

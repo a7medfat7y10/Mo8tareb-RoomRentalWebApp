@@ -11,5 +11,8 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
     {
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
+
+        public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
