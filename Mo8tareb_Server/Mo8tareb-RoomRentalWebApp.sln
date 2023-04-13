@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mo8tareb-RoomRentalWebApp.Api", "Mo8tareb-RoomRentalWebApp.Api\Mo8tareb-RoomRentalWebApp.Api.csproj", "{DE4A45FD-CFEB-4CA3-BEC9-F9FB8C8DFE98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mo8tareb-RoomRentalWebApp.DAL", "Mo8tareb-RoomRentalWebApp.DAL\Mo8tareb-RoomRentalWebApp.DAL.csproj", "{6FF9CE4D-F952-4B48-ADC7-9A862E83E4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mo8tareb-RoomRentalWebApp.BL", "Mo8tareb-RoomRentalWebApp.BL\Mo8tareb-RoomRentalWebApp.BL.csproj", "{89B7AF2D-BACE-48E0-8449-1BFC13380501}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DE4A45FD-CFEB-4CA3-BEC9-F9FB8C8DFE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE4A45FD-CFEB-4CA3-BEC9-F9FB8C8DFE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE4A45FD-CFEB-4CA3-BEC9-F9FB8C8DFE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF9CE4D-F952-4B48-ADC7-9A862E83E4D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF9CE4D-F952-4B48-ADC7-9A862E83E4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF9CE4D-F952-4B48-ADC7-9A862E83E4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF9CE4D-F952-4B48-ADC7-9A862E83E4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B7AF2D-BACE-48E0-8449-1BFC13380501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B7AF2D-BACE-48E0-8449-1BFC13380501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B7AF2D-BACE-48E0-8449-1BFC13380501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B7AF2D-BACE-48E0-8449-1BFC13380501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

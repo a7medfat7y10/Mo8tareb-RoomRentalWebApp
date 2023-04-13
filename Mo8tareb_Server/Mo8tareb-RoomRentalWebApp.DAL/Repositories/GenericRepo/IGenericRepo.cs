@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicketApp.DAL.Repositories.Tickets
+namespace Mo8tareb_RoomRentalWebApp.DAL
 {
         public interface IGenericRepo<T> where T : class
         {

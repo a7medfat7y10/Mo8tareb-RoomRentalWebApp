@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicketApp.DAL.Repositories.Tickets;
 
-namespace TicketApp.DAL.Repositories.UnitOfWork
+namespace Mo8tareb_RoomRentalWebApp.DAL
 {
     public interface IUnitOfWork : IDisposable
     {
-        IDevelopersRepo Developers { get; }
-        ITicketsRepo Tickets { get; }
-        IDepartmentsRepo Departments { get; }
+        //IDevelopersRepo Developers { get; }
+        //ITicketsRepo Tickets { get; }
+        //IDepartmentsRepo Departments { get; }
         Task<int> SaveAsync();
     }
 }

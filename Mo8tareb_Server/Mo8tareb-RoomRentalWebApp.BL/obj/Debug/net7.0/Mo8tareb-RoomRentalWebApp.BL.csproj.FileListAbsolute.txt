@@ -1,0 +1,15 @@
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.AssemblyReference.cache
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfoInputs.cache
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfo.cs
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CoreCompileInputs.cache
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.deps.json
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CopyComplete
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.BL.dll
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+D:\ITI\API Project\Mo8tareb-RoomRentalWebApp\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.BL.dll

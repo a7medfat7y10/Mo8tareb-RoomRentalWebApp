@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Mo8tareb_RoomRentalWebApp.DAL.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using TicketApp.DAL.Data.Context;
-using  TicketApp.DAL.Repositories.Tickets;
 
-namespace TicketApp.DAL.Repositories.Tickets
+
+namespace Mo8tareb_RoomRentalWebApp.DAL
 {
     public abstract class GenericRepo<T> : IGenericRepo<T> where T : class
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace TicketApp.BL.Dtos.Departments
+namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
 {
     public class ApplicationUserDto
     {

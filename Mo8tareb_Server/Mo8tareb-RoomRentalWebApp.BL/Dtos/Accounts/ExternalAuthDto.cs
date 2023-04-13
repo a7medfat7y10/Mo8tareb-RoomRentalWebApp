@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicketApp.BL.Dtos.Departments
+namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
 {
 
     public class ExternalAuthDto

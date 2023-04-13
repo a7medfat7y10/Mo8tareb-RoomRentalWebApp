@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicketApp.BL.Dtos.Departments
+namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
 {
-	// public record CreateDepartmentDto(string Name);
-
-	public class CreateDepartmentDto
+    public class RegistrationResponseDto
     {
-		public string? Name { get; set; }
-	}
+        public bool IsSuccessfulRegistration { get; set; }
+        public IEnumerable<string> Errors { get; set; } = new List<string>();   
+    }
 }
