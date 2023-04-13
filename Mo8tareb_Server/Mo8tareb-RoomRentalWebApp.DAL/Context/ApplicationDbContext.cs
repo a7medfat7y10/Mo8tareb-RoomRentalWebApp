@@ -21,6 +21,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<RoomService>().HasKey(r => new { r.RoomId, r.ServiceId });
             base.OnModelCreating(builder);
         }
 

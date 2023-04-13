@@ -12,8 +12,8 @@ using Mo8tareb_RoomRentalWebApp.DAL.Context;
 namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230413140510_initial-models")]
-    partial class initialmodels
+    [Migration("20230413155114_newone")]
+    partial class newone
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -357,18 +357,15 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.RoomService", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("RoomId");
+                    b.HasKey("RoomId", "ServiceId");
+
+                    b.HasIndex("ServiceId");
 
                     b.ToTable("RoomServices");
                 });
@@ -388,21 +385,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("RoomServiceService", b =>
-                {
-                    b.Property<int>("RoomServicesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ServicesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RoomServicesId", "ServicesId");
-
-                    b.HasIndex("ServicesId");
-
-                    b.ToTable("RoomServiceService");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Owner", b =>
@@ -531,22 +513,15 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", "Service")
+                        .WithMany("RoomServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Room");
-                });
 
-            modelBuilder.Entity("RoomServiceService", b =>
-                {
-                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.RoomService", null)
-                        .WithMany()
-                        .HasForeignKey("RoomServicesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", null)
-                        .WithMany()
-                        .HasForeignKey("ServicesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", b =>
@@ -564,6 +539,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     b.Navigation("Reviews");
 
+                    b.Navigation("RoomServices");
+                });
+
+            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", b =>
+                {
                     b.Navigation("RoomServices");
                 });
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class initialmodels : Migration
+    public partial class newone : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -134,40 +134,21 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 name: "RoomServices",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    RoomId = table.Column<int>(type: "int", nullable: false)
+                    RoomId = table.Column<int>(type: "int", nullable: false),
+                    ServiceId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RoomServices", x => x.Id);
+                    table.PrimaryKey("PK_RoomServices", x => new { x.RoomId, x.ServiceId });
                     table.ForeignKey(
                         name: "FK_RoomServices_Rooms_RoomId",
                         column: x => x.RoomId,
                         principalTable: "Rooms",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RoomServiceService",
-                columns: table => new
-                {
-                    RoomServicesId = table.Column<int>(type: "int", nullable: false),
-                    ServicesId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RoomServiceService", x => new { x.RoomServicesId, x.ServicesId });
                     table.ForeignKey(
-                        name: "FK_RoomServiceService_RoomServices_RoomServicesId",
-                        column: x => x.RoomServicesId,
-                        principalTable: "RoomServices",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RoomServiceService_Services_ServicesId",
-                        column: x => x.ServicesId,
+                        name: "FK_RoomServices_Services_ServiceId",
+                        column: x => x.ServiceId,
                         principalTable: "Services",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -204,14 +185,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 column: "OwnerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RoomServices_RoomId",
+                name: "IX_RoomServices_ServiceId",
                 table: "RoomServices",
-                column: "RoomId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RoomServiceService_ServicesId",
-                table: "RoomServiceService",
-                column: "ServicesId");
+                column: "ServiceId");
         }
 
         /// <inheritdoc />
@@ -227,16 +203,13 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 name: "Reviews");
 
             migrationBuilder.DropTable(
-                name: "RoomServiceService");
-
-            migrationBuilder.DropTable(
                 name: "RoomServices");
 
             migrationBuilder.DropTable(
-                name: "Services");
+                name: "Rooms");
 
             migrationBuilder.DropTable(
-                name: "Rooms");
+                name: "Services");
 
             migrationBuilder.DropColumn(
                 name: "Discriminator",
