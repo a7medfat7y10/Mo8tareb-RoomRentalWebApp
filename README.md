@@ -1,5 +1,5 @@
 <div style="text-align:center;">
-  <h1>M8tareb Web App</h1>
+  <h1 style="text-align:center;">M8tareb Web App</h1>
 </div>
 
 ![M8tareb Logo](https://github.com/a7medfat7y10/Mo8tareb-RoomRentalWebApp/blob/main/logo.png)
