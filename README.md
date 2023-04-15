@@ -10,7 +10,7 @@ M8tareb is a web application for renting rooms and real estate for rent. The app
 
 M8tareb was developed by a group of talented developers:
 
-- [Khaled Magdy](https://www.linkedin.com/in/khaledmagdy/)
+- [Khaled Magdy](https://www.linkedin.com/in/khaled-magdy-81b8a318b/)
 - [Mohand Saudi](https://www.linkedin.com/in/mohand-saudi/)
 - [Karim Eid](https://www.linkedin.com/in/karimeid93/)
 - [Hafsa Ibrahim](https://www.linkedin.com/in/hafsaibrahim/)
