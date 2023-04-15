@@ -19,7 +19,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Services.Email
         {
             To = new List<MailboxAddress>();
 
-            To.AddRange(to.Select(x => new MailboxAddress("email", x)));
+            To.AddRange(to.Select(x => new MailboxAddress("Email", x)));
             Subject = subject;
             Content = content;
             Attachments = attachments;

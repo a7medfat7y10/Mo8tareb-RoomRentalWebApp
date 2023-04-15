@@ -1,0 +1,28 @@
+==>Reviews
+ (1) User has (M) Reviews
+ (1) Room has (M) Reviews
+
+required Fromula :
+review :
+	{
+	"id":1,
+	"Comment":"nice room",
+	"Rating":"9",
+	"user":{
+		"Email":"vdfvd@fd.com",
+		"firstName":"khaled",
+		"lastName":"magdy",
+		
+		},
+	Room{
+		"RoomType":"Double",
+		"Id":"5",
+		"Owner":{		
+		"Email":"vdfvd@fd.com",
+		"firstName":"khaled",
+		"lastName":"magdy",
+		}
+		}
+		
+		}
+	}

@@ -10,9 +10,10 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
     {
         public int Id { get; set; }
 
-        public int RoomId { get; set; }
-        public virtual Room Room { get; set; }
+        public int? RoomId { get; set; }
+        public virtual Room? Room { get; set; }
 
-        public string ImageUrl { get; set; }
+        public  byte[] ImageUrl { get; set; }
+
     }
 }

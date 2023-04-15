@@ -117,10 +117,44 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             var param = new Dictionary<string, string>
             {
                 {"token", token },
-                {"email", user.Email }
+                {"Mo8tareb", user.Email }
             };
             var callback = QueryHelpers.AddQueryString(userForRegistration.ClientURI, param);
-            Message? message = new Message(new string[] { userForRegistration.Email }, "Email Confirmation token", callback, null, false);
+            var imageUrl = "https://img0.etsystatic.com/000/0/5229903/il_fullxfull.270122038.jpg";
+            Message message = new Message(
+                new string[] { userForRegistration.Email },
+                "Mo8tareb Room Rental Web App: Email Confirmation",
+                $@"<html>
+  <head>
+    <style>
+      body {{
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+      }}
+      img {{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+      }}
+    </style>
+  </head>
+  <body>
+    <h2>Thank you for registering to Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
+    <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
+    <p>Please confirm your email address by clicking on the following link:</p>
+    <p><a href=""{callback}"">Click Here</a></p>
+    <p>Please note that this link will expire in 24 hours.</p>
+    <p>If you did not register to Mo8tareb Room Rental Web App, please ignore this message.</p>
+    <p>Best regards,</p>
+    <p>Mo8tareb Room Rental Web App Team</p>
+    <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
+  </body>
+</html>",
+                null,
+                true);
             await _emailSender.SendEmailAsync(message);
 
             return StatusCode(201);

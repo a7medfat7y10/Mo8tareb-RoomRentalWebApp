@@ -8,6 +8,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
 {
     public class Owner:AppUser
     {
-        public virtual ICollection<Room> Rooms { get; set; } = new HashSet<Room>();
+        public virtual ICollection<Room>? Rooms { get; set; } = new HashSet<Room>();
     }
 }

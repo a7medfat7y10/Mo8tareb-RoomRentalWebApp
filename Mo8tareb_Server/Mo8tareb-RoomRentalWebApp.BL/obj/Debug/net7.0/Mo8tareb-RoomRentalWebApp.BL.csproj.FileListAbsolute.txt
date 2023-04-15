@@ -28,3 +28,18 @@ D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebA
 D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.BL.dll
 D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
 D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.BL.dll
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.deps.json
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CopyComplete
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.BL.dll
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.BL.dll

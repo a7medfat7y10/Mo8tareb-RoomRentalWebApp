@@ -244,11 +244,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<byte[]>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -269,7 +269,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
@@ -279,7 +279,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -300,17 +299,15 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Comment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -335,7 +332,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OwnerId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Price")
@@ -354,10 +350,10 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.RoomService", b =>
                 {
-                    b.Property<int>("RoomId")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ServiceId")
+                    b.Property<int?>("ServiceId")
                         .HasColumnType("int");
 
                     b.HasKey("RoomId", "ServiceId");
@@ -446,9 +442,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 {
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", "Room")
                         .WithMany("Images")
-                        .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoomId");
 
                     b.Navigation("Room");
                 });
@@ -457,15 +451,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 {
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", "Room")
                         .WithMany("Reservations")
-                        .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoomId");
 
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", "User")
                         .WithMany("Reservations")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Room");
 
@@ -476,15 +466,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 {
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", "Room")
                         .WithMany("Reviews")
-                        .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoomId");
 
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", "User")
                         .WithMany("Reviews")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Room");
 
@@ -495,9 +481,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                 {
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Owner", "Owner")
                         .WithMany("Rooms")
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OwnerId");
 
                     b.Navigation("Owner");
                 });

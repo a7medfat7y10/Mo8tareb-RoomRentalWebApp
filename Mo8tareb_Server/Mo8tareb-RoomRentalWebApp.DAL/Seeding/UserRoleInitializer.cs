@@ -56,7 +56,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Seeding
             // create Owner
             if (userManager.FindByEmailAsync(Authorization.OwnerEmail).Result is null)
             {
-                AppUser ownerUser = new AppUser()
+                AppUser ownerUser = new Owner()
                 {
                     Email = Authorization.OwnerEmail,
                     UserName = Authorization.OwnerPassword,
