@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Mo8tareb_RoomRentalWebApp.BL</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +13,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mo8tareb-RoomRentalWebApp.DAL\Mo8tareb-RoomRentalWebApp.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\ReservationDtos\" />
   </ItemGroup>
 
 </Project>

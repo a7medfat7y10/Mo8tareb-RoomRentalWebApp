@@ -8,10 +8,12 @@ using Microsoft.IdentityModel.Tokens;
 using Mo8tareb_RoomRentalWebApp.Api.JwtFeatures;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ImagesManagers;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManager;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
 using Mo8tareb_RoomRentalWebApp.DAL;
 using Mo8tareb_RoomRentalWebApp.DAL.Context;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
+using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReservationRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Seeding;
 using System.Security.Claims;
 using System.Text;
@@ -131,8 +133,9 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddScoped<IReviewManager, ReviewManager>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IimageManager, ImageManager>();
+            builder.Services.AddScoped<IReservationManager, ReservationManager>();
 
-            #endregion 
+            #endregion
 
             #region Default
             builder.Services.AddControllers();

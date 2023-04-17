@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Mo8tareb_RoomRentalWebApp.Api.Payloads;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
 
@@ -17,6 +18,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos
                .ForMember(d => d.LastName, map => map.MapFrom(s => s.LastName))
                //.ForMember(d =>d.Email, map => map.MapFrom(s => s.Email))
                .ReverseMap();
+
+            CreateMap<ReservationPayload, Reservation>();
+
 
         }
     }

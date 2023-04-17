@@ -1,4 +1,6 @@
-﻿using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReviewRepo;
+﻿using Mo8tareb_RoomRentalWebApp.DAL.Models;
+using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReservationRepo;
+using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReviewRepo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,8 @@ namespace Mo8tareb_RoomRentalWebApp.DAL
 {
     public interface IUnitOfWork : IDisposable
     {
-        public IReviewRepo Reviews { get; }
+        IReviewRepo Reviews { get; }
+        IReservationRepo ReservationRepo { get; }
         Task<int> SaveAsync();
     }
 }
