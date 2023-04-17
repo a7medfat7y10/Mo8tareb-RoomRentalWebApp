@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Mo8tareb-RoomRentalWebApp.Api.props" />
-</Project>
