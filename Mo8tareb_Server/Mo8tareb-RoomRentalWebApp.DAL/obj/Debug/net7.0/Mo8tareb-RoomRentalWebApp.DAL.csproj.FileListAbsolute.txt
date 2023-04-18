@@ -40,3 +40,17 @@ C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Serv
 C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
 C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Mo8tareb localRep\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.deps.json
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.runtimeconfig.json
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.AssemblyReference.cache
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfoInputs.cache
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfo.cs
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.CoreCompileInputs.cache
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.genruntimeconfig.cache
+C:\My Files\ITI\ITI_Projects\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.DAL.dll

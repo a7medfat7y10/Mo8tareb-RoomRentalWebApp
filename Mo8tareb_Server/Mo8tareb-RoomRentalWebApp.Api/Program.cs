@@ -9,6 +9,8 @@ using Mo8tareb_RoomRentalWebApp.Api.JwtFeatures;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ImagesManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.ServiceManagers;
 using Mo8tareb_RoomRentalWebApp.DAL;
 using Mo8tareb_RoomRentalWebApp.DAL.Context;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
@@ -26,6 +28,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
 
             #region Cors
             string? corsPolicy = "AllowAll";
@@ -133,6 +136,14 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddScoped<IimageManager, ImageManager>();
 
             #endregion 
+
+            #region AddingServiceManager
+            builder.Services.AddScoped<IServiceManager, ServiceManager>();
+            #endregion
+
+            #region AddingRoomManager
+            builder.Services.AddScoped<IRoomManager, RoomManager>();
+            #endregion
 
             #region Default
             builder.Services.AddControllers();

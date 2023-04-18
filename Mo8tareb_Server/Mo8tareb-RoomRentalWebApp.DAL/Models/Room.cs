@@ -17,9 +17,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public string? OwnerId { get; set; }
         public virtual Owner? Owner { get; set; }
 
-        public virtual ICollection<Review>? Reviews { get; set; }
-        public virtual ICollection<Reservation>? Reservations { get; set; }
-        public virtual ICollection<RoomService>? RoomServices { get; set; }
-        public virtual ICollection<Image>? Images { get; set; }
+        public virtual ICollection<Review>? Reviews { get; set; } = new HashSet<Review>();
+        public virtual ICollection<Reservation>? Reservations { get; set; } = new HashSet<Reservation>();
+        public virtual ICollection<Service>? Services { get; set; } = new HashSet<Service>();
+        public virtual ICollection<Image>? Images { get; set; } = new HashSet<Image>();
     }
 }

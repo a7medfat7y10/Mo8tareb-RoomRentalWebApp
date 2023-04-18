@@ -21,7 +21,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<RoomService>().HasKey(r => new { r.RoomId, r.ServiceId });
             base.OnModelCreating(builder);
         }
 
@@ -32,7 +31,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
         public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
-        public virtual DbSet<RoomService> RoomServices { get; set; }
         public virtual DbSet<Service> Services { get; set; }
     }
 }

@@ -12,15 +12,8 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public int Id { get; set; }
         public required string Name { get; set; }
 
-        public virtual ICollection<RoomService>? RoomServices { get; set; } = new HashSet<RoomService>();
+        public virtual ICollection<Room>? Rooms { get; set; } = new HashSet<Room>();
     }
 
-    public class RoomService
-    {
-        public int? RoomId { get; set; }
-        public virtual Room? Room { get; set; }
-
-        public int? ServiceId { get; set; }
-        public virtual Service? Service { get; set; }
-    }
+    
 }

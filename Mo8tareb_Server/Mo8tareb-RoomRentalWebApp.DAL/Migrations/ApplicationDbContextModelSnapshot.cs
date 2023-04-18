@@ -182,6 +182,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -348,21 +351,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.ToTable("Rooms");
                 });
 
-            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.RoomService", b =>
-                {
-                    b.Property<int?>("RoomId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RoomId", "ServiceId");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("RoomServices");
-                });
-
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -378,6 +366,21 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("RoomService", b =>
+                {
+                    b.Property<int>("RoomsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServicesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RoomsId", "ServicesId");
+
+                    b.HasIndex("ServicesId");
+
+                    b.ToTable("RoomService");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Owner", b =>
@@ -486,23 +489,19 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.RoomService", b =>
+            modelBuilder.Entity("RoomService", b =>
                 {
-                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", "Room")
-                        .WithMany("RoomServices")
-                        .HasForeignKey("RoomId")
+                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", null)
+                        .WithMany()
+                        .HasForeignKey("RoomsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", "Service")
-                        .WithMany("RoomServices")
-                        .HasForeignKey("ServiceId")
+                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", null)
+                        .WithMany()
+                        .HasForeignKey("ServicesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Room");
-
-                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", b =>
@@ -519,13 +518,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Navigation("Reservations");
 
                     b.Navigation("Reviews");
-
-                    b.Navigation("RoomServices");
-                });
-
-            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Service", b =>
-                {
-                    b.Navigation("RoomServices");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Owner", b =>
