@@ -1,0 +1,12 @@
+
+
+
+<div *ngIf="UserIsLoggedIn() " class="isLoggedIn">
+<h1>Home page,User is logged in</h1>
+<button (click)="SignOut()" class="btn-lg m-5 btn btn-danger">Sign out</button>
+</div>
+
+
+<div *ngIf="!UserIsLoggedIn() " class="NoLogIn">
+<h1>Home page,User is <b style="color: red;">not</b> logged in</h1>
+</div>

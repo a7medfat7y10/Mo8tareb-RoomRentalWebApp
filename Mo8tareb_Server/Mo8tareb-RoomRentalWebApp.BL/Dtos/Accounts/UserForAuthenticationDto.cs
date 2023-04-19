@@ -26,5 +26,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
         public bool IsAuthSuccessful { get; set; }
         public string? ErrorMessage { get; set; }
         public string? Token { get; set; }
+        public string? Role { get; set; }
     }
 }

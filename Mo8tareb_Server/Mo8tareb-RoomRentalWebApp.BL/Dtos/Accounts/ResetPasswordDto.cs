@@ -12,14 +12,5 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
                                    string Email,
                                    string? Token
                                   );
-    //public class ResetPasswordDto
-    //{
-    //    public required string Password { get; set; }
-
-    //    [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-    //    public required string ConfirmPassword { get; set; }
-
-    //    public  string? Email { get; set; }
-    //    public  string? Token { get; set; }
-    //}
+ 
 }

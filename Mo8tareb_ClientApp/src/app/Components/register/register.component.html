@@ -1,67 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+  <meta charset="utf-8">
+  <title>RegistrationForm_v1 by Colorlib</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+  <link rel="stylesheet" href="/assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 
-    <div class="main">
+  <div class="wrapper"
+    style="background-image: url('../../../assets/images/abstract-digital-grid-black-background.jpg');">
+    <div class="inner rounded border border-info">
+      <div class="image-holder">
+        <img src="../../../assets/images/logo_transparent - Copy.png" alt="">
+      </div>
+      <form
+        (ngSubmit)="CreateUser(fname.value,lname.value,userName.value,email.value,phone.value,Gender.value,password.value,confirmPassword.value)"
+        action="" method="post" [formGroup]="formValidation">
+        <h3>Registration Form</h3>
+        <div class="form-group">
+          <input formControlName="fname" (input)="resetApiError()" name="firstName" #fname type="text"
+            placeholder="First Name" class="form-control">
+          <input formControlName="lname" (input)="resetApiError()" name="lastName" #lname type="text"
+            placeholder="Last Name" class="form-control">
+        </div>
+        <div class="row d-flex ">
+          <div class="col-6  align-items-start">
+            <span *ngIf="!validFname() && fname.value" id="fnameHelp" class="form-text text-danger text-start">Not a
+              Valid Fname !</span>
+          </div>
+          <div class="col-6 align-items-start justify-content-end">
+            <span *ngIf="!validLname()  && lname.value" id="lnameHelp" class="form-text text-danger text-end">Not a
+              Valid Lname !</span>
+          </div>
+        </div>
+        <div class="form-wrapper ">
+          <input formControlName="userName" (input)="resetApiError()" name="UserName" #userName type="text"
+            placeholder="Username" class="form-control">
+          <i class="zmdi zmdi-account"></i>
+          <span *ngIf="!validUserName()  && userName.value" id="lnameHelp" class="form-text text-danger text-end">Not a
+            Valid User Name !</span>
+        </div>
+        <div class="form-wrapper ">
+          <input formControlName="email" (input)="resetApiError()" name="email" #email type="text"
+            placeholder="Email Address" class="form-control">
+          <i class="zmdi zmdi-email"></i>
+          <span *ngIf="!validEmail()  && email.value" id="emailHelp" class="form-text text-danger text-end">Not a Valid
+            Email !</span>
 
-        <!-- Sign up form -->
-        <section class="signup">
-            <div class="container">
-                <div class="signup-content">
-                    <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form">
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                            </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-image">
-                        <figure><img src="/assets/images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="#" class="signup-image-link">I am already member</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+        <div class="form-wrapper ">
+          <input formControlName="phone" (input)="resetApiError()" name="phone" #phone type="text"
+            placeholder="phone Number" class="form-control">
+          <i class="zmdi zmdi-phone"></i>
+          <span *ngIf="!validPhone()  && phone.value" id="phoneHelp" class="form-text text-danger text-end">Not a Valid
+            phone number !</span>
 
-
-
+        </div>
+        <div class="form-wrapper ">
+          <select name="Gender" id="" #Gender class="form-control">
+            <option value="Male" disabled>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Femal">Female</option>
+          </select>
+          <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+        </div>
+        <div class="form-wrapper ">
+          <input type="password" (input)="resetApiError()" formControlName="Password" name="password" #password
+            placeholder="Password" class="form-control">
+          <i class="zmdi zmdi-lock"></i>
+          <span *ngIf="!validPassword() &&  password.value" id="emailHelp" class="form-text text-danger text-end">Not a
+            Valid Password !</span>
+        </div>
+        <div class="form-wrapper ">
+          <input type="password" (input)="resetApiError()" formControlName="PasswordConfirm" name="confirmPassword"
+            #confirmPassword placeholder="Confirm Password" class="form-control">
+          <i class="zmdi zmdi-lock"></i>
+        </div>
+        <span *ngIf="!validPasswordConfirm() && confirmPassword.value" id="emailHelp"
+          class="form-text text-danger text-end">Not a Valid password confirmation !</span>
+        <span *ngIf="getAPIError()" id="APIErrorHelp" class="form-text text-danger text-end">Not a Valid Data Was
+          Entered !</span>
+        <button>Register
+          <i class="zmdi zmdi-arrow-right"></i>
+        </button>
+      </form>
     </div>
+  </div>
 
-    <!-- JS -->
-    <script src="/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
+
 </html>

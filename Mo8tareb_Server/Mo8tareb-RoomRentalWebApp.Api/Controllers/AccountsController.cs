@@ -15,6 +15,9 @@ using System.Net;
 using System.Security.Claims;
 using Mo8tareb_RoomRentalWebApp.DAL.Constants;
 using Authorization = Mo8tareb_RoomRentalWebApp.DAL.Constants.Authorization;
+using static Mo8tareb_RoomRentalWebApp.DAL.Constants.Enums;
+using System.Web;
+using System.Text;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -23,6 +26,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     public class AccountsController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
         private readonly JwtHandler _jwtHandler;
         private readonly IEmailSender _emailSender;
@@ -30,7 +34,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
          // IMapper mapper
         //  IEmailSender emailSender,
-        public AccountsController(UserManager<AppUser> userManager, JwtHandler jwtHandler,
+        public AccountsController(UserManager<AppUser> userManager ,RoleManager<IdentityRole> roleManager,JwtHandler jwtHandler,
             IUnitOfWork unitOfWork, IEmailSender emailSender)  
         {
             _userManager = userManager;
@@ -38,6 +42,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             _jwtHandler = jwtHandler;
             _emailSender = emailSender;
             _unitOfWork = unitOfWork;
+            _roleManager= roleManager;
         }
 
         [HttpPost("Login")]
@@ -74,7 +79,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             {
                 await _userManager.AccessFailedAsync(user);
 
-                return Unauthorized(new AuthResponseDto { ErrorMessage = "Invalid Authentication" });
+                return Unauthorized(new AuthResponseDto { ErrorMessage = "Wrong password" });
             }
 
 
@@ -83,15 +88,19 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             JwtSecurityToken? tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
             string? token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
+            await _userManager.AddClaimsAsync(user, claims);
             await _userManager.ResetAccessFailedCountAsync(user);
 
-            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token });
+            var roles = await _userManager.GetRolesAsync(user);
+            string RolesString = roles.Count==1?roles[0]: string.Join(',',roles);
+
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token,Role=RolesString });
         }
 
         [HttpPost("Registration")]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {
-            if (userForRegistration == null || !ModelState.IsValid)
+            if (userForRegistration == null|| userForRegistration.Password!=userForRegistration.ConfirmPassword || !ModelState.IsValid || Enum.TryParse<Gender>(userForRegistration.Gender,out Gender gender)==false)
                 return BadRequest(ModelState);
 
             // AppUser? user = _mapper.Map<AppUser>(userForRegistration);
@@ -100,7 +109,9 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                 FirstName = userForRegistration.FirstName,
                 LastName = userForRegistration.LastName,
                 Email = userForRegistration.Email,
-                UserName = userForRegistration.Email
+                PhoneNumber = userForRegistration.phone,
+                UserName = userForRegistration.UserName,
+                Gender = gender
             };
 
             IdentityResult? result = await _userManager.CreateAsync(user, userForRegistration.Password);
@@ -114,13 +125,17 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             await _userManager.AddToRoleAsync(user, Authorization.User);
 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            var TokenBytes = Encoding.UTF8.GetBytes(token);
+            var encodedTokens = Convert.ToBase64String(TokenBytes);
+
             var param = new Dictionary<string, string>
             {
-                {"token", token },
-                {"Mo8tareb", user.Email }
+                {"token", encodedTokens },
+                {"email", user.Email }
             };
             var callback = QueryHelpers.AddQueryString(userForRegistration.ClientURI, param);
-            var imageUrl = "https://img0.etsystatic.com/000/0/5229903/il_fullxfull.270122038.jpg";
+            var imageUrl = "https://assets.stickpng.com/images/5a04b8b69cf05203c4b603b6.png";
             Message message = new Message(
                 new string[] { userForRegistration.Email },
                 "Mo8tareb Room Rental Web App: Email Confirmation",
@@ -161,6 +176,35 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         }
 
 
+        [HttpGet("EmailConfirmation")]
+        public async Task<IActionResult> EmailConfirmation([FromQuery] string email, [FromQuery] string token)
+        {
+            AppUser? user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+                return BadRequest("Invalid Email Confirmation Request 1");
+
+            var tokenArray = Convert.FromBase64String(token);
+            var DecodedToken = Encoding.UTF8.GetString(tokenArray);
+
+            IdentityResult? confirmResult = await _userManager.ConfirmEmailAsync(user, DecodedToken);
+            if (!confirmResult.Succeeded)
+                return BadRequest($"Invalid Email Confirmation Request 2 token={token} user, {user.Email}");
+
+
+
+            SigningCredentials? signingCredentials = _jwtHandler.GetSigningCredentials();
+            List<Claim>? claims = await _jwtHandler.GetClaims(user);
+            JwtSecurityToken? tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
+            string? Jwttoken = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+
+            await _userManager.AddClaimsAsync(user, claims);
+            await _userManager.ResetAccessFailedCountAsync(user);
+
+            var roles = await _userManager.GetRolesAsync(user);
+            string RolesString = roles.Count == 1 ? roles[0] : string.Join(',', roles);
+
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = Jwttoken, Role = RolesString });
+        }
        
         [HttpPost("ForgotPassword")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
@@ -174,32 +218,71 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
             string? token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
+            var tokenArrayBytes = Encoding.UTF8.GetBytes(token);
+            var encodedToken = Convert.ToBase64String(tokenArrayBytes);
+
             Dictionary<string, string> param = new Dictionary<string, string>
             {
-                {"token", token },
+                {"token", encodedToken },
                 {"email", forgotPasswordDto.Email }
             };
 
             var callback = QueryHelpers.AddQueryString(forgotPasswordDto.ClientURI, param);
-
-            var message = new Message(new string[] { user.Email }, "Reset password token", callback, null, false);
+            var imageUrl = "https://assets.stickpng.com/images/5a04b8b69cf05203c4b603b6.png";
+            Message message = new Message(
+                new string[] { forgotPasswordDto.Email },
+                "Mo8tareb Room Rental Web App: Email Confirmation",
+                $@"<html>
+  <head>
+    <style>
+      body {{
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+      }}
+      img {{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+      }}
+    </style>
+  </head>
+  <body>
+    <h2>Thank you for Using  Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
+    <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
+    <p>Please confirm Reseting your password by clicking on the following link:</p>
+    <p><a href=""{callback}"">Click Here</a></p>
+    <p>Please note that this link will expire in 24 hours.</p>
+    <p>If you did not register to Mo8tareb Room Rental Web App, please ignore this message.</p>
+    <p>Best regards,</p>
+    <p>Mo8tareb Room Rental Web App Team</p>
+    <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
+  </body>
+</html>",
+                null,
+                true);
             await _emailSender.SendEmailAsync(message);
 
-            return Ok();
+            return StatusCode(201);
         }
 
       
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || resetPasswordDto.Password!= resetPasswordDto.ConfirmPassword)
                 return BadRequest();
 
             AppUser? user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
             if (user == null)
                 return BadRequest("Invalid Request");
 
-            IdentityResult? resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.Password);
+            var tokenBytes = Convert.FromBase64String(resetPasswordDto.Token??"");
+            var decodedToken = Encoding.UTF8.GetString(tokenBytes);
+
+            IdentityResult? resetPassResult = await _userManager.ResetPasswordAsync(user, decodedToken ?? "", resetPasswordDto.Password);
             if (!resetPassResult.Succeeded)
             {
                 IEnumerable<string>? errors = resetPassResult.Errors.Select(e => e.Description);
@@ -211,19 +294,6 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             return Ok();
         }
 
-        [HttpGet("EmailConfirmation")]
-        public async Task<IActionResult> EmailConfirmation([FromQuery] string email, [FromQuery] string token)
-        {
-            AppUser? user = await _userManager.FindByEmailAsync(email);
-            if (user == null)
-                return BadRequest("Invalid Email Confirmation Request");
-
-            IdentityResult? confirmResult = await _userManager.ConfirmEmailAsync(user, token);
-            if (!confirmResult.Succeeded)
-                return BadRequest("Invalid Email Confirmation Request");
-
-            return Ok();
-        }
 
         [Authorize(Roles ="Admin")]
         [HttpGet("Privacy")]

@@ -9,7 +9,10 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.Accounts
 {
     public record UserForRegistrationDto(string FirstName,
                                          string LastName,
+                                         string UserName,
+                                         string Gender,
                                          string Email,
+                                         string phone,
                                          string Password,
                                          string ConfirmPassword,
                                          string ClientURI
