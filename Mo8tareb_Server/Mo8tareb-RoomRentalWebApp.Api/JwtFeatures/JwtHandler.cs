@@ -34,7 +34,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.JwtFeatures
 
         public SigningCredentials GetSigningCredentials()
         {
-            byte[]? key = Encoding.UTF8.GetBytes(_jwtSettings.GetSection("securityKey").Value);
+            byte[]? key = Encoding.UTF8.GetBytes(_jwtSettings.GetSection("securityKey").Value!);
             SymmetricSecurityKey? secret = new SymmetricSecurityKey(key);
 
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
@@ -46,6 +46,9 @@ namespace Mo8tareb_RoomRentalWebApp.Api.JwtFeatures
            {
               new Claim(ClaimTypes.Email, user.Email!),
               new Claim(ClaimTypes.NameIdentifier, user.Id),
+              new Claim(ClaimTypes.MobilePhone, user.PhoneNumber??"null"),
+              new Claim(ClaimTypes.Name, user.FirstName??"null"),
+              new Claim(ClaimTypes.Gender, user.Gender.ToString()??"null"),
            };
 
             IList<string>? roles = await _userManager.GetRolesAsync(user);
@@ -53,6 +56,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.JwtFeatures
             {
                 claims.Add(item: new Claim(ClaimTypes.Role, role));
             }
+
 
             return claims;
         }

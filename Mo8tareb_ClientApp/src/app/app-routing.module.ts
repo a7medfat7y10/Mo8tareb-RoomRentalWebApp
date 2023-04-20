@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:"forgetPassword",component:ForgetPasswordComponent},
   {path:"resetPassword",component:RestPasswordComponent},
   {path:"unAuthorized",component:UnAuthorizedErrorComponent},
+  // {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
   {path:"loading",component:CheckingCredintialsComponent},
   {path:"**",component:Error404Component}

@@ -17,6 +17,8 @@ import { RoomOwnerDashboardComponent } from './Components/room-owner-dashboard/r
 import { CheckingCredintialsComponent } from './Components/checking-credintials/checking-credintials.component';
 import { RestPasswordComponent } from './Components/rest-password/rest-password.component';
 import { TokenInterceptor } from './Interceptors/token.interceptor';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TokenInterceptor } from './Interceptors/token.interceptor';
     AdminDashboardComponent,
     RoomOwnerDashboardComponent,
     CheckingCredintialsComponent,
-    RestPasswordComponent
+    RestPasswordComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
