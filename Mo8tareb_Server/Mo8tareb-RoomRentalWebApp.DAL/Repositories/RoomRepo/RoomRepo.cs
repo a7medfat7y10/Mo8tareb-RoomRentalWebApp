@@ -23,5 +23,13 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Repositories.RoomRepo
                                                        .Include(r => r.Images)
                                                        .Include(r => r.Reviews));
         }
+        public async Task<Room> GetRoom(int id)
+        {
+            return await Task.FromResult(_context.Rooms.Include(r => r.Reservations)
+                                                       .Include(r => r.Owner)
+                                                       .Include(r => r.Services)
+                                                       .Include(r => r.Images)
+                                                       .Include(r => r.Reviews).FirstOrDefault(r=> r.Id == id));
+        }
     }
 }

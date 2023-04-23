@@ -1,4 +1,5 @@
 ﻿using Mo8tareb_RoomRentalWebApp.DAL.Context;
+using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReservationRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReviewRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.RoomRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ServiceRepo;
@@ -19,6 +20,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL
         public UnitOfWork(ApplicationDbContext context) => _context = context;
         
         public IReviewRepo Reviews => new ReviewRepo(_context);
+        public IReservationRepo Reservations => new ReservationRepo(_context);
         public IServiceRepo Services => new ServiceRepo(_context);
         public IRoomRepo Rooms => new RoomRepo(_context);
 

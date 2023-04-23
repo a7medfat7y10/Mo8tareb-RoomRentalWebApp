@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
-import { AccountApiService } from './account-api.service';
+import { AccountApiService } from './Services/account-api.service';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { EmailConfirmationComponent } from './Components/email-confirmation/email-confirmation.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
@@ -19,6 +19,10 @@ import { RestPasswordComponent } from './Components/rest-password/rest-password.
 import { TokenInterceptor } from './Interceptors/token.interceptor';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { AboutComponent } from './Components/about/about.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { RoomsComponent } from './Components/rooms/rooms.component';
+import { RoomDetailsComponent } from './Components/room-details/room-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { FooterComponent } from './Components/footer/footer.component';
     CheckingCredintialsComponent,
     RestPasswordComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    ContactComponent,
+    RoomsComponent,
+    RoomDetailsComponent
   ],
   imports: [
     BrowserModule,

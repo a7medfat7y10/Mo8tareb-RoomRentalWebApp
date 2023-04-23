@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { AccountApiService } from './Services/account-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clientApp';
+  showNavbar:any;
+  constructor(private ActivatedRoute:ActivatedRoute,private AuthenticationService: AccountApiService, private router:Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.showNavbar =! (event.url === '/login'
+                            || event.url === '/register'
+                            || event.url === '/EmailConfirmation'
+                            || event.url === '/forgetPassword'
+                            || event.url === '/resetPassword'
+                            || event.url === '/unAuthorized');
+      }
+    });
+  }
 }

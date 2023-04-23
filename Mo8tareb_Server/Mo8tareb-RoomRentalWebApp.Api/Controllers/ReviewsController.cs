@@ -14,7 +14,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         public ReviewsController(IReviewManager ReviewManager)
         {
-            _ReviewManager= ReviewManager;
+            _ReviewManager = ReviewManager;
         }
 
 
@@ -32,11 +32,11 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         public async Task<IActionResult> CreateReview(ReviewsCreateDtos review)
         {
             if (review == null || !ModelState.IsValid)
-               return BadRequest("Please send a Valid data to create !!");
+                return BadRequest("Please send a Valid data to create !!");
 
             ReviewsCreateDtos? objectCreated = await _ReviewManager?.CreateReviewWithUsersWithRoomsAsync(review)!;
 
-            return objectCreated!=null?Ok("Review created Succssfuly !"):BadRequest("Could not create Review due to the inValid data you sent :(");
+            return objectCreated != null ? Ok("Review created Succssfuly !") : BadRequest("Could not create Review due to the inValid data you sent :(");
         }
 
 

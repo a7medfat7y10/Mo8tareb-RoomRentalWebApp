@@ -77,11 +77,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
             return review;
 
         }
-        public async Task<IQueryable<ReviewsReadDtos>> GetAllReviews()
-        {
-            throw new NotImplementedException();
-           
-        }
         public async Task<ReviewsToDeleteDtos?>? DeleteReviewAsync(ReviewsToDeleteDtos review)
         {
             Review? reviewFromDatabase = _UnitOfWork.Reviews.FindByCondtion(r => r.Id == review.id).FirstOrDefault();
@@ -96,33 +91,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
             catch { return null; }
 
             return review;
-        }
-
-        public Task<ReviewsReadDtos?> GetDetailsById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ReviewsReadDtos> CreateReview(ReviewsReadDtos createReviewDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ReviewsReadDtos> DeleteReview(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-      
-
-        public Task<ReviewsReadDtos> GetReviewById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ReviewsReadDtos> UpdateReview(int id, ReviewsReadDtos updateReviewDto)
-        {
-            throw new NotImplementedException();
         }
 
     }

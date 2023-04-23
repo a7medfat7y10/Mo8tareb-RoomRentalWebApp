@@ -1,7 +1,7 @@
 import { Token } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AccountApiService } from 'src/app/account-api.service';
+import { AccountApiService } from 'src/app/Services/account-api.service';
 
 interface LoginResponse {
   isAuthSuccessful: boolean;

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { urlencoded } from 'body-parser';
-import { AccountApiService } from 'src/app/account-api.service';
+import { AccountApiService } from 'src/app/Services/account-api.service';
 
 @Component({
   selector: 'app-register',

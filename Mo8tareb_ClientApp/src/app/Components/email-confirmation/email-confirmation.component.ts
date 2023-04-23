@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AccountApiService } from 'src/app/account-api.service';
+import { AccountApiService } from 'src/app/Services/account-api.service';
 
 @Component({
   selector: 'app-email-confirmation',

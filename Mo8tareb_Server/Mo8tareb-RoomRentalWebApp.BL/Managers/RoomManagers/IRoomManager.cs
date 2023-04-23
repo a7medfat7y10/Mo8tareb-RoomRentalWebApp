@@ -1,5 +1,6 @@
 ﻿using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ServieDtos;
+using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,15 +12,11 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
     public interface IRoomManager
     {
         Task<IQueryable<RoomReadDto>> GetAllRoomsWithDetails();
+        public Task<RoomReadDto> GetRoomWithDetails(int id);
 
-        //Task<ServiceReadDtos> CreateService(ServiceReadDtos createServiceDto);
+        Task<Room> CreateRoomsAsync(RoomCreateDto createRoomDto);
+        public Task<RoomUpdateDto?>? UpdateRoomAsync(RoomUpdateDto room);
+        public Task<RoomDeleteDto?>? DeleteRoomAsync(RoomDeleteDto room);
 
-        //Task<IQueryable<ServiceReadDtos>> GetAllServices();
-        //Task<ServiceReadDtos> GetServiceById(int id);
-        //Task<ServiceReadDtos?> GetDetailsById(int id);
-        //Task<ServiceReadDtos> UpdateService(int id, ServiceReadDtos updateServiceDto);
-        //Task<ServiceReadDtos> DeleteService(int id);
-        //Task<ServicesUpdateDtos?>? UpdateServiceAsync(ServicesUpdateDtos service);
-        //Task<ServicesToDeleteDtos?>? DeleteServiceAsync(ServicesToDeleteDtos service);
     }
 }

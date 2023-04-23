@@ -11,7 +11,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReviewRepo
 {
     public class ReviewRepo : GenericRepo<Review>, IReviewRepo
     {
-        
+
         public ReviewRepo(ApplicationDbContext context) : base(context)
         {
             

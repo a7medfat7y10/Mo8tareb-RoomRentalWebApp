@@ -27,22 +27,17 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly IMapper _mapper;
         private readonly JwtHandler _jwtHandler;
         private readonly IEmailSender _emailSender;
         private readonly IUnitOfWork _unitOfWork;
-
-         // IMapper mapper
-        //  IEmailSender emailSender,
-        public AccountsController(UserManager<AppUser> userManager ,RoleManager<IdentityRole> roleManager,JwtHandler jwtHandler,
-            IUnitOfWork unitOfWork, IEmailSender emailSender)  
+        public AccountsController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, JwtHandler jwtHandler,
+            IUnitOfWork unitOfWork, IEmailSender emailSender)
         {
             _userManager = userManager;
-            //_mapper = mapper;
             _jwtHandler = jwtHandler;
             _emailSender = emailSender;
             _unitOfWork = unitOfWork;
-            _roleManager= roleManager;
+            _roleManager = roleManager;
         }
 
         [HttpPost("Login")]
@@ -92,15 +87,15 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             await _userManager.ResetAccessFailedCountAsync(user);
 
             var roles = await _userManager.GetRolesAsync(user);
-            string RolesString = roles.Count==1?roles[0]: string.Join(',',roles);
+            string RolesString = roles.Count == 1 ? roles[0] : string.Join(',', roles);
 
-            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token,Role=RolesString });
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = RolesString });
         }
 
         [HttpPost("Registration")]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {
-            if (userForRegistration == null|| userForRegistration.Password!=userForRegistration.ConfirmPassword || !ModelState.IsValid || Enum.TryParse<Gender>(userForRegistration.Gender,out Gender gender)==false)
+            if (userForRegistration == null || userForRegistration.Password != userForRegistration.ConfirmPassword || !ModelState.IsValid || Enum.TryParse<Gender>(userForRegistration.Gender, out Gender gender) == false)
                 return BadRequest(ModelState);
 
             // AppUser? user = _mapper.Map<AppUser>(userForRegistration);
@@ -205,7 +200,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
             return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = Jwttoken, Role = RolesString });
         }
-       
+
         [HttpPost("ForgotPassword")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
         {
@@ -268,18 +263,18 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             return StatusCode(201);
         }
 
-      
+
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
-            if (!ModelState.IsValid || resetPasswordDto.Password!= resetPasswordDto.ConfirmPassword)
+            if (!ModelState.IsValid || resetPasswordDto.Password != resetPasswordDto.ConfirmPassword)
                 return BadRequest();
 
             AppUser? user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
             if (user == null)
                 return BadRequest("Invalid Request");
 
-            var tokenBytes = Convert.FromBase64String(resetPasswordDto.Token??"");
+            var tokenBytes = Convert.FromBase64String(resetPasswordDto.Token ?? "");
             var decodedToken = Encoding.UTF8.GetString(tokenBytes);
 
             IdentityResult? resetPassResult = await _userManager.ResetPasswordAsync(user, decodedToken ?? "", resetPasswordDto.Password);
@@ -295,7 +290,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         }
 
 
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("Privacy")]
         public IActionResult Privacy()
         {
@@ -311,6 +306,49 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         #endregion
 
         #region ExternalLogin
+
+        [HttpPost("ExternalLogin")]
+        public async Task<IActionResult> ExternalLogin([FromBody] ExternalAuthDto externalAuth)
+        {
+            var payload = await _jwtHandler.VerifyGoogleToken(externalAuth);
+            if (payload == null)
+                return BadRequest("Invalid External Authentication.");
+
+            UserLoginInfo? info = new UserLoginInfo(externalAuth.Provider, payload.Subject, externalAuth.Provider);
+
+            AppUser? user = await _userManager.FindByLoginAsync(info.LoginProvider, info.ProviderKey);
+            if (user == null)
+            {
+                user = await _userManager.FindByEmailAsync(payload.Email);
+
+                if (user == null)
+                {
+                    user = new AppUser { Email = payload.Email, UserName = payload.Email, FirstName = payload.GivenName, LastName = payload.FamilyName };
+                    await _userManager.CreateAsync(user);
+
+                    //TODO: prepare and send an email for the email confirmation
+
+                    await _userManager.AddToRoleAsync(user, Authorization.User);
+                    await _userManager.AddLoginAsync(user, info);
+                }
+                else
+                {
+                    if (await _userManager.IsInRoleAsync(user, Authorization.Owner) &&
+                        !user.EmailConfirmed)
+                    {
+                        return BadRequest("Invalid External Authentication., your account is under review");
+                    }
+
+                    await _userManager.AddLoginAsync(user, info);
+                }
+            }
+
+            string? token = await _jwtHandler.GenerateToken(user);
+            //byte[]? TokenBytes = Encoding.UTF8.GetBytes(token);
+            //string? encodedTokens = Convert.ToBase64String(TokenBytes);
+
+            return Ok(new AuthResponseDto { Token = token, IsAuthSuccessful = true });
+        }
 
         #endregion
 

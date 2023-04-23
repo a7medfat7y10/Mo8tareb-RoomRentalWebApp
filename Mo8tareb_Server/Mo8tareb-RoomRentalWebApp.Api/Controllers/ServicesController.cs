@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ServieDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ServiceManagers;
+using Mo8tareb_RoomRentalWebApp.DAL.Models;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -37,6 +40,31 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
             return objectCreated != null ? Ok("Service created Succssfuly !") : BadRequest("Could not create Service due to the inValid data you sent :(");
         }
+
+        [HttpPut]
+        [Route("UpdateService")]
+        public async Task<IActionResult> UpdateService(int id, ServicesUpdateDtos service)
+        {
+            if (service == null || id != service.id)
+                return BadRequest("Please send valid Data to Update !!");
+
+            ServicesUpdateDtos? objectUpdated = await ServiceManager.UpdateService(service)!;
+
+            return objectUpdated != null ? Ok("Service Updated Succssfuly !") : BadRequest("Could not Update Service due to the inValid data you sent  :(");
+        }
+
+        [HttpDelete]
+        [Route("DeleteService")]
+        public async Task<IActionResult> DeleteService(int id, ServicesToDeleteDtos service)
+        {
+            if (service == null || id != service.id)
+                return BadRequest("Please send valid Data to Update !!");
+
+            ServicesToDeleteDtos? objectUpdated = await ServiceManager.DeleteService(service)!;
+
+            return objectUpdated != null ? Ok("Service Deleted Succssfuly !") : BadRequest("Could not Deleted Service due to the inValid data you sent  :(");
+        }
+
 
     }
 }

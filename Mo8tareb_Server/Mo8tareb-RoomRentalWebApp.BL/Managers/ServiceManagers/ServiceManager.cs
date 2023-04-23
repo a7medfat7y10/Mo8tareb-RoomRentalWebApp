@@ -57,40 +57,43 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ServiceManagers
                 return rowsAffected > 0 ?createServiceDto: null;
         }
 
-        public Task<ServiceReadDtos> DeleteService(int id)
+        public async Task<ServicesUpdateDtos?>? UpdateService(ServicesUpdateDtos service)
         {
-            throw new NotImplementedException();
+            Service? serviceFromDatabase = _UnitOfWork.Services.FindByCondtion(r => r.Id == service.id).FirstOrDefault(); 
+            if (serviceFromDatabase == null)
+                return null;
+
+            serviceFromDatabase.Name = service.Name;
+
+            try
+            {
+                _UnitOfWork.Services.Update(serviceFromDatabase);
+                int rowsAffected = await _UnitOfWork.SaveAsync();
+                if (rowsAffected <= 0) throw new Exception();
+            }
+            catch
+            {
+                return null;
+            }
+            return service;
+
+        }
+        public async Task<ServicesToDeleteDtos?>? DeleteService(ServicesToDeleteDtos service)
+        {
+            Service? serviceFromDatabase = _UnitOfWork.Services.FindByCondtion(r => r.Id == service.id).FirstOrDefault();
+            if (serviceFromDatabase == null)
+                return null;
+
+            try
+            {
+                _UnitOfWork.Services.Remove(serviceFromDatabase);
+                int rowsAffected = await _UnitOfWork.SaveAsync();
+                if (rowsAffected <= 0) throw new Exception();
+            }
+            catch { return null; }
+
+            return service;
         }
 
-        public Task<ServicesToDeleteDtos?>? DeleteServiceAsync(ServicesToDeleteDtos service)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<IQueryable<ServiceReadDtos>> GetAllServices()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public Task<ServiceReadDtos?> GetDetailsById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ServiceReadDtos> GetServiceById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ServiceReadDtos> UpdateService(int id, ServiceReadDtos updateServiceDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ServicesUpdateDtos?>? UpdateServiceAsync(ServicesUpdateDtos service)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

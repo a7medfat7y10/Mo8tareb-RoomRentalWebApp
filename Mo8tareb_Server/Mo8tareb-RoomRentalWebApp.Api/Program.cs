@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Mo8tareb_RoomRentalWebApp.Api.JwtFeatures;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ImagesManagers;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ServiceManagers;
@@ -131,6 +132,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddScoped<JwtHandler>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IReservationManager, ReservationManager>();
             builder.Services.AddScoped<IReviewManager, ReviewManager>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IimageManager, ImageManager>();
