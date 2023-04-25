@@ -28,15 +28,10 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         }
 
         [HttpPost]
-        [Route("CreateReview")]
-        public async Task<IActionResult> CreateReview(ReviewsCreateDtos review)
+        public async Task<IActionResult> CreateReview(CreateReviewPayload payload)
         {
-            if (review == null || !ModelState.IsValid)
-                return BadRequest("Please send a Valid data to create !!");
-
-            ReviewsCreateDtos? objectCreated = await _ReviewManager?.CreateReviewWithUsersWithRoomsAsync(review)!;
-
-            return objectCreated != null ? Ok("Review created Succssfuly !") : BadRequest("Could not create Review due to the inValid data you sent :(");
+            var result = await _ReviewManager.CreateReviewAsync(payload);
+            return result is null ? BadRequest("Error") : Ok("Success");
         }
 
 

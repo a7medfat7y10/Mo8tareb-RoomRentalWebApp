@@ -12,5 +12,13 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos
     public record ReviewsCreateDtos([MaxLength(100)] [MinLength(1)] string comment,[Range(0,10)] int Rating, userCreateDtos User, RoomCreateDtos Room);
     public record ReviewsUpdateDtos(int id, [MaxLength(100)][MinLength(1)] string comment, [Range(0, 10)] int Rating);
     public record ReviewsToDeleteDtos(int id);
+    public class CreateReviewPayload
+    {
+        public int Rating { get; set; }
+        public string? UserId { get; set; }
+        public string? Comments { get; set; }
+        public int RoomId { get; set; }
+        public int ReservationId { get; set; }
+    }
 
 }

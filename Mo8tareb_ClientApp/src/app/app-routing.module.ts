@@ -17,6 +17,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
+import { ReviewsComponent } from './Components/reviews/reviews.component';
 
 const routes: Routes = [
   {path: "Admindashboard", component:AdminDashboardComponent,canActivate:[IsInAdminRoleGuard]},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: "rooms", component: RoomsComponent},
   {path: "loading", component: CheckingCredintialsComponent},
   {path: "room/:id", component: RoomDetailsComponent },
+  {path: "reviews", component : ReviewsComponent},
   {path: "**", component:Error404Component}
 ];
 

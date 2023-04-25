@@ -13,5 +13,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
         Task<ReviewsCreateDtos?>? CreateReviewWithUsersWithRoomsAsync(ReviewsCreateDtos? createReviewDto);
         Task<ReviewsUpdateDtos?>? UpdateReviewAsync(ReviewsUpdateDtos review);
         Task<ReviewsToDeleteDtos?>? DeleteReviewAsync(ReviewsToDeleteDtos review);
+        Task<dynamic> CreateReviewAsync(CreateReviewPayload payload);
     }
 }

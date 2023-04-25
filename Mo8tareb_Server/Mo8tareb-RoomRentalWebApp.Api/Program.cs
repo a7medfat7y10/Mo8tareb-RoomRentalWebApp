@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Mo8tareb_RoomRentalWebApp.Api.JwtFeatures;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ImagesManagers;
@@ -151,7 +152,20 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen( c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mo8tareb API", Version = "v1" });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT"
+                });
+            });
             #endregion
 
             var app = builder.Build();

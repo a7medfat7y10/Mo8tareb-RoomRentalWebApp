@@ -62,6 +62,12 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             return objectUpdated is not null ? Ok("Reservation Deleted Succssfuly !") : BadRequest("Could not Deleted Reservation due to the inValid data you sent  :(");
         }
 
-
+        [HttpGet]
+        [Route("{userId}")]
+        public async Task<IActionResult> GetConfirmedUserReservations([FromRoute] string userId)
+        {
+            var reservations = await _ReservationManager.GetConfirmedUserReservations(userId);
+            return Ok(reservations);
+        }
     }
 }

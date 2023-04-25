@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.OwnerDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
@@ -37,37 +38,53 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
         public async Task<ReviewsCreateDtos?>? CreateReviewWithUsersWithRoomsAsync(ReviewsCreateDtos? createReviewDto)
         {
 
-            var user = await _userManager.FindByEmailAsync(createReviewDto?.User.Email??"");
+            var user = await _userManager.FindByEmailAsync(createReviewDto?.User.Email ?? "");
             //var roomId= _UnitOfWork.RoomRepo.getbyId(createReviewDto.Room.id) متنساش تضيف السطر دا لما تعمل Repo of room
-            
-                if (user == null ||createReviewDto==null)//|| roomId==null
+
+            if (user == null || createReviewDto == null)//|| roomId==null
                 return null;
 
-                Review CreatedReview = new Review()
-                {
-                    Comment = createReviewDto.comment,
-                    Rating = createReviewDto.Rating,
-                    UserId = user.Id,
-                    RoomId = createReviewDto.Room.id
-                };
-           await _UnitOfWork.Reviews.AddAsync(CreatedReview);
-           int rowsAffected=await _UnitOfWork.SaveAsync();
+            // Check if room exists and user made a reservation in that room
+
+            var room = await _UnitOfWork.Rooms.GetByIdAsync(createReviewDto.Room.id);
+
+            if (room is null)
+                return null;
+
+            var reservation = await _UnitOfWork.Reservations
+                .FindByCondtion(i => i.UserId == user.Id && i.RoomId == room.Id)
+                .FirstOrDefaultAsync();
+
+            if (reservation is null) 
+                return null;
+
+
+            Review CreatedReview = new Review()
+            {
+                Comment = createReviewDto.comment,
+                Rating = createReviewDto.Rating,
+                UserId = user.Id,
+                RoomId = createReviewDto.Room.id
+            };
+            await _UnitOfWork.Reviews.AddAsync(CreatedReview);
+            int rowsAffected = await _UnitOfWork.SaveAsync();
 
             return rowsAffected > 0 ?
                createReviewDto : null;
         }
         public async Task<ReviewsUpdateDtos?>? UpdateReviewAsync(ReviewsUpdateDtos review)
         {
-            Review? reviewFromDatabase= _UnitOfWork.Reviews.FindByCondtion(r=> r.Id==review.id).FirstOrDefault();
+            Review? reviewFromDatabase = _UnitOfWork.Reviews.FindByCondtion(r => r.Id == review.id).FirstOrDefault();
             if (reviewFromDatabase == null)
                 return null;
 
             reviewFromDatabase.Comment = review.comment;
             reviewFromDatabase.Rating = review.Rating;
 
-            try { 
-            _UnitOfWork.Reviews.Update(reviewFromDatabase);
-                int rowsAffected =await _UnitOfWork.SaveAsync();
+            try
+            {
+                _UnitOfWork.Reviews.Update(reviewFromDatabase);
+                int rowsAffected = await _UnitOfWork.SaveAsync();
                 if (rowsAffected <= 0) throw new Exception();
             }
             catch
@@ -83,8 +100,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
             if (reviewFromDatabase == null)
                 return null;
 
-            try { 
-                _UnitOfWork.Reviews.Remove(reviewFromDatabase); 
+            try
+            {
+                _UnitOfWork.Reviews.Remove(reviewFromDatabase);
                 int rowsAffected = await _UnitOfWork.SaveAsync();
                 if (rowsAffected <= 0) throw new Exception();
             }
@@ -93,5 +111,42 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
             return review;
         }
 
+        public async Task<dynamic> CreateReviewAsync(CreateReviewPayload payload)
+        {
+
+            var user = await _userManager.FindByIdAsync(payload.UserId ?? "");
+            //var roomId= _UnitOfWork.RoomRepo.getbyId(createReviewDto.Room.id) متنساش تضيف السطر دا لما تعمل Repo of room
+
+            if (user == null)//|| roomId==null
+                return null;
+
+            // Check if room exists and user made a reservation in that room
+
+            var room = await _UnitOfWork.Rooms.GetByIdAsync(payload.RoomId);
+
+            if (room is null)
+                return null;
+
+            var reservation = await _UnitOfWork.Reservations
+                .FindByCondtion(i => i.UserId == user.Id && i.RoomId == room.Id)
+                .FirstOrDefaultAsync();
+
+            if (reservation is null)
+                return null;
+
+
+            Review CreatedReview = new Review()
+            {
+                Comment = payload.Comments,
+                Rating = payload.Rating,
+                UserId = user.Id,
+                RoomId = payload.RoomId
+            };
+            await _UnitOfWork.Reviews.AddAsync(CreatedReview);
+            int rowsAffected = await _UnitOfWork.SaveAsync();
+
+            return rowsAffected > 0 ?
+               new {Message = "Success"} : null;
+        }
     }
 }

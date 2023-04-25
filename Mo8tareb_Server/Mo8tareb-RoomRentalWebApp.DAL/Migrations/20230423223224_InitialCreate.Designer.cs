@@ -12,8 +12,8 @@ using Mo8tareb_RoomRentalWebApp.DAL.Context;
 namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230417095332_initialH")]
-    partial class initialH
+    [Migration("20230423223224_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

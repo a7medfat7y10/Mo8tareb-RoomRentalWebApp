@@ -1,4 +1,5 @@
-﻿using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
+﻿using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReservationsDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
         Task<ReservationsCreateDtos?>? CreateReservationWithUsersWithRoomsAsync(ReservationsCreateDtos? createReservationDto);
         Task<ReservationsUpdateDtos?>? UpdateReservationAsync(ReservationsUpdateDtos Reservation);
         Task<ReservationsToDeleteDtos?>? DeleteReservationAsync(ReservationsToDeleteDtos Reservation);
+        Task<List<UserReservationDto>> GetConfirmedUserReservations(string userId);
     }
 }

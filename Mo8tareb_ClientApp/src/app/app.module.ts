@@ -23,6 +23,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
+import { ReviewsComponent } from './Components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RoomDetailsComponent } from './Components/room-details/room-details.com
     AboutComponent,
     ContactComponent,
     RoomsComponent,
-    RoomDetailsComponent
+    RoomDetailsComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

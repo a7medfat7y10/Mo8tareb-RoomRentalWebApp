@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReservationsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.OwnerDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
@@ -94,5 +96,17 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
 
         }
 
+        public async Task<List<UserReservationDto>> GetConfirmedUserReservations(string userId)
+        {
+            return await _UnitOfWork.Reservations
+                .FindByCondtion(i => i.UserId == userId && i.Status == ReservationStatus.Approved)
+                .Select(r => new UserReservationDto
+                {
+                    Id = r.Id,
+                    StartDate = r.StartDate,
+                    EndDate = r.EndDate,
+                    RoomId = r.RoomId
+                }).ToListAsync();
+        }
     }
 }
