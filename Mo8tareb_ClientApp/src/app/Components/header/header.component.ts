@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Route, Router } from '@angular/router';
 import { AccountApiService } from 'src/app/Services/account-api.service';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,8 +11,10 @@ import { AccountApiService } from 'src/app/Services/account-api.service';
 })
 export class HeaderComponent {
   showNavbar:any;
-  constructor(private ActivatedRoute:ActivatedRoute,private AuthenticationService: AccountApiService) {
+  constructor(private ActivatedRoute:ActivatedRoute,private AuthenticationService: AccountApiService,public translate: TranslateService) {
+    this.translate.setDefaultLang('en');
    }
+   
 
   SignOut() {
     this.AuthenticationService.SignOut();
@@ -26,7 +30,10 @@ export class HeaderComponent {
   }
 
 
-
+  useLanguage(event: Event): void {
+    const language = (event.target as HTMLSelectElement).value;
+    this.translate.use(language);
+  }
 
 
 }

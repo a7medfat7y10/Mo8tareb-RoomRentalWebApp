@@ -100,28 +100,31 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" routerLink="/">Mo<span class="color-b">8tareb</span></a>
+      <a class="navbar-brand text-brand" routerLink="/"><span class="color-b">{{ 'Mo8tareb' | translate }}</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/home">{{ 'Home' | translate }}</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/rooms">Rooms</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/rooms">{{ 'Rooms' | translate }}</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/about">About</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/about">{{ 'About' | translate }}</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/contact">{{ 'Contact' | translate }}</a>
           </li>
         </ul>
+        
       </div>
+
+      
 
       <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
         <i class="bi bi-search"></i>
@@ -136,6 +139,16 @@
   <div *ngIf="!UserIsLoggedIn() " class="NoLogIn">
     <button routerLink="/login" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px;">Register</button>
   </div>
+
+  <div>
+    <!-- <label for="language-select">{{ 'SELECT_LANGUAGE' | translate }}</label> -->
+    <select id="language-select" (change)="useLanguage($event)">
+      <option value="en" [selected]="translate.currentLang === 'en'">{{ 'ENGLISH' | translate }}</option>
+      <option value="fr" [selected]="translate.currentLang === 'fr'">{{ 'FRENCH' | translate }}</option>
+      <option value="ar" [selected]="translate.currentLang === 'ar'">{{ 'ARABIC' | translate }}</option>
+    </select>
+  </div>
+  
 </div>
   </nav><!-- End Header/Navbar -->
 

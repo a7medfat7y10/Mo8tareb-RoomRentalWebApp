@@ -88,3 +88,18 @@ C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.BL.dll
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.BL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.deps.json
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.AssemblyReference.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfoInputs.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.AssemblyInfo.cs
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CoreCompileInputs.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.csproj.CopyComplete
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.BL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.BL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.BL.dll

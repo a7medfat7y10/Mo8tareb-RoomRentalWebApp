@@ -24,6 +24,16 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
 
+
+//Translation
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+//Translation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +60,16 @@ import { RoomDetailsComponent } from './Components/room-details/room-details.com
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+    
   ],
   providers: [AccountApiService,
     {
