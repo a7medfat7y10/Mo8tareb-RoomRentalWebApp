@@ -141,10 +141,8 @@
   </div>
 
   <div>
-    <!-- <label for="language-select">{{ 'SELECT_LANGUAGE' | translate }}</label> -->
     <select id="language-select" (change)="useLanguage($event)">
       <option value="en" [selected]="translate.currentLang === 'en'">{{ 'ENGLISH' | translate }}</option>
-      <option value="fr" [selected]="translate.currentLang === 'fr'">{{ 'FRENCH' | translate }}</option>
       <option value="ar" [selected]="translate.currentLang === 'ar'">{{ 'ARABIC' | translate }}</option>
     </select>
   </div>
