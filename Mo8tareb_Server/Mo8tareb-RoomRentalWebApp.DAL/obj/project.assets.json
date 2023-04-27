@@ -4310,24 +4310,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fathy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mohan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+      "projectUniqueName": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
       "projectName": "Mo8tareb-RoomRentalWebApp.DAL",
-      "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
-      "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
+      "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+      "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4335,7 +4330,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4393,7 +4387,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Mo8tareb_RoomRentalWebApp.Api.JwtFeatures;
+using Mo8tareb_RoomRentalWebApp.Api.services.Payment;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.PaymentDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ImagesManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
@@ -29,7 +31,6 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
 
             #region Cors
             string? corsPolicy = "AllowAll";
@@ -117,7 +118,8 @@ namespace Mo8tareb_RoomRentalWebApp.Api
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
 
-            builder.Services.Configure<FormOptions>(o => {
+            builder.Services.Configure<FormOptions>(o =>
+            {
                 o.ValueLengthLimit = int.MaxValue;
                 o.MultipartBodyLengthLimit = int.MaxValue;
                 o.MemoryBufferThreshold = int.MaxValue;
@@ -135,6 +137,8 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddScoped<IReservationManager, ReservationManager>();
             builder.Services.AddScoped<IReviewManager, ReviewManager>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
+            // builder.Services.AddScoped<IPaymentService, PaymentService>();
+
             builder.Services.AddScoped<IimageManager, ImageManager>();
 
             #endregion 

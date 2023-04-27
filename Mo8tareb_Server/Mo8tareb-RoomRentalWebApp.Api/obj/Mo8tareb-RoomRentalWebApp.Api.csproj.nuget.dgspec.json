@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj": {}
+    "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj": {}
   },
   "projects": {
-    "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj": {
+    "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj",
+        "projectUniqueName": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj",
         "projectName": "Mo8tareb-RoomRentalWebApp.Api",
-        "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj",
-        "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\obj\\",
+        "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\Mo8tareb-RoomRentalWebApp.Api.csproj",
+        "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
+        "outputPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
-                "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj"
+              "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
+                "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj"
               }
             }
           }
@@ -83,6 +78,10 @@
               "target": "Package",
               "version": "[6.28.1, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.13.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -111,25 +110,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
+    "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+        "projectUniqueName": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
         "projectName": "Mo8tareb-RoomRentalWebApp.BL",
-        "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
-        "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\obj\\",
+        "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+        "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
+        "outputPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -137,15 +132,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
-                "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj"
+              "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
+                "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj"
               }
             }
           }
@@ -181,25 +175,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
+    "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+        "projectUniqueName": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
         "projectName": "Mo8tareb-RoomRentalWebApp.DAL",
-        "projectPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
-        "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
+        "projectPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
+        "outputPath": "D:\\ITI\\API Project\\GIT 25-4\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -207,7 +197,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -265,7 +254,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
