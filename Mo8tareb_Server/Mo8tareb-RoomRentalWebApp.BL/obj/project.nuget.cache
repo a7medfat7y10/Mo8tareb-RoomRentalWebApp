@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "88sSe76jkEBw5fxt/FlDEn5wNoh+7CFYLBw1D4XiDLTeAjYOleNt7T/jaOQvib8sF02pPNTTwKBOqGj2DuCYIg==",
+  "dgSpecHash": "WeDWe40VdiYkjWDn+v34nPMiTa1dVzX4LQD9MPk3gMdRQYo/+x85Qbg3Taeatr7SWLMVdvh3HCCnataHUAGjPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+  "projectFilePath": "D:\\ITI\\Project\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fathy\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Fathy\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
