@@ -1,4 +1,6 @@
 ﻿using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
+using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,13 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
 {
     public interface IReservationManager
     {
+        bool DidThisUserReserveThisRoomManager(AppUser user, RoomReadDto room);
+        bool DidThisUserReserveThisRoomAndGetApprovedByOwnerManager(AppUser user, RoomReadDto room);
+        bool DidThisUserReserveThisRoomAndGetRejectedByOwnerManager(AppUser user, RoomReadDto room);
+        bool DidThisUserReserveThisRoomAndGetSuspendedByOwnerManager(AppUser user, RoomReadDto room);
+
+        
+
         Task<IQueryable<ReservationsReadDtos>> GetAllReservationsWithUsersWithRoomsAsync();
         Task<ReservationsCreateDtos?>? CreateReservationWithUsersWithRoomsAsync(ReservationsCreateDtos? createReservationDto);
         Task<ReservationsUpdateDtos?>? UpdateReservationAsync(ReservationsUpdateDtos Reservation);

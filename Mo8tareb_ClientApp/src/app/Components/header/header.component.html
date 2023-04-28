@@ -3,7 +3,7 @@
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
+      <h3 class="title-d">Search Room</h3>
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
@@ -121,10 +121,10 @@
             <a class="nav-link" routerLinkActive="active" routerLink="/contact">{{ 'Contact' | translate }}</a>
           </li>
         </ul>
-        
+
       </div>
 
-      
+
 
       <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
         <i class="bi bi-search"></i>
@@ -132,21 +132,23 @@
 
 
 <div *ngIf="UserIsLoggedIn() " class="isLoggedIn">
-  <button (click)="SignOut()" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px;">Sign out</button>
+  <button (click)="SignOut()" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">Sign out</button>
   </div>
 
 
   <div *ngIf="!UserIsLoggedIn() " class="NoLogIn">
-    <button routerLink="/login" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px;">Register</button>
+    <button routerLink="/login" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">Register</button>
   </div>
 
   <div>
+    <!-- <label for="language-select">{{ 'SELECT_LANGUAGE' | translate }}</label> -->
     <select id="language-select" (change)="useLanguage($event)">
       <option value="en" [selected]="translate.currentLang === 'en'">{{ 'ENGLISH' | translate }}</option>
+      <option value="fr" [selected]="translate.currentLang === 'fr'">{{ 'FRENCH' | translate }}</option>
       <option value="ar" [selected]="translate.currentLang === 'ar'">{{ 'ARABIC' | translate }}</option>
     </select>
   </div>
-  
+
 </div>
   </nav><!-- End Header/Navbar -->
 

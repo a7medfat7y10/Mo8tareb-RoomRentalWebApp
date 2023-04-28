@@ -14,4 +14,6 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos
 
         public decimal Price { get; set; }
     }
+        
+    public record EmailRoomIdDto(string userEmail, int RoomId);
 }

@@ -40,6 +40,15 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             _roleManager = roleManager;
         }
 
+        [HttpGet("GetUserById")]
+        public async Task<IActionResult> GetUserById([FromQuery] string id )
+        {
+          var user=  await _userManager.FindByIdAsync(id);
+            if (user == null) return NotFound();
+
+            return Ok(user);
+        }
+
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserForAuthenticationDto userForAuthentication)
         {
@@ -89,7 +98,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             var roles = await _userManager.GetRolesAsync(user);
             string RolesString = roles.Count == 1 ? roles[0] : string.Join(',', roles);
 
-            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = RolesString });
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = RolesString,Email=user.Email });
         }
 
         [HttpPost("Registration")]

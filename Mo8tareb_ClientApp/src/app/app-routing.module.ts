@@ -17,10 +17,26 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
+import { AdminReviewComponent } from './Components/admin-dashboard/admin-review/admin-review.component';
+import { AdminServicesComponent } from './Components/admin-dashboard/admin-services/admin-services.component';
+import { ReservationsComponent } from './Components/admin-dashboard/reservations/reservations.component';
+import { AdminRoomsComponent } from './Components/admin-dashboard/admin-rooms/admin-rooms.component';
+import { OwnerRoomsComponent } from './Components/room-owner-dashboard/owner-rooms/owner-rooms.component';
+import { OwnerRerservationsComponent } from './Components/room-owner-dashboard/owner-rerservations/owner-rerservations.component';
+import { OwnerCreateRoomComponent } from './Components/room-owner-dashboard/owner-create-room/owner-create-room.component';
+import { AdminCreateServiceComponent } from './Components/admin-dashboard/admin-create-service/admin-create-service.component';
 
 const routes: Routes = [
   {path: "Admindashboard", component:AdminDashboardComponent,canActivate:[IsInAdminRoleGuard]},
+  {path: "Admindashboard/reviews", component:AdminReviewComponent,canActivate:[IsInAdminRoleGuard]},
+  {path: "Admindashboard/rooms", component:AdminRoomsComponent,canActivate:[IsInAdminRoleGuard]},
+  {path: "Admindashboard/services", component:AdminServicesComponent,canActivate:[IsInAdminRoleGuard]},
+  {path: "Admindashboard/reservations", component:ReservationsComponent,canActivate:[IsInAdminRoleGuard]},
+  {path: "Admindashboard/AddService", component:AdminCreateServiceComponent,canActivate:[IsInAdminRoleGuard]},
   {path: "OwnerDashboard", component: RoomOwnerDashboardComponent, canActivate: [IsInRoomOwnerRoleGuard] },
+  {path: "OwnerDashboard/reservations", component:OwnerRerservationsComponent,canActivate:[IsInRoomOwnerRoleGuard]},
+  {path: "OwnerDashboard/rooms", component:OwnerRoomsComponent,canActivate:[IsInRoomOwnerRoleGuard]},
+  {path: "OwnerDashboard/AddRoom", component:OwnerCreateRoomComponent,canActivate:[IsInRoomOwnerRoleGuard]},
   {path: "login", component:LoginComponent},
   {path:  "register", component: RegisterComponent },
   {path: "EmailConfirmation", component: EmailConfirmationComponent},

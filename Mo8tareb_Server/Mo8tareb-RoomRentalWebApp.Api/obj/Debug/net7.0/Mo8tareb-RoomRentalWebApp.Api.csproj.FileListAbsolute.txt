@@ -580,100 +580,298 @@ C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.genruntimeconfig.cache
 C:\Users\Fathy\Downloads\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.Api.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.Development.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.exe
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.deps.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.runtimeconfig.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Core.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Identity.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Core.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Humanizer.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MailKit.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MimeKit.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mono.TextTemplating.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\BouncyCastle.Crypto.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.CodeDom.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Drawing.Common.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Memory.Data.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Runtime.Caching.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Permissions.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Windows.Extensions.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.AssemblyReference.cache
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.GeneratedMSBuildEditorConfig.editorconfig
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfoInputs.cache
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfo.cs
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CoreCompileInputs.cache
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cs
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cache
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.Mo8tareb-RoomRentalWebApp.Api.Microsoft.AspNetCore.StaticWebAssets.props
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Mo8tareb-RoomRentalWebApp.Api.props
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mo8tareb-RoomRentalWebApp.Api.props
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Mo8tareb-RoomRentalWebApp.Api.props
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.pack.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.build.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.development.json
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\scopedcss\bundle\Mo8tareb-RoomRentalWebApp.Api.styles.css
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CopyComplete
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.Api.dll
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.genruntimeconfig.cache
-G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.Development.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.exe
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.deps.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.runtimeconfig.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Core.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Identity.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Core.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Humanizer.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MailKit.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MimeKit.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.CodeDom.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Memory.Data.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.AssemblyReference.cache
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfoInputs.cache
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfo.cs
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CoreCompileInputs.cache
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.Mo8tareb-RoomRentalWebApp.Api.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Mo8tareb-RoomRentalWebApp.Api.props
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mo8tareb-RoomRentalWebApp.Api.props
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Mo8tareb-RoomRentalWebApp.Api.props
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.pack.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.build.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.development.json
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\scopedcss\bundle\Mo8tareb-RoomRentalWebApp.Api.styles.css
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CopyComplete
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.genruntimeconfig.cache
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\ITI\Angualar\Project\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\OpenAI_API.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.Development.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.exe
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.deps.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.runtimeconfig.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Core.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Identity.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Core.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Humanizer.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MailKit.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MimeKit.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\OpenAI_API.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.CodeDom.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Memory.Data.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.AssemblyReference.cache
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfoInputs.cache
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfo.cs
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CoreCompileInputs.cache
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.Mo8tareb-RoomRentalWebApp.Api.Microsoft.AspNetCore.StaticWebAssets.props
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Mo8tareb-RoomRentalWebApp.Api.props
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mo8tareb-RoomRentalWebApp.Api.props
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Mo8tareb-RoomRentalWebApp.Api.props
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.pack.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.build.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.development.json
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\scopedcss\bundle\Mo8tareb-RoomRentalWebApp.Api.styles.css
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CopyComplete
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.Api.dll
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.genruntimeconfig.cache
+D:\web projects\Temp Repo\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.Api.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.AssemblyReference.cache
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfoInputs.cache
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.AssemblyInfo.cs
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CoreCompileInputs.cache
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.Api.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\appsettings.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.exe
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.deps.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.runtimeconfig.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.pdb
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Auth.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Google.Apis.Core.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MailKit.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\MimeKit.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\OpenAI_API.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Stripe.net.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.BL.pdb
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.Mo8tareb-RoomRentalWebApp.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Mo8tareb-RoomRentalWebApp.Api.props
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mo8tareb-RoomRentalWebApp.Api.props
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Mo8tareb-RoomRentalWebApp.Api.props
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\scopedcss\bundle\Mo8tareb-RoomRentalWebApp.Api.styles.css
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.csproj.CopyComplete
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.Api.genruntimeconfig.cache
+C:\Users\Fathy\Downloads\Compressed\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.Api\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.Api.dll

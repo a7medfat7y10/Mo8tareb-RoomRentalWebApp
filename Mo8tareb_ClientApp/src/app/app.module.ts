@@ -28,6 +28,16 @@ import { RoomDetailsComponent } from './Components/room-details/room-details.com
 //Translation
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AdminHeaderComponent } from './Components/admin-dashboard/admin-header/admin-header.component';
+import { AdminReviewComponent } from './Components/admin-dashboard/admin-review/admin-review.component';
+import { AdminServicesComponent } from './Components/admin-dashboard/admin-services/admin-services.component';
+import { ReservationsComponent } from './Components/admin-dashboard/reservations/reservations.component';
+import { AdminRoomsComponent } from './Components/admin-dashboard/admin-rooms/admin-rooms.component';
+import { OwnerHeaderComponent } from './Components/room-owner-dashboard/owner-header/owner-header.component';
+import { OwnerRoomsComponent } from './Components/room-owner-dashboard/owner-rooms/owner-rooms.component';
+import { OwnerRerservationsComponent } from './Components/room-owner-dashboard/owner-rerservations/owner-rerservations.component';
+import { OwnerCreateRoomComponent } from './Components/room-owner-dashboard/owner-create-room/owner-create-room.component';
+import { AdminCreateServiceComponent } from './Components/admin-dashboard/admin-create-service/admin-create-service.component';
 
 //Translation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -53,7 +63,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     ContactComponent,
     RoomsComponent,
-    RoomDetailsComponent
+    RoomDetailsComponent,
+    AdminHeaderComponent,
+    AdminReviewComponent,
+    AdminServicesComponent,
+    ReservationsComponent,
+    AdminRoomsComponent,
+    OwnerHeaderComponent,
+    OwnerRoomsComponent,
+    OwnerRerservationsComponent,
+    OwnerCreateRoomComponent,
+    AdminCreateServiceComponent
   ],
   imports: [
     BrowserModule,

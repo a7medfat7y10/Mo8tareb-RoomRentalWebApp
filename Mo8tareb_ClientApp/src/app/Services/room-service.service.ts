@@ -17,7 +17,7 @@ export class RoomServiceService {
   }
 
   AddNewRoom(room: any){
-    return this.myClient.post(this.url, room);
+    return this.myClient.post("https://localhost:7188/api/Rooms/CreateRoom", room);
   }
 
   UpdateRoomByID(id: any, room:any){
