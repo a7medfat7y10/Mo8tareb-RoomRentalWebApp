@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {}
+    "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {}
   },
   "projects": {
-    "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
+    "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
         "projectName": "Mo8tareb-RoomRentalWebApp.BL",
-        "projectPath": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
-        "packagesPath": "C:\\Users\\Karim\\.nuget\\packages\\",
-        "outputPath": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\obj\\",
+        "projectPath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\Mo8tareb-RoomRentalWebApp.BL.csproj",
+        "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.BL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Karim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
-                "projectPath": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj"
+              "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
+                "projectPath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj"
               }
             }
           }
@@ -65,21 +70,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
+    "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
         "projectName": "Mo8tareb-RoomRentalWebApp.DAL",
-        "projectPath": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
-        "packagesPath": "C:\\Users\\Karim\\.nuget\\packages\\",
-        "outputPath": "D:\\iti me\\Mo8tareb\\Mo8tareb-RoomRentalWebApp\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\Mo8tareb-RoomRentalWebApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\Fathy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fathy\\Downloads\\Compressed\\Mo8tareb-RoomRentalWebApp-768e65699ee2a63b88cde89bc02d2551438c5d83\\Mo8tareb_Server\\Mo8tareb-RoomRentalWebApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Karim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,6 +96,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -144,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

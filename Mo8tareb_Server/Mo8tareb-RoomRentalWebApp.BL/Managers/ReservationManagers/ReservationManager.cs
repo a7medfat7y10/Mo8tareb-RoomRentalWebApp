@@ -8,6 +8,7 @@ using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
 
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.UserDtos;
 using Mo8tareb_RoomRentalWebApp.DAL;
+using Mo8tareb_RoomRentalWebApp.DAL.Context;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using System.Linq;
 
@@ -17,12 +18,15 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
     {
         public readonly IUnitOfWork _UnitOfWork;
         public readonly UserManager<AppUser> _userManager;
-        public ReservationManager(IUnitOfWork unitOfWork, UserManager<AppUser> userManager)
+        protected readonly ApplicationDbContext _context;
+
+        public ReservationManager(ApplicationDbContext context, IUnitOfWork unitOfWork, UserManager<AppUser> userManager)
         {
             _UnitOfWork = unitOfWork;
             _userManager = userManager;
+            _context = context;
         }
-
+       
         public async Task<IQueryable<ReservationsReadDtos>> GetAllReservationsWithUsersWithRoomsAsync()
         {
             IQueryable<Reservation>? ReservationsList = await _UnitOfWork.Reservations.GetAllReservationsWithUsersWithRoomsRepoFuncAsync();
@@ -49,9 +53,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
 
             Reservation CreatedReservation = new Reservation()
             {
-                StartDate = createReservationDto.StartDate,
-                EndDate = createReservationDto.EndDate,
-                Status = createReservationDto.Status,
+                StartDate = Convert.ToDateTime( createReservationDto.StartDate),
+                EndDate = Convert.ToDateTime(createReservationDto.EndDate),
+                Status =  createReservationDto.Status,
                 UserId = user.Id,
                 RoomId = createReservationDto.Room.id
             };
@@ -107,6 +111,49 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
                     EndDate = r.EndDate,
                     RoomId = r.RoomId
                 }).ToListAsync();
+        }
+        bool IReservationManager.DidThisUserReserveThisRoomManager(AppUser user, RoomReadDto room)
+        {
+                var usersList = _context.AppUsers.ToList();
+                var reservedRoomList = _context.Reservations.Include(r => r.Room).ToList();
+
+                var reservedRoom= reservedRoomList.FirstOrDefault(r => r.UserId == user.Id && r.RoomId == room.Id);
+            if (reservedRoom == null) return false;
+
+            return reservedRoom != null ? true : false;
+        }
+
+        public bool DidThisUserReserveThisRoomAndGetApprovedByOwnerManager(AppUser user, RoomReadDto room)
+        {
+            var usersList = _context.AppUsers.ToList();
+            var reservedRoomList = _context.Reservations.Include(r => r.Room).ToList();
+
+            var reservedRoom = reservedRoomList.FirstOrDefault(r => r.UserId == user.Id && r.RoomId == room.Id);
+            if (reservedRoom == null) return false;
+
+            return reservedRoom.Status==ReservationStatus.Approved ? true : false;
+        }
+
+        public bool DidThisUserReserveThisRoomAndGetRejectedByOwnerManager(AppUser user, RoomReadDto room)
+        {
+            var usersList = _context.AppUsers.ToList();
+            var reservedRoomList = _context.Reservations.Include(r => r.Room).ToList();
+
+            var reservedRoom = reservedRoomList.FirstOrDefault(r => r.UserId == user.Id && r.RoomId == room.Id);
+            if (reservedRoom == null) return false;
+
+            return reservedRoom.Status == ReservationStatus.Rejected ? true : false;
+        }
+
+        public bool DidThisUserReserveThisRoomAndGetSuspendedByOwnerManager(AppUser user, RoomReadDto room)
+        {
+            var usersList = _context.AppUsers.ToList();
+            var reservedRoomList = _context.Reservations.Include(r => r.Room).ToList();
+
+            var reservedRoom = reservedRoomList.FirstOrDefault(r => r.UserId == user.Id && r.RoomId == room.Id);
+            if (reservedRoom == null) return false;
+
+            return reservedRoom.Status == ReservationStatus.Pending ? true : false;
         }
     }
 }

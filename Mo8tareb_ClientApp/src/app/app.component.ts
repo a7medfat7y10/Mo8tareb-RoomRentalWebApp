@@ -18,8 +18,20 @@ export class AppComponent {
                             || event.url === '/EmailConfirmation'
                             || event.url === '/forgetPassword'
                             || event.url === '/resetPassword'
-                            || event.url === '/unAuthorized');
+                            || event.url === '/unAuthorized'
+                            || event.url === '/Admindashboard'
+                            || event.url === '/Admindashboard/reviews'
+                            || event.url === '/Admindashboard/services'
+                            || event.url === '/Admindashboard/rooms'
+                            || event.url === '/Admindashboard/reservations'
+                            || event.url === '/OwnerDashboard'
+                            || event.url === '/OwnerDashboard/rooms'
+                            || event.url === '/OwnerDashboard/reservations'
+                            || event.url === '/OwnerDashboard/AddRoom'
+                            || event.url === '/Admindashboard/AddService'
+                            );
       }
     });
   }
+
 }

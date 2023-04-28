@@ -1,9 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers;
 using Mo8tareb_RoomRentalWebApp.DAL.Context;
+using Mo8tareb_RoomRentalWebApp.DAL.Models;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -12,9 +16,62 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     public class ReservationsController : ControllerBase
     {
         public readonly IReservationManager _ReservationManager;
+        public readonly IRoomManager _RoomManager;
+        public readonly UserManager<AppUser> _userManger;
 
-        public ReservationsController(IReservationManager ReservationManager) => _ReservationManager = ReservationManager;
+        public ReservationsController(UserManager<AppUser> userManager, IRoomManager RoomManager , IReservationManager ReservationManager)
+        {
+            _ReservationManager = ReservationManager;
+            _RoomManager= RoomManager;
+            _userManger = userManager;
+        }
 
+
+        [HttpPost]
+        [Route("DidThisUserReserveThisRoom")]
+        public async Task<IActionResult> DidThisUserReserveThisRoom([FromBody] EmailRoomIdDto obj)
+        {
+           var user= await _userManger.FindByEmailAsync(obj.userEmail);
+           var room = await _RoomManager.GetRoomWithDetails(obj.RoomId);
+           if (user == null || room == null) 
+                return NotFound();
+
+            return _ReservationManager.DidThisUserReserveThisRoomManager(user, room)==true?Ok(true):  Ok(false);
+        }
+
+        [HttpPost]
+        [Route("DidThisUserReserveThisRoomAndGetApprovedByOwner")]
+        public async Task<IActionResult> DidThisUserReserveThisRoomAndGetApprovedByOwner([FromBody] EmailRoomIdDto obj)
+        {
+            var user = await _userManger.FindByEmailAsync(obj.userEmail);
+            var room = await _RoomManager.GetRoomWithDetails(obj.RoomId);
+            if (user == null || room == null)
+                return NotFound();
+
+            return _ReservationManager.DidThisUserReserveThisRoomAndGetApprovedByOwnerManager(user, room) == true ? Ok(true) : Ok(false);
+        }
+        [HttpPost]
+        [Route("DidThisUserReserveThisRoomAndGetRejectedByOwner")]
+        public async Task<IActionResult> DidThisUserReserveThisRoomAndGetRejectedByOwner([FromBody] EmailRoomIdDto obj)
+        {
+            var user = await _userManger.FindByEmailAsync(obj.userEmail);
+            var room = await _RoomManager.GetRoomWithDetails(obj.RoomId);
+            if (user == null || room == null)
+                return NotFound();
+
+            return _ReservationManager.DidThisUserReserveThisRoomAndGetRejectedByOwnerManager(user, room) == true ? Ok(true) : Ok(false);
+        }
+        [HttpPost]
+        [Route("DidThisUserReserveThisRoomAndGetSuspendedByOwner")]
+        public async Task<IActionResult> DidThisUserReserveThisRoomAndGetSuspendedByOwner([FromBody] EmailRoomIdDto obj)
+        {
+            var user = await _userManger.FindByEmailAsync(obj.userEmail);
+            var room = await _RoomManager.GetRoomWithDetails(obj.RoomId);
+            if (user == null || room == null)
+                return NotFound();
+
+            return _ReservationManager.DidThisUserReserveThisRoomAndGetSuspendedByOwnerManager(user, room) == true ? Ok(true) : Ok(false);
+        }
 
         [HttpGet]
         [Route("GetAllReservationsWithUsersWithRoomsAsync")]
@@ -22,19 +79,22 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         {
             IQueryable<ReservationsReadDtos>? ReservationsReadDtos = await _ReservationManager.GetAllReservationsWithUsersWithRoomsAsync();
 
-            return ReservationsReadDtos.Any() ? NotFound() : Ok(ReservationsReadDtos);
+            return ReservationsReadDtos.Count()==0 ? NotFound() : Ok(ReservationsReadDtos);
         }
 
         [HttpPost]
         [Route("CreateReservation")]
         public async Task<IActionResult> CreateReservation(ReservationsCreateDtos Reservation)
         {
-            if (Reservation is null || !ModelState.IsValid)
+            if (Reservation == null)
                 return BadRequest("Please send a Valid data to create !!");
 
             ReservationsCreateDtos? objectCreated = await _ReservationManager?.CreateReservationWithUsersWithRoomsAsync(Reservation)!;
 
-            return objectCreated is not null ? Ok("Reservation created Succssfuly !") : BadRequest("Could not create Reservation due to the inValid data you sent :(");
+            Console.WriteLine("CreateReservation======================" + objectCreated);
+
+
+            return objectCreated != null ? Ok("Reservation created Succssfuly !") : BadRequest("Could not create Reservation due to the inValid data you sent :(");
         }
 
 
@@ -47,6 +107,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
             ReservationsUpdateDtos? objectUpdated = await _ReservationManager.UpdateReservationAsync(Reservation)!;
 
+            
             return objectUpdated is not null ? Ok("Reservation Updated Succssfuly !") : BadRequest("Could not Update Reservation due to the inValid data you sent  :(");
         }
 
