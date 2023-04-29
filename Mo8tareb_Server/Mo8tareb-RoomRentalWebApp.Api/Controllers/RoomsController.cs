@@ -39,14 +39,14 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         [HttpPost]
         [Route("CreateRoom")]
-        public async Task<IActionResult> CreateRoom(RoomCreateDto room)
+        public async Task<object> CreateRoom(RoomCreateDto room)
         {
             if (room == null || !ModelState.IsValid)
                 return BadRequest("Please send a Valid data to create !!");
 
             Room? objectCreated = await RoomManager?.CreateRoomsAsync(room)!;
 
-            return objectCreated != null ? Ok("Room created Succssfuly !") : BadRequest("Could not create Room due to the inValid data you sent :(");
+            return objectCreated != null ? objectCreated.Id : BadRequest("Could not create Room due to the inValid data you sent :(");
         }
 
         [HttpPut]

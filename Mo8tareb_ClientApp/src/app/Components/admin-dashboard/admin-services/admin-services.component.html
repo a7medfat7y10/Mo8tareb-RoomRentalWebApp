@@ -62,11 +62,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="cell">#15346</td>
-                      <td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
-                      <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Edit</a></td>
-                      <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete</a></td>
+                    <tr *ngFor= "let service of services">
+                      <td class="cell">{{service.id}}</td>
+                      <td class="cell"><span class="truncate">{{service.name}}</span></td>
+                      <td class="cell"><a class="btn-sm app-btn-secondary" >Edit</a></td>
+                      <td class="cell"><button class="btn-sm app-btn-secondary"  (click)="Delete(service.id)">Delete</button></td>
                     </tr>
 
 

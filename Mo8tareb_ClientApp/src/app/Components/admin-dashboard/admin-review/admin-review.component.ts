@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { RoomServiceService } from 'src/app/Services/room-service.service';
 
 @Component({
   selector: 'app-admin-review',
   templateUrl: './admin-review.component.html',
   styleUrls: ['./admin-review.component.css']
 })
-export class AdminReviewComponent {
+export class AdminReviewComponent implements OnInit {
+  constructor(private myClient: HttpClient, private sanitizer: DomSanitizer){}
+  // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
+  // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
+  reviews: any;
+  ngOnInit(): void {
+    // throw new Error('Method not implemented.');
+    this.myClient.get("https://localhost:7188/api/Reviews/GetAllReviewsWithUsersWithRoomsAsync").subscribe({
+      next:(data:any)=>{
+        this.reviews = data
+      },
 
+      error:()=>{}
+    });
+  }
 }
+

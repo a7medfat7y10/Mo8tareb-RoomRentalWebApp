@@ -32,44 +32,15 @@
           ></label>
           <input
             type="text"
+            #name
             class="form-control"
             id="setting-input-1"
-            value="Lorem Ipsum Ltd."
             required
+            placeholder="Add Service"
           />
         </div>
-        <div class="mb-3">
-          <label for="setting-input-2" class="form-label">Contact Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="setting-input-2"
-            value="Steve Doe"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="setting-input-3" class="form-label"
-            >Business Email Address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="setting-input-3"
-            value="hello@companywebsite.com"
-          />
-        </div>
-        <div class="form-check form-switch mb-3">
-          <input class="form-check-input" type="checkbox" id="settings-switch-1" checked>
-          <label class="form-check-label" for="settings-switch-1">Project notifications</label>
-        </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" value="" id="settings-checkbox-2" checked>
-        <label class="form-check-label" for="settings-checkbox-2">
-            Keep user app preferences
-        </label>
-      </div>
-        <button type="submit" class="btn app-btn-primary">Save Changes</button>
+
+        <button type="submit" class="btn app-btn-primary" (click)="Add(name.value)">Add Service</button>
       </form>
     </div>
   </div>

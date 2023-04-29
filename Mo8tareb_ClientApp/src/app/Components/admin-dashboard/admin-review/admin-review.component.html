@@ -64,13 +64,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="cell">#15346</td>
-                      <td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
+                    <tr *ngFor="let review of reviews">
+                      <td class="cell">{{review.id}}</td>
+                      <td class="cell"><span class="truncate">{{review.comment}}</span></td>
                       <td class="cell">John Sanders</td>
-                      <td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
+                      <td class="cell">{{review.rating}}</td>
                       <!-- <td class="cell"><span class="badge bg-success">Paid</span></td> -->
-                      <td class="cell">$259.35</td>
+                      <td class="cell">{{review.room.id}}</td>
                       <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete</a></td>
                     </tr>
 
