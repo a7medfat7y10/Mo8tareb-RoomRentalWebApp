@@ -40,6 +40,13 @@ import { OwnerRerservationsComponent } from './Components/room-owner-dashboard/o
 import { OwnerCreateRoomComponent } from './Components/room-owner-dashboard/owner-create-room/owner-create-room.component';
 import { AdminCreateServiceComponent } from './Components/admin-dashboard/admin-create-service/admin-create-service.component';
 
+import { ReservationSuspendedComponent } from './Components/reservation-suspended/reservation-suspended.component';
+import { ReservationApprovedComponent } from './Components/reservation-approved/reservation-approved.component';
+import { ReservationRejectedComponent } from './Components/reservation-rejected/reservation-rejected.component';
+import { PaymentComponent } from './Components/payment/payment.component';
+import { CheckingReservationComponent } from './Components/checking-reservation/checking-reservation.component';
+import { ReserveRoomComponent } from './Components/reserve-room/reserve-room.component';
+
 //Translation
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -75,7 +82,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     OwnerRoomsComponent,
     OwnerRerservationsComponent,
     OwnerCreateRoomComponent,
-    AdminCreateServiceComponent
+    AdminCreateServiceComponent,
+    ReserveRoomComponent,
+    ReservationSuspendedComponent,
+    ReservationApprovedComponent,
+    ReservationRejectedComponent,
+    PaymentComponent,
+    CheckingReservationComponent
   ],
   imports: [
     BrowserModule,

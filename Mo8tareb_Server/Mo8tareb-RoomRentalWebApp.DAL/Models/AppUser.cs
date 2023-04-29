@@ -19,5 +19,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public Enums.Gender Gender { get; set; }
         public virtual ICollection<Reservation>? Reservations { get; set; }
         public virtual ICollection<Review>? Reviews { get; set; }
+        public virtual ICollection<Payment>? Payments { get; set; }
     }
 }

@@ -19,6 +19,10 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public ReservationStatus Status { get; set; } = ReservationStatus.Pending;
+
+        public int? PaymentId { get; set; }
+        public virtual Payment? Payment { get; set; }
+
     }
     public enum ReservationStatus
     {

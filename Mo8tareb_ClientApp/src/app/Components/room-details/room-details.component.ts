@@ -11,6 +11,9 @@ import { RoomServiceService } from 'src/app/Services/room-service.service';
 export class RoomDetailsComponent {
   ID: any;
   room: any;
+
+
+
   constructor(myActivated: ActivatedRoute, private myService: RoomServiceService, private sanitizer: DomSanitizer){
     this.ID = myActivated.snapshot.params["id"];
   }

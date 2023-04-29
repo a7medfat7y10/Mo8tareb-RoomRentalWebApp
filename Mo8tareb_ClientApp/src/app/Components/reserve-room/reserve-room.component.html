@@ -1,0 +1,84 @@
+<head>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body >
+
+
+  <section class="site-section m-5">
+    <div class="container">
+      <div class="row d-flex ">
+        <div class="col-md-9">
+          <h2 class="mb-5">Reservation Form</h2>
+          <form [formGroup]="formValidation" (ngSubmit)="getReservationForm(arrival.value,Departure.value,email.value)" method="post">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="">Arrival Date</label>
+                <input (input)="resetApiError()" formControlName="Arrival" #arrival type="datetime-local" class="form-control" id="datetimepicker" name="datetimepicker">
+              </div>
+              <span *ngIf="(!validArrivalDate()&& arrival.value ) " id="emailHelp" class="form-text text-danger text-end">Not a Valid Arrival Date !</span>
+
+              <div class="col-sm-6 form-group">
+                <label for="">Departure Date</label>
+                <input (input)="resetApiError()" formControlName="departure" #Departure type="datetime-local" class="form-control" id="datetimepicker" name="datetimepicker">
+              </div>
+              <span *ngIf="(!validDepartureDate()&& Departure.value ) " id="emailHelp" class="form-text text-danger text-end">Not a Valid Departure Date !</span>
+
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="email">Email</label>
+                <input readonly (input)="resetApiError()" formControlName="email" #email type="email" id="email" class="form-control ">
+              </div>
+              <span *ngIf="(!validEmail()&& email.value ) " id="emailHelp" class="form-text text-danger text-start">Not a Valid Email !</span>
+
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="message">Write a Note</label>
+                <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <span *ngIf="getAPIError()" id="APIErrorHelp" class="form-text text-danger text-center">Not a Valid Data Was
+                Entered !</span>
+              <div class="col-md-6  d-flex m-auto text-center w-50 h-10 mt-5 mb-5 justify-content-center align-items-center  form-group">
+                <input    type="submit" value="Reserve Now" class="btn btn-success  p-4   ">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 d-flex justify-content-end">
+          <div class="card" style="width: 18rem;">
+            <img  *ngIf="room; else loading" [src]="room?.images[0]?.imageUrl" class="card-img-top" alt="...">
+
+            <ng-template  #loading>
+              <p style="color: black;">
+                Loading image...
+            </p></ng-template>
+            <div class="card-body">
+              <h5 class="card-title">Room type</h5>
+              <p class="card-text">{{room?.roomType}}</p>
+              <h5 class="card-title">Room Location</h5>
+              <p>{{room?.location}}</p>
+              <h5 class="card-title">Room price</h5>
+              <p>{{room?.price}} EGP</p>
+              <h5 class="card-title">Room Owner name</h5>
+              <p>{{FirstName}} {{LastName}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+</body>

@@ -261,6 +261,40 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.ToTable("Images");
                 });
 
+            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Payment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<long?>("Amount")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("AppUserID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StripeId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ReservationId")
+                        .IsUnique()
+                        .HasFilter("[ReservationId] IS NOT NULL");
+
+                    b.ToTable("Payment");
+                });
+
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", b =>
                 {
                     b.Property<int>("Id")
@@ -271,6 +305,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("PaymentId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("RoomId")
                         .HasColumnType("int");
@@ -330,6 +367,12 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("BedNo")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsReserved")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -339,6 +382,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("RoomDescription")
+                        .HasColumnType("int");
 
                     b.Property<string>("RoomType")
                         .IsRequired()
@@ -450,6 +496,21 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Navigation("Room");
                 });
 
+            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Payment", b =>
+                {
+                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", "AppUser")
+                        .WithMany("Payments")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", "Reservation")
+                        .WithOne("Payment")
+                        .HasForeignKey("Mo8tareb_RoomRentalWebApp.DAL.Models.Payment", "ReservationId");
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Reservation");
+                });
+
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", b =>
                 {
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", "Room")
@@ -506,9 +567,16 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", b =>
                 {
+                    b.Navigation("Payments");
+
                     b.Navigation("Reservations");
 
                     b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", b =>
+                {
+                    b.Navigation("Payment");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Room", b =>

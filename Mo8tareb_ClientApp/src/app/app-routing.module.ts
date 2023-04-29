@@ -26,6 +26,15 @@ import { OwnerRoomsComponent } from './Components/room-owner-dashboard/owner-roo
 import { OwnerRerservationsComponent } from './Components/room-owner-dashboard/owner-rerservations/owner-rerservations.component';
 import { OwnerCreateRoomComponent } from './Components/room-owner-dashboard/owner-create-room/owner-create-room.component';
 import { AdminCreateServiceComponent } from './Components/admin-dashboard/admin-create-service/admin-create-service.component';
+import { ReserveRoomComponent } from './Components/reserve-room/reserve-room.component';
+import { UserIsLogedInGuard } from './Guards/user-is-loged-in.guard';
+import { ReservationSuspendedComponent } from './Components/reservation-suspended/reservation-suspended.component';
+import { ReservationApprovedComponent } from './Components/reservation-approved/reservation-approved.component';
+import { ReservationRejectedComponent } from './Components/reservation-rejected/reservation-rejected.component';
+import { PaymentComponent } from './Components/payment/payment.component';
+import { ReservationGuardGuard } from './Guards/reservation-guard.guard';
+import { CheckingReservationComponent } from './Components/checking-reservation/checking-reservation.component';
+
 
 const routes: Routes = [
   {path: "Admindashboard", component:AdminDashboardComponent,canActivate:[IsInAdminRoleGuard]},
@@ -51,6 +60,12 @@ const routes: Routes = [
   {path: "rooms", component: RoomsComponent},
   {path: "loading", component: CheckingCredintialsComponent},
   {path: "room/:id", component: RoomDetailsComponent },
+  {path: "ReserveRoom/:id", component: ReserveRoomComponent,canActivate:[UserIsLogedInGuard] },
+  {path: "ReservationSuspended/:id", component: ReservationSuspendedComponent,canActivate:[UserIsLogedInGuard] },
+  {path: "ReservationApproved/:id", component: ReservationApprovedComponent,canActivate:[UserIsLogedInGuard] },
+  {path: "ReservationRejected/:id", component: ReservationRejectedComponent,canActivate:[UserIsLogedInGuard] },
+  {path: "CheckingReservation/:id", component: CheckingReservationComponent,canActivate:[UserIsLogedInGuard] },
+  {path: "payment/:id", component: PaymentComponent,canActivate:[UserIsLogedInGuard] },
   {path: "reviews", component : ReviewsComponent},
   {path: "**", component:Error404Component}
 ];

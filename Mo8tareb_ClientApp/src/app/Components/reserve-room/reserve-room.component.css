@@ -1,0 +1,16 @@
+body{
+  margin-top: 100px;
+}
+.btn{
+  border: solid 2px green;
+  transition: all .8s;
+  font-size: 1.2rem;
+
+}
+.btn:hover{
+  border: solid 2px green;
+  transition: all .8s;
+  background-color: transparent;
+  color: black;
+  font-size: 1.8rem;
+}
