@@ -14,6 +14,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public int Id { get; set; }
 
         public string? UserId { get; set; }
+        [ForeignKey("AppUserId")]
         public virtual AppUser? User { get; set; }
 
         public int? RoomId { get; set; }
@@ -21,6 +22,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public DateTime PaymentDate { get; set; }
         public ReservationStatus Status { get; set; } = ReservationStatus.Pending;
     }
     public enum ReservationStatus

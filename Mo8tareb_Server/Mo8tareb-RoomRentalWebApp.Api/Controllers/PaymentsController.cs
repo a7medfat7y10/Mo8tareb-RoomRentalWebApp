@@ -89,6 +89,58 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Webhook()
+        {
+            string? json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
+            string endpointSecret = _configuration["Stripe:WebHook_Sec"]!;
+            try
+            {
+                var stripeEvent = EventUtility.ParseEvent(json);
+                var signatureHeader = Request.Headers["Stripe-Signature"];
+
+                stripeEvent = EventUtility.ConstructEvent(json,
+                        signatureHeader, endpointSecret);
+
+                await Console.Out.WriteLineAsync(stripeEvent.Type);
+
+                if (stripeEvent.Type == "checkout.session.completed")
+                {
+                    Session? session = stripeEvent.Data.Object as Session;
+                    int reservationId = int.Parse(session!.Metadata["reservation_id"]);
+
+                    Reservation? reservation = await _unitOfWork.Reservations.GetByIdAsync((int)reservationId);
+
+                    if (reservation != null)
+                    {
+                        reservation.Status = ReservationStatus.Approved;
+                        _unitOfWork.Reservations.Update(reservation);
+                        await _unitOfWork.SaveAsync();
+                    }
+
+                    Payment payment = new Payment
+                    {
+                        StripeId = session.Id,
+                        AppUserID = reservation?.UserId,
+                        OwnerID = reservation?.UserId,
+                        Amount = session.AmountTotal
+                    };
+
+
+                }
+                else
+                {
+                    Console.WriteLine("Unhandled event type: {0}", stripeEvent.Type);
+                }
+                return Ok();
+            }
+            catch (StripeException e)
+            {
+                Console.WriteLine(e.StripeError.Message);
+                return BadRequest();
+            }
+        }
+
         [Authorize]
         [HttpPost("customer-portal")]
         public async Task<IActionResult> CustomerPortal([FromBody] CustomerPortalRequest req)
@@ -133,47 +185,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Webhook()
-        {
-            string? json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
-            string endpointSecret = _configuration["Stripe:WebHook_Sec"]!;
-            try
-            {
-                var stripeEvent = EventUtility.ParseEvent(json);
-                var signatureHeader = Request.Headers["Stripe-Signature"];
-
-                stripeEvent = EventUtility.ConstructEvent(json,
-                        signatureHeader, endpointSecret);
-
-                await Console.Out.WriteLineAsync(stripeEvent.Type);
-
-                if (stripeEvent.Type == "checkout.session.completed")
-                {
-                    Session? session = stripeEvent.Data.Object as Session;
-                    int reservationId = int.Parse(session!.Metadata["reservation_id"]);
-
-                    Reservation? reservation = await _unitOfWork.Reservations.GetByIdAsync((int)reservationId);
-
-                    if (reservation != null)
-                    {
-                        reservation.Status = ReservationStatus.Approved;
-                        _unitOfWork.Reservations.Update(reservation);
-                        await _unitOfWork.SaveAsync();
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Unhandled event type: {0}", stripeEvent.Type);
-                }
-                return Ok();
-            }
-            catch (StripeException e)
-            {
-                Console.WriteLine(e.StripeError.Message);
-                return BadRequest();
-            }
-        }
+       
 
     }
 }

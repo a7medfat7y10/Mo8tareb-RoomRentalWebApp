@@ -13,14 +13,12 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         [Key]
         public int Id { get; set; }
         public string? StripeId { get; set; }
-      //  public string Status { get; set; } = string.Empty;
+     // public string Status { get; set; } = string.Empty;
 
         public string? AppUserID { get; set; }
-
         [ForeignKey("AppUserId")]
         public virtual AppUser? AppUser { get; set; }
         public string? OwnerID { get; set; }
-
         [ForeignKey("OwnerId")]
         public virtual Owner? Owner { get; set; }
 
