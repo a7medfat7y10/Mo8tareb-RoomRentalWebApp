@@ -17,8 +17,10 @@ export class OwnerCreateRoomComponent implements OnInit {
   services!: any[];
   selectedServices: any[] = [];
   location: string = '';
-  price: number = 0;
+  price: number = 700;
   roomType: string = '';
+  roomDescription: string = '';
+  bedNo: number = 1;
 
   ngOnInit(): void {
     this.myClient.get("https://localhost:7188/api/Services/GetAllServies").subscribe({
@@ -40,7 +42,7 @@ export class OwnerCreateRoomComponent implements OnInit {
     }
   }
 
-  Add(location: string, price: number, roomType: string, services: any[]) {
+  Add(location: string, price: number, roomType: string, roomDescription: string, bedNo: number, services: any[]) {
     let myServices: { id: number, name: string }[] = [];
 
     this.services.forEach(service => {
@@ -65,6 +67,7 @@ export class OwnerCreateRoomComponent implements OnInit {
 
 
   onSubmit() {
+    this.roomId = 3;
     const formData = new FormData();
     formData.append('RoomId', this.roomId.toString());
     formData.append('ImageUrl', this.selectedFile, this.selectedFile.name);

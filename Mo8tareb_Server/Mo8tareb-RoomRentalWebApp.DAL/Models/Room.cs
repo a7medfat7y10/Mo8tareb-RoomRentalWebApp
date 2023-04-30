@@ -9,7 +9,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
     public class Room
     {
         public int Id { get; set; }
-        public int RoomDescription { get; set; }
+        public string RoomDescription { get; set; }
         public required string RoomType { get; set; }
         public required string Location { get; set; }
         public decimal Price { get; set; }

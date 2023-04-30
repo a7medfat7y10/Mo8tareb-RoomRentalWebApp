@@ -272,9 +272,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Property<long?>("Amount")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("AppUserID")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -383,8 +380,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("RoomDescription")
-                        .HasColumnType("int");
+                    b.Property<string>("RoomDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoomType")
                         .IsRequired()

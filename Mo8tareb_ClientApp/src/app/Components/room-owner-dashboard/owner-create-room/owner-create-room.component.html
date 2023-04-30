@@ -21,6 +21,14 @@
           <label for="setting-input-2" class="form-label">Price</label>
           <input type="text" class="form-control" id="setting-input-2" value="900.00" [(ngModel)]="price" name="price" required  />
         </div>
+        <div class="mb-3">
+          <label for="setting-input-2" class="form-label">Room Description</label>
+          <input type="text" class="form-control" id="setting-input-2" value="This is my room" [(ngModel)]="roomDescription" name="roomDescription" required  />
+        </div>
+        <div class="mb-3">
+          <label for="setting-input-2" class="form-label">Bed NO</label>
+          <input type="text" class="form-control" id="setting-input-2" value="1" [(ngModel)]="bedNo" name="bedNo" required  />
+        </div>
         <!-- <div class="mb-3">
           <label for="setting-input-3" class="form-label"
             >Business Email Address</label
@@ -58,7 +66,7 @@
             {{s.name}}
           </label>
         </div>
-        <button type="submit" class="btn app-btn-primary" (click)="Add(location, price, roomType, selectedServices)">Add Room</button>
+        <button type="submit" class="btn app-btn-primary" (click)="Add(location, price, roomType, roomDescription, bedNo, selectedServices)">Add Room</button>
 
 
 

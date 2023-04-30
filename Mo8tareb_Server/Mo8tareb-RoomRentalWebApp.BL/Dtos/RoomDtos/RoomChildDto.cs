@@ -11,8 +11,10 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos
         public int Id { get; set; }
         public required string RoomType { get; set; }
         public required string Location { get; set; }
-
         public decimal Price { get; set; }
+
+        public bool IsReserved { get; set; }
+        public int BedNo { get; set; }
     }
         
     public record EmailRoomIdDto(string userEmail, int RoomId);
