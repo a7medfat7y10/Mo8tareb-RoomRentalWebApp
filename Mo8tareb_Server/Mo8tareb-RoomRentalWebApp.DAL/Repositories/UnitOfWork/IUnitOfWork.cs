@@ -1,4 +1,5 @@
-﻿using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReservationRepo;
+﻿using Mo8tareb_RoomRentalWebApp.DAL.Repositories.PaymentRepo;
+using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReservationRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ReviewRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.RoomRepo;
 using Mo8tareb_RoomRentalWebApp.DAL.Repositories.ServiceRepo;
@@ -17,6 +18,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL
         public IReservationRepo Reservations { get; }
         public IServiceRepo Services { get; }
         public IRoomRepo Rooms { get; }
+        public IPaymentRepo Payments { get; }
         Task<int> SaveAsync();
     }
 }

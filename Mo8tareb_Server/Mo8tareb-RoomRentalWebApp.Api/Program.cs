@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
@@ -17,6 +18,7 @@ using Mo8tareb_RoomRentalWebApp.DAL;
 using Mo8tareb_RoomRentalWebApp.DAL.Context;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using Mo8tareb_RoomRentalWebApp.DAL.Seeding;
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 //using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
@@ -137,6 +139,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api
             builder.Services.AddScoped<IReviewManager, ReviewManager>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IimageManager, ImageManager>();
+            builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             #endregion 
 

@@ -14,8 +14,8 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
         Task<IQueryable<RoomReadDto>> GetAllRoomsWithDetails();
         public Task<RoomReadDto> GetRoomWithDetails(int id);
 
-        Task<Room> CreateRoomsAsync(RoomCreateDto createRoomDto);
-        public Task<RoomUpdateDto?>? UpdateRoomAsync(RoomUpdateDto room);
+        Task<Room> CreateRoomsAsync(RoomDto createRoomDto);
+        public Task<RoomDto?>? UpdateRoomAsync(RoomDto room);
         public Task<RoomDeleteDto?>? DeleteRoomAsync(RoomDeleteDto room);
 
     }

@@ -125,7 +125,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             return RoomDto;
         }
 
-        public async Task<Room?>? CreateRoomsAsync(RoomCreateDto? createRoomDto)
+        public async Task<Room?>? CreateRoomsAsync(RoomDto? createRoomDto)
         {
             if (createRoomDto == null)//|| roomId==null
                 return null;
@@ -135,7 +135,8 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
                 Location = createRoomDto.Location,
                 RoomType = createRoomDto.RoomType,
                 OwnerId = createRoomDto.OwnerId,
-                Price = createRoomDto.Price
+                Price = createRoomDto.Price,
+                BedNo = createRoomDto.NumOfBeds
             };
 
             await _UnitOfWork.Rooms.AddAsync(CreatedRoom);
@@ -144,9 +145,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             return rowsAffected > 0 ?
                CreatedRoom : null;
         }
-        public async Task<RoomUpdateDto?>? UpdateRoomAsync(RoomUpdateDto room)
+        public async Task<RoomDto?>? UpdateRoomAsync(RoomDto room)
         {
-            Room? RoomFromDatabase = _UnitOfWork.Rooms.FindByCondtion(r => r.Id == room.id).FirstOrDefault();
+            Room? RoomFromDatabase = _UnitOfWork.Rooms.FindByCondtion(r => r.Id == room.Id).FirstOrDefault();
 
             if (RoomFromDatabase == null)
                 return null;
@@ -155,6 +156,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             RoomFromDatabase.RoomType = room.RoomType;
             RoomFromDatabase.OwnerId = room.OwnerId;
             RoomFromDatabase.Price = room.Price;
+            RoomFromDatabase.BedNo = room.NumOfBeds;
 
             _UnitOfWork.Rooms.Update(RoomFromDatabase);
 

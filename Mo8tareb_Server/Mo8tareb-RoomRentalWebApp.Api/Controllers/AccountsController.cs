@@ -18,6 +18,8 @@ using Authorization = Mo8tareb_RoomRentalWebApp.DAL.Constants.Authorization;
 using static Mo8tareb_RoomRentalWebApp.DAL.Constants.Enums;
 using System.Web;
 using System.Text;
+using Mo8tareb_RoomRentalWebApp.Api.Validators;
+using FluentValidation;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -30,14 +32,21 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         private readonly JwtHandler _jwtHandler;
         private readonly IEmailSender _emailSender;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IValidator <UserForAuthenticationDto> _userForAuthenticationDtoValidation;
+        private readonly IValidator<UserForRegistrationDto> _userForRegistertionDtoValidation;
+        private readonly IValidator<ResetPasswordDto> _resetPasswordDtoValidation;
+
         public AccountsController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, JwtHandler jwtHandler,
-            IUnitOfWork unitOfWork, IEmailSender emailSender)
+            IUnitOfWork unitOfWork, IEmailSender emailSender, IValidator<UserForAuthenticationDto> userForAuthenticationDtoValidation, IValidator<UserForRegistrationDto> userForRegistertionDtoValidation, IValidator<ResetPasswordDto> resetPasswordDtoValidation)
         {
             _userManager = userManager;
             _jwtHandler = jwtHandler;
             _emailSender = emailSender;
             _unitOfWork = unitOfWork;
             _roleManager = roleManager;
+            _userForAuthenticationDtoValidation = userForAuthenticationDtoValidation;
+            _userForRegistertionDtoValidation = userForRegistertionDtoValidation;
+            _resetPasswordDtoValidation = resetPasswordDtoValidation;
         }
 
         [HttpGet("GetUserById")]
@@ -52,6 +61,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserForAuthenticationDto userForAuthentication)
         {
+            //todo add validation to mail and pass
+
+            var validationResult = _userForAuthenticationDtoValidation.Validate(userForAuthentication);
+
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
             AppUser? user = await _userManager.FindByEmailAsync(userForAuthentication.Email);
 
             if (user == null)
@@ -104,8 +120,20 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         [HttpPost("Registration")]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {
+            //TODO validation 
+
+            var validationResult = _userForAuthenticationDtoValidation.Validate((IValidationContext)userForRegistration);
+
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
+
             if (userForRegistration == null || userForRegistration.Password != userForRegistration.ConfirmPassword || !ModelState.IsValid || Enum.TryParse<Gender>(userForRegistration.Gender, out Gender gender) == false)
                 return BadRequest(ModelState);
+
+
+
+
 
             // AppUser? user = _mapper.Map<AppUser>(userForRegistration);
             AppUser? user = new AppUser
@@ -276,6 +304,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
         {
+            //TODO validation
+            var validationResult = _resetPasswordDtoValidation.Validate(resetPasswordDto);
+
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
+
             if (!ModelState.IsValid || resetPasswordDto.Password != resetPasswordDto.ConfirmPassword)
                 return BadRequest();
 

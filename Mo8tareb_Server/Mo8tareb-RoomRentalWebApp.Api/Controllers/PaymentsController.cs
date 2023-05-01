@@ -10,6 +10,8 @@ using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.PaymentDtos;
 using Mo8tareb_RoomRentalWebApp.DAL;
 using Org.BouncyCastle.Ocsp;
+using Mo8tareb_RoomRentalWebApp.BL.Managers.PaymentManagers;
+using FluentValidation;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -19,18 +21,27 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPaymentManager _paymentManager;
         private readonly IConfiguration _configuration;
+        private readonly IValidator<CreateCheckoutSessionRequest> _createCheckoutSessionValidator;
 
-        public PaymentsController(IConfiguration configuration, UserManager<AppUser> userManager, IUnitOfWork unitOfWork)
+        public PaymentsController(IConfiguration configuration, UserManager<AppUser> userManager, IUnitOfWork unitOfWork, IPaymentManager paymentManager, IValidator<CreateCheckoutSessionRequest> createCheckoutSessionValidator)
         {
             _configuration = configuration;
             _userManager = userManager;
             _unitOfWork = unitOfWork;
+            _paymentManager = paymentManager;
+            _createCheckoutSessionValidator = createCheckoutSessionValidator;
         }
 
         [HttpPost("create-checkout-session")]
         public async Task<IActionResult> CreateCheckoutSession([FromBody] CreateCheckoutSessionRequest req)
         {
+            var validationResult = _createCheckoutSessionValidator.Validate(req);
+            
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
             SessionCreateOptions? options = new SessionCreateOptions
             {
                 SuccessUrl = req.SuccessUrl,
@@ -173,6 +184,26 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                 Console.WriteLine(e.StripeError.Message);
                 return BadRequest();
             }
+        }
+
+        [HttpGet] // TODO: Add authrorization , or else anyone can see all payments
+        public async Task<IActionResult> GetAllPayments()
+        {
+            var result = await _paymentManager.GetAllPayments();
+            if (result != null)
+                return Ok(result);
+
+            return BadRequest("No payments available");
+        }
+
+        [HttpGet("{paymentId}")] // TODO: Add authrorization
+        public async Task<IActionResult> GetPaymentById([FromRoute] int paymentId)
+        {
+            var result = await _paymentManager.GetPaymentById(paymentId);
+            if (result != null)
+                return Ok(result);
+
+            return BadRequest("Invalid payment Id");
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
@@ -10,11 +11,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     [ApiController]
     public class ReviewsController : ControllerBase
     {
-        public readonly IReviewManager _ReviewManager;
+        private readonly IReviewManager _ReviewManager;
+        private readonly IValidator<CreateReviewPayload> _createReviewPayloadValidator;
 
-        public ReviewsController(IReviewManager ReviewManager)
+        public ReviewsController(IReviewManager ReviewManager, IValidator<CreateReviewPayload> createReviewPayloadValidator)
         {
             _ReviewManager = ReviewManager;
+            _createReviewPayloadValidator = createReviewPayloadValidator;
         }
 
 
@@ -22,14 +25,20 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         [Route("GetAllReviewsWithUsersWithRoomsAsync")]
         public async Task<IActionResult> GetAllReviewsWithUsersWithRoomsAsync()
         {
-           var lst= await _ReviewManager.GetAllReviewsWithUsersWithRoomsAsync();
+            var lst = await _ReviewManager.GetAllReviewsWithUsersWithRoomsAsync();
 
-            return lst.Count()==0?NotFound():Ok(lst);
+            return lst.Count() == 0 ? NotFound() : Ok(lst);
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateReview(CreateReviewPayload payload)
         {
+            // Validate payload
+
+            var validationResult = _createReviewPayloadValidator.Validate(payload);
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
             var result = await _ReviewManager.CreateReviewAsync(payload);
             return result is null ? BadRequest("Error") : Ok("Success");
         }
@@ -37,9 +46,9 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         [HttpPut]
         [Route("UpdateReview")]
-        public async Task<IActionResult> UpdateReview(int id,ReviewsUpdateDtos review)
+        public async Task<IActionResult> UpdateReview(int id, ReviewsUpdateDtos review)
         {
-            if (review == null || id !=review.id)
+            if (review == null || id != review.id)
                 return BadRequest("Please send valid Data to Update !!");
 
             ReviewsUpdateDtos? objectUpdated = await _ReviewManager.UpdateReviewAsync(review)!;

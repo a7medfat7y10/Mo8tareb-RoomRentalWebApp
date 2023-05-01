@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ReservationsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
@@ -12,12 +13,15 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     [ApiController]
     public class RoomsController : Controller
     {
-        public RoomsController(IRoomManager roomManager)
+        private readonly IRoomManager RoomManager;
+        private readonly IValidator<RoomDto> _roomDtoValidator;
+
+        public RoomsController(IRoomManager roomManager, IValidator<RoomDto> roomDtoValidator)
         {
             RoomManager = roomManager;
+            _roomDtoValidator = roomDtoValidator;
         }
 
-        public IRoomManager RoomManager { get; }
 
         [HttpGet]
         [Route("GetAllRooms")]
@@ -39,10 +43,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         [HttpPost]
         [Route("CreateRoom")]
-        public async Task<object> CreateRoom(RoomCreateDto room)
+        public async Task<object> CreateRoom(RoomDto room)
         {
-            if (room == null || !ModelState.IsValid)
-                return BadRequest("Please send a Valid data to create !!");
+            var validationResult = _roomDtoValidator.Validate(room);
+
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
 
             Room? objectCreated = await RoomManager?.CreateRoomsAsync(room)!;
 
@@ -51,12 +58,14 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         [HttpPut]
         [Route("UpdateRoom")]
-        public async Task<IActionResult> UpdateRoom(int id, RoomUpdateDto room)
+        public async Task<IActionResult> UpdateRoom(int id, RoomDto room)
         {
-            if (room == null || id != room.id)
-                return BadRequest("Please send valid Data to Update !!");
+            var validationResult = _roomDtoValidator.Validate(room);
 
-            RoomUpdateDto? objectUpdated = await RoomManager.UpdateRoomAsync(room)!;
+            if (!validationResult.IsValid)
+                return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
+
+            RoomDto? objectUpdated = await RoomManager.UpdateRoomAsync(room)!;
 
             return objectUpdated != null ? Ok("Room Updated Succssfuly !") : BadRequest("Could not Update Room due to the inValid data you sent  :(");
         }
