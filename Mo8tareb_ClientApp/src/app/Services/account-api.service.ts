@@ -13,7 +13,7 @@ export class AccountApiService {
   constructor(private myClient: HttpClient) { }
 
   GetUserById(id: string) {
-    return this.myClient.get(this.API_Uri+`GetUserById?id=${id}` );
+    return this.myClient.get("https://localhost:7188/api/users/"+`GetUserById?id=${id}` );
   }
 
 

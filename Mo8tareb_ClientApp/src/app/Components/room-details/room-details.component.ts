@@ -20,6 +20,7 @@ export class RoomDetailsComponent {
   ngOnInit(): void {
     this.myService.getRoomById(this.ID).subscribe({
       next:(data)=>{
+        console.log(data)
         this.room = data;
 
         this.room.images = this.room.images.map((image:any) =>({

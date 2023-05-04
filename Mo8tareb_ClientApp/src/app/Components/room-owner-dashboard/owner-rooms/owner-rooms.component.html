@@ -74,12 +74,12 @@
                       <tbody>
                         <tr *ngFor="let r of rooms">
                           <td class="cell">{{r.id}}</td>
-                          <td class="cell"><span class="truncate">{{r.Location}}</span></td>
-                          <td class="cell">John Sanders</td>
+                          <td class="cell"><span class="truncate">{{r.location}}</span></td>
+                          <td class="cell">{{r.useremail}}</td>
                           <td class="cell">{{r.roomType}}</td>
                           <td class="cell"><span class="badge bg-success">Paid</span></td>
                           <td class="cell">${{r.price}}</td>
-                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Edit Room</a> &nbsp;<a class="btn-sm app-btn-secondary" href="#">Delete Room</a></td>
+                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete Room</a></td>
                         </tr>
 
 

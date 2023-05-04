@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AccountApiService } from 'src/app/Services/account-api.service';
 import { RoomServiceService } from 'src/app/Services/room-service.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { RoomServiceService } from 'src/app/Services/room-service.service';
 })
 export class OwnerCreateRoomComponent implements OnInit {
 
-  constructor(public myService: RoomServiceService, public myClient: HttpClient) { }
+  constructor(public myService: RoomServiceService, public myClient: HttpClient, private AccountService:AccountApiService) { }
 
   roomId!: number;
   selectedFile!: File;
@@ -23,6 +24,8 @@ export class OwnerCreateRoomComponent implements OnInit {
   bedNo: number = 1;
 
   ngOnInit(): void {
+    console.log(this.AccountService.GetEmail())
+
     this.myClient.get("https://localhost:7188/api/Services/GetAllServies").subscribe({
       next: (data: any) => {
         this.services = data;
