@@ -61,14 +61,12 @@ export class LoginComponent {
         next: (res:any) => {
           this.ApiErrorVariable == '';
 
-          console.log(res);
           //token
           this.myCrud.StoreToken(res.token);
           //Roles
           this.myCrud.StoreRole(res.role);
-          console.log(this.myCrud.GetRole());
-          console.log(this.myCrud.GetRole()?.includes("Admin"));
-
+          //Email
+          this.myCrud.StoreEmail(res.email);
           if(this.myCrud.GetRole()?.includes("Admin"))
             window.location.href = "/Admindashboard/";
           else if(this.myCrud.GetRole()?.includes("Owner"))

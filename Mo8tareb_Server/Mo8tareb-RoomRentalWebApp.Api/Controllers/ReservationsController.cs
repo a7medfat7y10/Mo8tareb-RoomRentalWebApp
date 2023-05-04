@@ -125,9 +125,19 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
         [HttpGet]
         [Route("{userId}")]
-        public async Task<IActionResult> GetConfirmedUserReservations([FromRoute] string userId)
+        public async Task<IActionResult> GetConfirmedUserReservationsByUserId([FromRoute] string userId)
         {
-            var reservations = await _ReservationManager.GetConfirmedUserReservations(userId);
+            var reservations = await _ReservationManager.GetConfirmedUserReservationsByUserId(userId);
+            return Ok(reservations);
+        }
+
+        [HttpGet]
+        [Route("by-email")]
+        public async Task<IActionResult> GetConfirmedUserReservationsByEmail([FromQuery] string email)
+        {
+            if (email is null)
+                return BadRequest("Email must be provided");
+            var reservations = await _ReservationManager.GetConfirmedUserReservationsByUserEmail(email);
             return Ok(reservations);
         }
     }

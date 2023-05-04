@@ -272,9 +272,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
                     b.Property<long?>("Amount")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("AppUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int?>("ReservationId")
                         .HasColumnType("int");
 
@@ -283,13 +280,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
-
                     b.HasIndex("ReservationId")
                         .IsUnique()
                         .HasFilter("[ReservationId] IS NOT NULL");
 
-                    b.ToTable("Payment");
+                    b.ToTable("payments");
                 });
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", b =>
@@ -496,15 +491,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.Payment", b =>
                 {
-                    b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", "AppUser")
-                        .WithMany("Payments")
-                        .HasForeignKey("AppUserId");
-
                     b.HasOne("Mo8tareb_RoomRentalWebApp.DAL.Models.Reservation", "Reservation")
                         .WithOne("Payment")
                         .HasForeignKey("Mo8tareb_RoomRentalWebApp.DAL.Models.Payment", "ReservationId");
-
-                    b.Navigation("AppUser");
 
                     b.Navigation("Reservation");
                 });
@@ -565,8 +554,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Migrations
 
             modelBuilder.Entity("Mo8tareb_RoomRentalWebApp.DAL.Models.AppUser", b =>
                 {
-                    b.Navigation("Payments");
-
                     b.Navigation("Reservations");
 
                     b.Navigation("Reviews");

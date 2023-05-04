@@ -27,7 +27,8 @@ export class CheckingReservationComponent implements OnInit {
     isReservationSuspendedByOwnerFlag: Boolean = false;
     DidUserReserveTHisRoomFlag: Boolean = false;
 
-    DidUserReserveTHisRoom():any {
+  DidUserReserveTHisRoom(): any {
+      console.log(this.AccountService.GetEmail(),this.roomId)
       this.ReservationService.DidThisUserReserveThisRoom(this.AccountService.GetEmail(), this.roomId).subscribe({
         next: (data:any) => {
           this.DidUserReserveTHisRoomFlag = data;

@@ -112,7 +112,15 @@
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="/rooms">{{ 'Rooms' | translate }}</a>
           </li>
-
+          <li class="nav-item" >
+            <a class="nav-link" routerLinkActive="active" routerLink="/MyRooms">{{ 'My Rooms'  }}</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" routerLinkActive="active" routerLink="/JoinUsAsOwner">{{ 'Rent A Room'  }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" style="color:#18b152" routerLink="/Mo8tarebGBT">{{ 'Mo8tareb GBT'  }}</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="/about">{{ 'About' | translate }}</a>
           </li>
@@ -142,6 +150,7 @@
 
   <div>
     <!-- <label for="language-select">{{ 'SELECT_LANGUAGE' | translate }}</label> -->
+
     <select id="language-select" (change)="useLanguage($event)">
       <option value="en" [selected]="translate.currentLang === 'en'">{{ 'ENGLISH' | translate }}</option>
       <option value="fr" [selected]="translate.currentLang === 'fr'">{{ 'FRENCH' | translate }}</option>

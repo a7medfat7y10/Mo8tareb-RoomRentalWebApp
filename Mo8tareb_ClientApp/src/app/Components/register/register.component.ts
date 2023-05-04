@@ -138,6 +138,7 @@ console.log(this.user)
       next: (data: any) => {
         this.ApiErrorVariable == '';
         console.log(data)
+        
         this.NavigateEmailConfirmation();
         },
       error: (err: any) => {

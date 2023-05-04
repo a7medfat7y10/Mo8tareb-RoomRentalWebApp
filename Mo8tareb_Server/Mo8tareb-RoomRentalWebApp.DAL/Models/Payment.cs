@@ -15,9 +15,7 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Models
         public string? StripeId { get; set; }
       //  public string Status { get; set; } = string.Empty;
 
-        public string? AppUserId { get; set; }
-        public virtual AppUser? AppUser { get; set; }
-
+      
         public int? ReservationId { get; set; }
         [ForeignKey("ReservationId")]
         public virtual Reservation? Reservation { get; set; }

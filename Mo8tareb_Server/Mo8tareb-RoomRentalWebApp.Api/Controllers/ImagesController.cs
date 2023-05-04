@@ -74,6 +74,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         [HttpPut("Id")]
         public async Task<IActionResult> UpdateAsync(int id, [FromForm] ImageDto dto)
         {
+
+
+
+
+
+
+
             var img = await _imageManger.GetById(id);
             if (img == null) return NotFound();
 

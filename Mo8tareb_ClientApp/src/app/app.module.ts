@@ -46,6 +46,11 @@ import { ReservationRejectedComponent } from './Components/reservation-rejected/
 import { PaymentComponent } from './Components/payment/payment.component';
 import { CheckingReservationComponent } from './Components/checking-reservation/checking-reservation.component';
 import { ReserveRoomComponent } from './Components/reserve-room/reserve-room.component';
+import { MyRoomsComponent } from './Components/my-rooms/my-rooms.component';
+import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.component';
+import { Mo8tarebGBTComponent } from './Components/mo8tareb-gbt/mo8tareb-gbt.component';
+import { EditReservationComponent } from './Components/edit-reservation/edit-reservation.component';
+import { UserControllerServiceService } from './Services/user-controller-service.service';
 
 //Translation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -88,7 +93,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReservationApprovedComponent,
     ReservationRejectedComponent,
     PaymentComponent,
-    CheckingReservationComponent
+    CheckingReservationComponent,
+    MyRoomsComponent,
+    JoinAsOwnerComponent,
+    Mo8tarebGBTComponent,
+    EditReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -106,7 +115,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
 
   ],
-  providers: [AccountApiService,
+  providers: [AccountApiService,UserControllerServiceService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

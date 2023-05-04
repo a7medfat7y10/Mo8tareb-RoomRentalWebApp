@@ -40,14 +40,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             _roleManager = roleManager;
         }
 
-        [HttpGet("GetUserById")]
-        public async Task<IActionResult> GetUserById([FromQuery] string id )
-        {
-          var user=  await _userManager.FindByIdAsync(id);
-            if (user == null) return NotFound();
-
-            return Ok(user);
-        }
+       
 
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserForAuthenticationDto userForAuthentication)
@@ -98,7 +91,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             var roles = await _userManager.GetRolesAsync(user);
             string RolesString = roles.Count == 1 ? roles[0] : string.Join(',', roles);
 
-            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = RolesString,Email=user.Email });
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = RolesString, Email = user.Email });
         }
 
         [HttpPost("Registration")]
@@ -139,41 +132,17 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                 {"email", user.Email }
             };
             var callback = QueryHelpers.AddQueryString(userForRegistration.ClientURI, param);
+
             var imageUrl = "https://assets.stickpng.com/images/5a04b8b69cf05203c4b603b6.png";
-            Message message = new Message(
-                new string[] { userForRegistration.Email },
-                "Mo8tareb Room Rental Web App: Email Confirmation",
-                $@"<html>
-  <head>
-    <style>
-      body {{
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        color: #333;
-        text-align: center;
-      }}
-      img {{
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        height: 50%;
-      }}
-    </style>
-  </head>
-  <body>
-    <h2>Thank you for registering to Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
-    <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
-    <p>Please confirm your email address by clicking on the following link:</p>
-    <p><a href=""{callback}"">Click Here</a></p>
-    <p>Please note that this link will expire in 24 hours.</p>
-    <p>If you did not register to Mo8tareb Room Rental Web App, please ignore this message.</p>
-    <p>Best regards,</p>
-    <p>Mo8tareb Room Rental Web App Team</p>
-    <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
-  </body>
-</html>",
-                null,
-                true);
+
+            string messageBody = GetEmailConfirmationMessage(imageUrl, callback, userForRegistration.Email);
+            Message message = new Message(new string[] { userForRegistration.Email },
+                                           subject: "Mo8tareb Room Rental Web App: Email Confirmation",
+                                           messageBody,
+                                           attachments: null,
+                                           isHtml: true
+                                          );
+
             await _emailSender.SendEmailAsync(message);
 
             return StatusCode(201);
@@ -233,40 +202,14 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
             var callback = QueryHelpers.AddQueryString(forgotPasswordDto.ClientURI, param);
             var imageUrl = "https://assets.stickpng.com/images/5a04b8b69cf05203c4b603b6.png";
-            Message message = new Message(
-                new string[] { forgotPasswordDto.Email },
-                "Mo8tareb Room Rental Web App: Email Confirmation",
-                $@"<html>
-  <head>
-    <style>
-      body {{
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        color: #333;
-        text-align: center;
-      }}
-      img {{
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        height: 50%;
-      }}
-    </style>
-  </head>
-  <body>
-    <h2>Thank you for Using  Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
-    <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
-    <p>Please confirm Reseting your password by clicking on the following link:</p>
-    <p><a href=""{callback}"">Click Here</a></p>
-    <p>Please note that this link will expire in 24 hours.</p>
-    <p>If you did not register to Mo8tareb Room Rental Web App, please ignore this message.</p>
-    <p>Best regards,</p>
-    <p>Mo8tareb Room Rental Web App Team</p>
-    <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
-  </body>
-</html>",
-                null,
-                true);
+            string messageBody = GenerateForgotPasswordEmailBody(imageUrl, callback);
+            Message message = new Message(new string[] { forgotPasswordDto.Email },
+                                           subject: "Mo8tareb Room Rental Web App: Email Confirmation",
+                                           messageBody,
+                                           attachments: null,
+                                           isHtml: true
+                                          );
+
             await _emailSender.SendEmailAsync(message);
 
             return StatusCode(201);
@@ -360,6 +303,72 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         }
 
         #endregion
+
+        private string GetEmailConfirmationMessage(string imageUrl, string callback, string email)
+        {
+            return $@"<html>
+               <head>
+                 <style>
+                   body {{
+                     font-family: Arial, sans-serif;
+                     font-size: 16px;
+                     color: #333;
+                     text-align: center;
+                   }}
+                   img {{
+                     display: block;
+                     margin: 0 auto;
+                     width: 50%;
+                     height: 50%;
+                   }}
+                 </style>
+               </head>
+               <body>
+                 <h2>Thank you for registering to Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
+                 <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
+                 <p>Please confirm your email address by clicking on the following link:</p>
+                 <p><a href=""{callback}"">Click Here</a></p>
+                 <p>Please note that this link will expire in 24 hours.</p>
+                 <p>If you did not register to Mo8tareb Room Rental Web App using this email address ({email}), please ignore this message.</p>
+                 <p>Best regards,</p>
+                 <p>Mo8tareb Room Rental Web App Team</p>
+                 <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
+               </body>
+             </html>";
+        }
+        private static string GenerateForgotPasswordEmailBody(string imageUrl, string callback)
+        {
+            return $@"<html>
+                      <head>
+                        <style>
+                          body {{
+                            font-family: Arial, sans-serif;
+                            font-size: 16px;
+                            color: #333;
+                            text-align: center;
+                          }}
+                          img {{
+                            display: block;
+                            margin: 0 auto;
+                            width: 50%;
+                            height: 50%;
+                          }}
+                        </style>
+                      </head>
+                      <body>
+                        <h2>Thank you for Using Mo8tareb Room Rental Web App, the leading online platform for finding affordable rooms in Egypt.</h2>
+                        <img src=""{imageUrl}"" alt=""Image Description"" width=""400"" height=""300"">
+                        <p>Please confirm Reseting your password by clicking on the following link:</p>
+                        <p><a href=""{callback}"">Click Here</a></p>
+                        <p>Please note that this link will expire in 24 hours.</p>
+                        <p>If you did not register to Mo8tareb Room Rental Web App, please ignore this message.</p>
+                        <p>Best regards,</p>
+                        <p>Mo8tareb Room Rental Web App Team</p>
+                        <h4>P.S. - You can check out our website to find more information about our services and offers: <a href=""[Mo8tareb Web App URL]"">Mo8tareb Web App URL</a></h4>
+                      </body>
+                    </html>";
+        }
+
 
     }
 }

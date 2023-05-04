@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Room>()
+           .Property(r => r.Price)
+           .HasColumnType("decimal(18,2)");
             base.OnModelCreating(builder);
         }
 
@@ -32,5 +36,6 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Context
         public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Payment> payments { get; set; }
     }
 }

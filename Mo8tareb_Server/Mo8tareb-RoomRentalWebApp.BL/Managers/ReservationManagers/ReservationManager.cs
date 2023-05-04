@@ -51,6 +51,12 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
             if (user is null || createReservationDto is null)
                 return null;
 
+            // Check if room is reserved previously
+
+            var room = await _UnitOfWork.Rooms.FindByCondtion(i => i.Id == createReservationDto.Room.id).FirstOrDefaultAsync();
+            if (room is null || room.IsReserved)
+                return null;
+
             Reservation CreatedReservation = new Reservation()
             {
                 StartDate = Convert.ToDateTime( createReservationDto.StartDate),
@@ -100,7 +106,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
 
         }
 
-        public async Task<List<UserReservationDto>> GetConfirmedUserReservations(string userId)
+        public async Task<List<UserReservationDto>> GetConfirmedUserReservationsByUserId(string userId)
         {
             return await _UnitOfWork.Reservations
                 .FindByCondtion(i => i.UserId == userId && i.Status == ReservationStatus.Approved)
@@ -112,6 +118,20 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
                     RoomId = r.RoomId
                 }).ToListAsync();
         }
+
+        public async Task<List<UserReservationDto>> GetConfirmedUserReservationsByUserEmail(string mail)
+        {
+            return await _UnitOfWork.Reservations
+                .FindByCondtion(i => i.UserId != null && i.User.Email == mail && i.Status == ReservationStatus.Approved)
+                .Select(r => new UserReservationDto
+                {
+                    Id = r.Id,
+                    StartDate = r.StartDate,
+                    EndDate = r.EndDate,
+                    RoomId = r.RoomId
+                }).ToListAsync();
+        }
+
         bool IReservationManager.DidThisUserReserveThisRoomManager(AppUser user, RoomReadDto room)
         {
                 var usersList = _context.AppUsers.ToList();

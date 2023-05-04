@@ -33,6 +33,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             new RoomReadDto()
             {
                 Id = r.Id,
+                NoBeds=r.BedNo,
+                Description=r.RoomDescription,
+                IsReserved=r.IsReserved,
                 Price = r.Price,
                 Location = r.Location,
                 RoomType = r.RoomType,
@@ -84,6 +87,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             var RoomDto = new RoomReadDto()
             {
                 Id = RoomFromDatabase.Id,
+                NoBeds=RoomFromDatabase.BedNo,
+                Description=RoomFromDatabase.RoomDescription,
+                IsReserved=RoomFromDatabase.IsReserved,
                 Price = RoomFromDatabase.Price,
                 Location = RoomFromDatabase.Location,
                 RoomType = RoomFromDatabase.RoomType,
@@ -125,7 +131,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             return RoomDto;
         }
 
-        public async Task<Room?>? CreateRoomsAsync(RoomCreateDto? createRoomDto)
+        public async Task<Room?>? CreateRoomsAsync(RoomDto? createRoomDto)
         {
             if (createRoomDto == null)//|| roomId==null
                 return null;
@@ -135,7 +141,10 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
                 Location = createRoomDto.Location,
                 RoomType = createRoomDto.RoomType,
                 OwnerId = createRoomDto.OwnerId,
-                Price = createRoomDto.Price
+                Price = createRoomDto.Price,
+                BedNo = createRoomDto.NumOfBeds,
+                RoomDescription=createRoomDto.Description,
+                IsReserved=createRoomDto.isreserved
             };
 
             await _UnitOfWork.Rooms.AddAsync(CreatedRoom);
@@ -144,9 +153,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             return rowsAffected > 0 ?
                CreatedRoom : null;
         }
-        public async Task<RoomUpdateDto?>? UpdateRoomAsync(RoomUpdateDto room)
+        public async Task<RoomDto?>? UpdateRoomAsync(RoomDto room)
         {
-            Room? RoomFromDatabase = _UnitOfWork.Rooms.FindByCondtion(r => r.Id == room.id).FirstOrDefault();
+            Room? RoomFromDatabase = _UnitOfWork.Rooms.FindByCondtion(r => r.Id == room.Id).FirstOrDefault();
 
             if (RoomFromDatabase == null)
                 return null;
@@ -155,6 +164,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
             RoomFromDatabase.RoomType = room.RoomType;
             RoomFromDatabase.OwnerId = room.OwnerId;
             RoomFromDatabase.Price = room.Price;
+            RoomFromDatabase.BedNo = room.NumOfBeds;
+            RoomFromDatabase.IsReserved = room.isreserved;
+            RoomFromDatabase.RoomDescription = room.Description;
 
             _UnitOfWork.Rooms.Update(RoomFromDatabase);
 
@@ -175,5 +187,74 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
 
         }
 
+        public async Task<IQueryable<RoomLocationsDto>> GetRoomsLocations()
+        {
+            IQueryable<Room>? rooms = await _UnitOfWork.Rooms.GetAllAsync();
+
+            if (rooms is null || !rooms.Any())
+                return null!;
+
+            IQueryable<RoomLocationsDto>? roomLocations = rooms.Select(r => new RoomLocationsDto
+            {
+                RoomId = r.Id,
+                Location = r.Location
+            }).
+            Distinct();
+
+            return roomLocations.AsQueryable();
+        }
+
+        public async Task<IQueryable<RoomReadDto>> GetRoomsByLocation(string location)
+        {
+            IQueryable<Room> rooms = await _UnitOfWork.Rooms.GetAllAsync();
+
+            if (rooms is null || !rooms.Any()) return null!;
+
+            IQueryable<RoomReadDto> roomDtos = rooms
+                .Where(r => r.Location == location)
+                .Select(r => new RoomReadDto
+                {
+                    Id = r.Id,
+                    RoomType = r.RoomType,
+                    Location = r.Location,
+                    Price = r.Price,
+                    OwnerId = r.OwnerId,
+                    Description=r.RoomDescription,
+                    IsReserved=r.IsReserved,
+                    NoBeds=r.BedNo,
+                    Owner = new OwnerChildDto
+                    {
+                        Id = r.Owner!.Id!,
+                        FirstName = r.Owner.FirstName!,
+                        LastName = r.Owner.LastName!
+                    },
+                    Reviews = r.Reviews!.Select(review => new ReviewChildDto
+                    {
+                        Id = review.Id,
+                        Rating = review.Rating,
+                        Comment = review.Comment
+                    }).ToList(),
+                    Reservations = r.Reservations!.Select(reservation => new ReservationChildDto
+                    {
+                        Id = reservation.Id,
+                        StartDate = reservation.StartDate,
+                        EndDate = reservation.EndDate,
+                        Status = reservation.Status
+                    }).ToList(),
+                    Services = r.Services!.Select(service => new ServiceChildDto
+                    {
+                        Id = service.Id,
+                        Name = service.Name
+                    }).ToList(),
+                    Images = r.Images!.Select(image => new ImageChildDto
+                    {
+                        Id = image.Id,
+                        RoomId = image.RoomId,
+                        ImageUrl = image.ImageUrl
+                    }).ToList()
+                });
+
+            return roomDtos;
+        }
     }
 }

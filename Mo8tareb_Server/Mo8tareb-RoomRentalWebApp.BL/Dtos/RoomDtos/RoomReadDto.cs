@@ -13,6 +13,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos
         public int Id { get; set; }
         public required string RoomType { get; set; }
         public required string Location { get; set; }
+        public required string Description { get; set; }
+        public required int NoBeds { get; set; }
+        public required bool IsReserved { get; set; }
 
         public decimal Price { get; set; }
 

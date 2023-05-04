@@ -34,6 +34,10 @@ import { ReservationRejectedComponent } from './Components/reservation-rejected/
 import { PaymentComponent } from './Components/payment/payment.component';
 import { ReservationGuardGuard } from './Guards/reservation-guard.guard';
 import { CheckingReservationComponent } from './Components/checking-reservation/checking-reservation.component';
+import { Mo8tarebGBTComponent } from './Components/mo8tareb-gbt/mo8tareb-gbt.component';
+import { EditReservationComponent } from './Components/edit-reservation/edit-reservation.component';
+import { MyRoomsComponent } from './Components/my-rooms/my-rooms.component';
+import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.component';
 
 
 const routes: Routes = [
@@ -67,6 +71,10 @@ const routes: Routes = [
   {path: "CheckingReservation/:id", component: CheckingReservationComponent,canActivate:[UserIsLogedInGuard] },
   {path: "payment/:id", component: PaymentComponent,canActivate:[UserIsLogedInGuard] },
   {path: "reviews", component : ReviewsComponent},
+  {path: "Mo8tarebGBT", component : Mo8tarebGBTComponent,canActivate:[UserIsLogedInGuard]},
+  {path: "EditReserveRoom/:id", component : EditReservationComponent,canActivate:[UserIsLogedInGuard]},
+  {path: "MyRooms", component : MyRoomsComponent,canActivate:[UserIsLogedInGuard]},
+  {path: "JoinUsAsOwner", component : JoinAsOwnerComponent,canActivate:[UserIsLogedInGuard]},
   {path: "**", component:Error404Component}
 ];
 

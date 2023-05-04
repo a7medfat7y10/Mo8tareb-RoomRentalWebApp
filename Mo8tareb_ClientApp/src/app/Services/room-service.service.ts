@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AccountApiService } from './account-api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,12 @@ import { Injectable } from '@angular/core';
 export class RoomServiceService {
 
   private readonly url = "https://localhost:7188/api/Rooms/GetAllRooms";
-  constructor(private readonly myClient: HttpClient) { }
+  constructor(private readonly myClient: HttpClient,private account:AccountApiService) { }
   getAllRooms(){
     return this.myClient.get(this.url);
+  }
+  getAllRoomsOfUser(){
+    return this.myClient.get("https://localhost:7188/api/Rooms/GetAllRoomsOfUser?Email="+this.account.GetEmail());
   }
 
   getRoomById(id: any){

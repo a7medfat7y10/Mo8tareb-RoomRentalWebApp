@@ -25,6 +25,8 @@ console.log(this.email)
           this.AuthenticationService.StoreToken(response.token);
           //Roles
           this.AuthenticationService.StoreRole(response.role);
+          //Email
+          this.AuthenticationService.StoreEmail(this.email);
           if (this.AuthenticationService.GetRole()?.includes("Admin"))
             window.location.href = "/AdminDashboard/";
           else if (this.AuthenticationService.GetRole()?.includes("Owner"))

@@ -24,6 +24,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
         Task<ReservationsCreateDtos?>? CreateReservationWithUsersWithRoomsAsync(ReservationsCreateDtos? createReservationDto);
         Task<ReservationsUpdateDtos?>? UpdateReservationAsync(ReservationsUpdateDtos Reservation);
         Task<ReservationsToDeleteDtos?>? DeleteReservationAsync(ReservationsToDeleteDtos Reservation);
-        Task<List<UserReservationDto>> GetConfirmedUserReservations(string userId);
+        Task<List<UserReservationDto>> GetConfirmedUserReservationsByUserId(string userId);
+        Task<List<UserReservationDto>> GetConfirmedUserReservationsByUserEmail(string mail);
     }
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://th.bing.com/th/id/R.982e835f1698e7d85ffa641aa7755272?rik=0e%2bSK3U5LhPPFA&pid=ImgRaw&r=0');
+  min-height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Join Us As A Room Owner</b></h1>
+    <p>Mo8tareb Room Owner Services, please note that if you Click this button uou will become a Room owner and
+      all your previous Reviews, Reservations, Payment History will be deleted !
+    </p>
+    <img src="../../../assets/images/logo_transparent - Copy.png" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="../../../assets/images/logo_transparent - Copy.png" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button (click)="AssignRole()" class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-home"></i> Rent My Rooms
+    </button>
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Our Rooms</h2>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="https://i.pinimg.com/originals/68/e6/f3/68e6f32fc09e92484231852ee045e87e.jpg" style="width:100%">
+        <img src="https://i.pinimg.com/originals/b0/81/d0/b081d0a19df8902fca9fb9d33dc46175.jpg" style="width:100%">
+        <img src="https://i.pinimg.com/originals/d8/44/f6/d844f6ae3324140b7ceada4c830fbc0f.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="https://th.bing.com/th/id/OIP.S_q54D3HJbkpZgJPewgXDgAAAA?pid=ImgDet&w=400&h=344&rs=1" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.gdakRD2VrAxP-VVaGLKstQHaFj?pid=ImgDet&w=184&h=138&c=7&dpr=1.6" style="width:100%">
+        <img src="https://i1.wp.com/magzhouse.com/wp-content/uploads/2019/10/Fabulous-Contemporary-Bedroom-Design-Ideas-15.jpg?strip=info&w=900&ssl=1" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.GnN3PZGetVadmryk7wbaRwHaF7?pid=ImgDet&w=184&h=147&c=7&dpr=1.6" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>
+      M8tareb is a user-friendly web application designed for renting rooms and real
+      estate. It offers a wide range of features to make the process of renting easy and
+       hassle-free. The app uses Google Maps API to locate rooms and provide information
+       about nearby services. It allows users to search for rooms based on their preferred
+        services, proximity to their location, and payment options, among other things.
+        The app has a rating and review system, which helps users make informed decisions
+         about the quality of the rooms they are interested in renting. Overall, M8tareb is a reliable
+          platform for renting rooms and real estate, offering excellent customer service
+          and support.
+    </p>
+
+
+  <!-- End Contact Section -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="#" target="_blank" class="w3-hover-text-green">ITI Students team</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

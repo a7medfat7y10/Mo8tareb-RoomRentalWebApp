@@ -1,4 +1,5 @@
 ﻿using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos;
+using Mo8tareb_RoomRentalWebApp.BL.Dtos.RoomDtos.Childs;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.ServieDtos;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using System;
@@ -13,9 +14,11 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.RoomManagers
     {
         Task<IQueryable<RoomReadDto>> GetAllRoomsWithDetails();
         public Task<RoomReadDto> GetRoomWithDetails(int id);
+        Task<IQueryable<RoomLocationsDto>> GetRoomsLocations();
+        Task<IQueryable<RoomReadDto>> GetRoomsByLocation(string location);
 
-        Task<Room> CreateRoomsAsync(RoomCreateDto createRoomDto);
-        public Task<RoomUpdateDto?>? UpdateRoomAsync(RoomUpdateDto room);
+        Task<Room> CreateRoomsAsync(RoomDto createRoomDto);
+        public Task<RoomDto?>? UpdateRoomAsync(RoomDto room);
         public Task<RoomDeleteDto?>? DeleteRoomAsync(RoomDeleteDto room);
 
     }

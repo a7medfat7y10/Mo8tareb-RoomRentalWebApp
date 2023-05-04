@@ -1,11 +1,12 @@
 .btn{
-  border: solid 2px green;
+  border: solid 2px rgb(23, 97, 23);
   transition: all .8s;
   font-size: 1.2rem;
+  color: rgb(255, 255, 255);
 
 }
 .btn:hover{
-  border: solid 2px green;
+  border: solid 2px rgb(23, 97, 23);
   transition: all .8s;
   background-color: transparent;
   color: black;
