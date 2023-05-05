@@ -71,9 +71,12 @@
                     <tr *ngFor="let r of reservations">
                       <td class="cell">{{r.id}}</td>
                       <td class="cell"><span class="truncate">{{r.room.id}}</span></td>
-                      <td class="cell">John Sanders</td>
+                      <td class="cell">{{r.user.email}}</td>
                       <td class="cell">{{r.startDate }} - {{r.endDate}}</td>
-                      <td class="cell"><span class="badge bg-success">Confirmed</span></td>
+                      <td class="cell"><span class="badge bg-success" *ngIf="r.status == 1">Confirmed</span>
+                        <span class="badge bg-danger" *ngIf="r.status == 2">Rejected</span>
+                        <span class="badge bg-warning" *ngIf="r.status == 0">Pending</span>
+                      </td>
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->

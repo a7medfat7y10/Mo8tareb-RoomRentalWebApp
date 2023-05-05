@@ -18,7 +18,9 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
         bool DidThisUserReserveThisRoomAndGetRejectedByOwnerManager(AppUser user, RoomReadDto room);
         bool DidThisUserReserveThisRoomAndGetSuspendedByOwnerManager(AppUser user, RoomReadDto room);
 
-        
+        public Task<ReservationsUpdateDtos?>? UpdateReservationStatus(ReservationsUpdateDtos Reservation);
+
+
 
         Task<IQueryable<ReservationsReadDtos>> GetAllReservationsWithUsersWithRoomsAsync();
         Task<ReservationsCreateDtos?>? CreateReservationWithUsersWithRoomsAsync(ReservationsCreateDtos? createReservationDto);

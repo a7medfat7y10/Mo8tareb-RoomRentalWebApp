@@ -175,5 +175,24 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReservationManagers
 
             return reservedRoom.Status == ReservationStatus.Pending ? true : false;
         }
+
+
+        
+        public async Task<ReservationsUpdateDtos?>? UpdateReservationStatus(ReservationsUpdateDtos Reservation)
+        {
+            Reservation? ReservationFromDatabase = _UnitOfWork.Reservations.FindByCondtion(r => r.Id == Reservation.id).FirstOrDefault();
+
+            if (ReservationFromDatabase is null)
+                return null;
+
+            ReservationFromDatabase.Status = Reservation.Status;
+
+            _UnitOfWork.Reservations.Update(ReservationFromDatabase);
+
+            int rowsAffected = await _UnitOfWork.SaveAsync();
+            return rowsAffected > 0 ? Reservation : null;
+
+        }
+
     }
 }

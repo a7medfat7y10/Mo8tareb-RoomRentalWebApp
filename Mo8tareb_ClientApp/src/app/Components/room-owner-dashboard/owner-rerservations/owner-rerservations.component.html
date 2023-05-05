@@ -71,39 +71,17 @@
                     <tr *ngFor="let r of reservations">
                       <td class="cell">{{r.id}}</td>
                       <td class="cell"><span class="truncate">{{r.room.id}}</span></td>
-                      <td class="cell">John Sanders</td>
+                      <td class="cell">{{r.user.email}}</td>
                       <td class="cell">{{r.startDate }} - {{r.endDate}}</td>
-                      <td class="cell"><span class="badge bg-success">Confirmed</span></td>
+                      <td class="cell"><span class="badge bg-success" *ngIf="r.status == 1">Confirmed</span>
+                        <span class="badge bg-danger" *ngIf="r.status == 2">Rejected</span>
+                        <span class="badge bg-warning" *ngIf="r.status == 0">Pending</span>
+                      </td>
+                      <td class="cell">
+                        <a class="btn-sm app-btn-secondary" style="cursor: pointer;" *ngIf="r.status == 0" (click)="Approve(r.id)">Approve</a>
+                        &nbsp;<a class="btn-sm app-btn-secondary" style="cursor: pointer;"  *ngIf="r.status == 0" (click)="Reject(r.id)">Reject</a></td>
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
-                      <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
-                    </tr>
-                    <tr>
-                      <td class="cell">#15346</td>
-                      <td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
-                      <td class="cell">John Sanders</td>
-                      <td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
-                      <td class="cell"><span class="badge bg-success">Confirmed</span></td>
-                      <td class="cell"></td>
-                    </tr>
-                    <tr>
-                      <td class="cell">#15345</td>
-                      <td class="cell"><span class="truncate">Consectetur adipiscing elit</span></td>
-                      <td class="cell">Dylan Ambrose</td>
-                      <td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td>
-                      <td class="cell"><span class="badge bg-warning">Pending</span></td>
-
-                      <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Approve</a>
-                        &nbsp;<a class="btn-sm app-btn-secondary" href="#">Reject</a></td>
-                    </tr>
-
-                    <tr>
-                      <td class="cell">#15342</td>
-                      <td class="cell"><span class="truncate">Justo feugiat neque</span></td>
-                      <td class="cell">Reina Brooks</td>
-                      <td class="cell"><span class="cell-data">12 Oct</span><span class="note">04:23 PM</span></td>
-                      <td class="cell"><span class="badge bg-danger">Rejected</span></td>
-
                       <!-- <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td> -->
                     </tr>
 

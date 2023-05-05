@@ -77,9 +77,12 @@
                           <td class="cell"><span class="truncate">{{r.location}}</span></td>
                           <td class="cell">{{r.useremail}}</td>
                           <td class="cell">{{r.roomType}}</td>
-                          <td class="cell"><span class="badge bg-success">Paid</span></td>
+                          <td class="cell">
+                            <span class="badge bg-success" *ngIf="r.isreserved">Reserved</span>
+                            <span class="badge bg-warning" *ngIf="!r.isreserved ">Free</span>
+                          </td>
                           <td class="cell">${{r.price}}</td>
-                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete Room</a></td>
+                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Edit Room</a>&nbsp;<a class="btn-sm app-btn-secondary" href="#">Delete Room</a> </td>
                         </tr>
 
 

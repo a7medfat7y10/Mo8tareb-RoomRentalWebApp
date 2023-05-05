@@ -67,11 +67,11 @@
                     <tr *ngFor="let review of reviews">
                       <td class="cell">{{review.id}}</td>
                       <td class="cell"><span class="truncate">{{review.comment}}</span></td>
-                      <td class="cell">John Sanders</td>
+                      <td class="cell">{{review.user.email}}</td>
                       <td class="cell">{{review.rating}}</td>
                       <!-- <td class="cell"><span class="badge bg-success">Paid</span></td> -->
                       <td class="cell">{{review.room.id}}</td>
-                      <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete</a></td>
+                      <td class="cell"><a class="btn-sm app-btn-secondary" (click)="Delete(review.id)" style="cursor:pointer">Delete</a></td>
                     </tr>
 
 

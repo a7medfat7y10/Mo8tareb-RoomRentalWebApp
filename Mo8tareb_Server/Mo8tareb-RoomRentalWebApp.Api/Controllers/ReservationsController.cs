@@ -140,5 +140,19 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             var reservations = await _ReservationManager.GetConfirmedUserReservationsByUserEmail(email);
             return Ok(reservations);
         }
+
+        [HttpPut]
+        [Route("UpdateReservationStatus")]
+        public async Task<IActionResult> UpdateReservationStatus(int id, ReservationsUpdateDtos Reservation)
+        {
+            if (Reservation is null || id != Reservation.id)
+                return BadRequest("Please send valid Data to Update !!");
+
+            ReservationsUpdateDtos? objectUpdated = await _ReservationManager.UpdateReservationStatus(Reservation)!;
+
+
+            return objectUpdated is not null ? Ok("Reservation Updated Succssfuly !") : BadRequest("Could not Update Reservation due to the inValid data you sent  :(");
+        }
+
     }
 }

@@ -20,8 +20,12 @@ export class OwnerCreateRoomComponent implements OnInit {
   location: string = '';
   price: number = 700;
   roomType: string = '';
-  roomDescription: string = '';
-  bedNo: number = 1;
+  description: string = '';
+  numOfBeds: number = 1;
+  ownerId:any;
+
+  roomCreated:boolean = false;
+  imageAdded:boolean = false;
 
   ngOnInit(): void {
     console.log(this.AccountService.GetEmail())
@@ -32,6 +36,14 @@ export class OwnerCreateRoomComponent implements OnInit {
       },
       error: () => { }
     });
+
+    this.myClient.get("https://localhost:7188/api/Users/GetUserByEmail?Email=" + this.AccountService.GetEmail()).subscribe({
+      next:(data:any)=>{
+        this.ownerId = data.id;
+      },
+      error:()=>{}
+    });
+
   }
 
   onServiceChange(event: any) {
@@ -45,7 +57,9 @@ export class OwnerCreateRoomComponent implements OnInit {
     }
   }
 
-  Add(location: string, price: number, roomType: string, roomDescription: string, bedNo: number, services: any[]) {
+
+
+  Add(location: string, price: number, roomType: string, description: string, numOfBeds: number, services: any[]) {
     let myServices: { id: number, name: string }[] = [];
 
     this.services.forEach(service => {
@@ -56,12 +70,17 @@ export class OwnerCreateRoomComponent implements OnInit {
 
     // console.log(myServices);
 
-    let newroom = { location, price, roomType, ownerId: "af3ece09-cdb3-4ee3-a968-dec16ac58262", services: myServices };
-    // console.log(newroom);
+
+    let newroom = { location, price, roomType,description, numOfBeds , ownerId: this.ownerId, isreserved:false ,services: myServices };
+    console.log(newroom);
+
+
+
 
     this.myService.AddNewRoom(newroom).subscribe((data: any) => {
       console.log(data);
       this.roomId = data;
+      this.roomCreated = true;
     });
   }
 
@@ -70,7 +89,7 @@ export class OwnerCreateRoomComponent implements OnInit {
 
 
   onSubmit() {
-    this.roomId = 3;
+    console.log(this.roomId);
     const formData = new FormData();
     formData.append('RoomId', this.roomId.toString());
     formData.append('ImageUrl', this.selectedFile, this.selectedFile.name);
@@ -78,6 +97,9 @@ export class OwnerCreateRoomComponent implements OnInit {
       (response) => {
         console.log('Data saved successfully');
         window.alert('Data saved successfully');
+        if(!this.imageAdded){
+          this.imageAdded = true;
+        }
       },
       (error: HttpErrorResponse) => {
         // console.log('Error saving data');

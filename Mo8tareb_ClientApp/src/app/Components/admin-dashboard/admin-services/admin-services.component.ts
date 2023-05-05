@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AdminServicesComponent implements OnInit{
   services:any;
+  serviceToDelete: any = {}; // create an empty object of ServicesToDeleteDtos class
   constructor(public myClient:HttpClient, public route:Router){
 
   }
@@ -22,8 +23,17 @@ export class AdminServicesComponent implements OnInit{
     });
   }
   Delete(id:number){
-    this.myClient.delete("https://localhost:7188/api/Services/DeleteService?id"+ id).subscribe();
-    console.log(id);
-    this.route.navigate(["/Admindashboard/services"]);
+    this.serviceToDelete.id = id; // set the id in the ServicesToDeleteDtos object
+    this.myClient.delete("https://localhost:7188/api/Services/DeleteService?id="+ id, { body: this.serviceToDelete }).subscribe({
+      next: () => {
+        console.log('Service deleted successfully');
+        this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.route.navigate(['/Admindashboard/services']);
+        });
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 }

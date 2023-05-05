@@ -23,11 +23,11 @@
         </div>
         <div class="mb-3">
           <label for="setting-input-2" class="form-label">Room Description</label>
-          <input type="text" class="form-control" id="setting-input-2" value="This is my room" [(ngModel)]="roomDescription" name="roomDescription" required  />
+          <input type="text" class="form-control" id="setting-input-2" value="This is my room" [(ngModel)]="description" name="description" required  />
         </div>
         <div class="mb-3">
           <label for="setting-input-2" class="form-label">Bed NO</label>
-          <input type="text" class="form-control" id="setting-input-2" value="1" [(ngModel)]="bedNo" name="bedNo" required  />
+          <input type="text" class="form-control" id="setting-input-2" value="1" [(ngModel)]="numOfBeds" name="numOfBeds" required  />
         </div>
         <!-- <div class="mb-3">
           <label for="setting-input-3" class="form-label"
@@ -59,23 +59,36 @@
           <input class="form-check-input" type="checkbox" id="settings-switch-1" checked>
           <label class="form-check-label" for="settings-switch-1">Project notifications</label>
         </div>-->
-        <label>Services:</label>
-        <div class="form-check mb-3" *ngFor="let s of services">
-          <input #service class="form-check-input" type="checkbox" placeholder="Price" [value]="s.id" (change)="onServiceChange($event)">
-          <label class="form-check-label" [for]="'settings-checkbox-' + s.name">
-            {{s.name}}
-          </label>
+        <div class="row">
+          <div class="col-md-3">
+            <label>Services:</label>
+            <div class="form-check mb-3" *ngFor="let s of services">
+              <input #service class="form-check-input" type="checkbox" placeholder="Price" [value]="s.id" (change)="onServiceChange($event)">
+              <label class="form-check-label" [for]="'settings-checkbox-' + s.name">
+                {{s.name}}
+              </label>
+            </div>
+          </div>
+          <div class="col-md-9" *ngIf="roomCreated">
+            <div >
+              <label for="">Please Add Images To Complete Adding Your Room</label>
+              <br>
+              <input type="file" accept=".jpg,.jpeg,.png,.ico" (change)="onFileSelected($event)">
+            </div>
+            <br>
+            <button type="button" (click)="onSubmit()" [disabled]="!selectedFile">Upload</button>
+          </div>
         </div>
-        <button type="submit" class="btn app-btn-primary" (click)="Add(location, price, roomType, roomDescription, bedNo, selectedServices)">Add Room</button>
 
 
 
-        <div>
-          <input type="file" accept=".jpg,.jpeg,.png,.ico" (change)="onFileSelected($event)">
-        </div>
+        <button *ngIf="!roomCreated" type="submit" class="btn app-btn-primary" (click)="Add(location, price, roomType, description, numOfBeds, selectedServices)">Add Room</button>
 
-      <button type="button" (click)="onSubmit()" [disabled]="!selectedFile">Upload</button>
-      </form>
+        <button *ngIf="imageAdded" routerLink="/OwnerDashboard/rooms" class="btn app-btn-primary" style="float: right;">Confirm</button>
+
+
+
+    </form>
     </div>
   </div>
   <!--//app-wrapper-->
