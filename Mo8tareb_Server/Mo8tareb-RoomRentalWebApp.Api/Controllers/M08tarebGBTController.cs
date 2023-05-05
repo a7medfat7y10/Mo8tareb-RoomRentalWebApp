@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using OpenAI_API;
 using OpenAI_API.Completions;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -29,7 +31,15 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             {
                 result += completion.Text;
             }
-            return Ok(result);
+            // Serialize the response data to JSON format
+            var responseData = new
+            {
+                result = result
+            };
+            var json = JsonConvert.SerializeObject(responseData);
+
+            // Return the JSON response
+            return Ok(json);
         }
 
 

@@ -38,6 +38,7 @@ import { Mo8tarebGBTComponent } from './Components/mo8tareb-gbt/mo8tareb-gbt.com
 import { EditReservationComponent } from './Components/edit-reservation/edit-reservation.component';
 import { MyRoomsComponent } from './Components/my-rooms/my-rooms.component';
 import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.component';
+import { AIWelcomePageComponent } from './Components/aiwelcome-page/aiwelcome-page.component';
 
 
 const routes: Routes = [
@@ -75,6 +76,7 @@ const routes: Routes = [
   {path: "EditReserveRoom/:id", component : EditReservationComponent,canActivate:[UserIsLogedInGuard]},
   {path: "MyRooms", component : MyRoomsComponent,canActivate:[UserIsLogedInGuard]},
   {path: "JoinUsAsOwner", component : JoinAsOwnerComponent,canActivate:[UserIsLogedInGuard]},
+  {path: "Mo8tarebGBTWelcomePage", component : AIWelcomePageComponent,canActivate:[UserIsLogedInGuard]},
   {path: "**", component:Error404Component}
 ];
 

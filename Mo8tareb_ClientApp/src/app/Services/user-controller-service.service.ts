@@ -11,7 +11,10 @@ export class UserControllerServiceService {
   constructor(private myClient: HttpClient,private Account: AccountApiService,) { }
 
   AssignUserToRoleOwner() {
-  
+
     return this.myClient.get(this.API_Uri+"AssignRoleOwnerToUserAsync?Email="+this.Account.GetEmail())
+  }
+  getUserByEmail() {
+    return this.myClient.get(this.API_Uri+"GetUserByEmail?Email="+this.Account.GetEmail())
   }
 }

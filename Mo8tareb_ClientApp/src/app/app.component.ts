@@ -29,6 +29,7 @@ export class AppComponent {
                             || event.url === '/OwnerDashboard/reservations'
                             || event.url === '/OwnerDashboard/AddRoom'
                             || event.url === '/Admindashboard/AddService'
+                            || event.url === '/Mo8tarebGBT'
                             );
       }
     });

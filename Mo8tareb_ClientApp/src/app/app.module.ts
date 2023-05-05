@@ -51,6 +51,11 @@ import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.c
 import { Mo8tarebGBTComponent } from './Components/mo8tareb-gbt/mo8tareb-gbt.component';
 import { EditReservationComponent } from './Components/edit-reservation/edit-reservation.component';
 import { UserControllerServiceService } from './Services/user-controller-service.service';
+import { RoomServiceService } from './Services/room-service.service';
+import { ReviewService } from './Services/review-service.service';
+import { Mo8tarebGBTService } from './Services/mo8tareb-gbt.service';
+import { ReservationServiceService } from './Services/reservation-service.service';
+import { AIWelcomePageComponent } from './Components/aiwelcome-page/aiwelcome-page.component';
 
 //Translation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -97,7 +102,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MyRoomsComponent,
     JoinAsOwnerComponent,
     Mo8tarebGBTComponent,
-    EditReservationComponent
+    EditReservationComponent,
+    AIWelcomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -115,12 +121,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
 
   ],
-  providers: [AccountApiService,UserControllerServiceService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptor,
-      multi:true
-    }],
+  providers: [AccountApiService, UserControllerServiceService, Mo8tarebGBTService, ReservationServiceService,
+    ReviewService,RoomServiceService,
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptor,
+        multi:true
+      }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
