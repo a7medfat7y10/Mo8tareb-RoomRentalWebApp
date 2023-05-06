@@ -28,16 +28,18 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
 
         [HttpPost("ApproveReservationPayment")]
-        public async Task<IActionResult> ApproveReservationPayment([FromQuery] int reservationId, [FromQuery] string userId)
+        public async Task<IActionResult> ApproveReservationPayment([FromQuery] int reservationId)
         {
             Reservation reservation = await _unitOfWork.Reservations.GetByIdAsync(reservationId);
-            AppUser? user = await _userManager.FindByIdAsync(userId);
+           
 
-            if (reservation is not null  && reservation.Status == ReservationStatus.Pending && user is not null )
+            if (reservation is not null  && reservation.Status == ReservationStatus.Pending  )
             {
                 reservation.Status = ReservationStatus.Approved;
                 _unitOfWork.Reservations.Update(reservation);
                 await _unitOfWork.SaveAsync();
+
+                AppUser? user = await _userManager.FindByIdAsync(reservation.UserId!);
 
                 // Send email to the user
                 var message = new Message(new string[] { user.Email! },
@@ -54,36 +56,25 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         }
 
         [HttpPost("RejectReservationPayment")]
-        public async Task<IActionResult> RejectReservationPayment([FromQuery] int reservationId, [FromQuery] string userId)
+        public async Task<IActionResult> RejectReservationPayment([FromQuery] int reservationId)
         {
             Reservation reservation = await _unitOfWork.Reservations.GetByIdAsync(reservationId);
-            AppUser? user = await _userManager.FindByIdAsync(userId!);
 
-            if (reservation is not null && reservation.Status == ReservationStatus.Pending && user is not null)
+            if (reservation is not null && reservation.Status == ReservationStatus.Pending)
             {
-                // Refund the payment
-                //Payment payment = await _unitOfWork.Payments.GetByReservationIdAsync(reservationId);
-                //if (payment != null)
-                //{
-                //    var refundOptions = new RefundCreateOptions
-                //    {
-                //        PaymentIntent = payment.StripeId,
-                //        Reason = RefundReasons.Fraudulent
-                //    };
-                //    var refundService = new RefundService();
-                //    await refundService.CreateAsync(refundOptions);
-                //}
-
                 // Update the reservation status
                 reservation.Status = ReservationStatus.Rejected;
                 _unitOfWork.Reservations.Update(reservation);
                 await _unitOfWork.SaveAsync();
 
+                AppUser? user = await _userManager.FindByIdAsync(reservation.UserId!);
+
+
                 // Send notification to the user
 
-                var message = new Message(new string[] { user.Email! },
+                var message = new Message(new string[] { user?.Email! },
                                                   subject: "Reservation Payment Rejected",
-                                                  $"Hi {user.UserName},<br/>Your reservation payment has been rejected." +
+                                                  $"Hi {user?.UserName},<br/>Your reservation payment has been rejected." +
                                                   $" Please contact the room owner for more information.",
                                                   attachments: null!,
                                                   isHtml: false

@@ -1,15 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using Stripe.Checkout;
 using Stripe;
-using System.Security.Claims;
 using Mo8tareb_RoomRentalWebApp.DAL.Models;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos.PaymentDtos;
 using Mo8tareb_RoomRentalWebApp.DAL;
-using Org.BouncyCastle.Ocsp;
 using Mo8tareb_RoomRentalWebApp.Api.Services.Email;
 using System.Text.Encodings.Web;
 
@@ -57,10 +52,10 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                         PriceData = new SessionLineItemPriceDataOptions
                         {
                             Currency = "USD",
-                            UnitAmount = req.RoomPrice,
+                            UnitAmount = req.RoomPrice * 100 / 31,
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = req.RoomTitle,
+                                //Name = req.RoomTitle,
                                 Description =  req.RoomDescription,
                                // Images = req.RoomImages
                             },
@@ -69,10 +64,10 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 
                     },
                 },
-                Metadata = new Dictionary<string, string>
-                {
-                  { "reservation_id", req.ReservationId.ToString() }
-                },
+                //Metadata = new Dictionary<string, string>
+                //{
+                //  { "reservation_id", req.ReservationId.ToString() }
+                //},
             };
             SessionService? service = new SessionService();
            // service.Create(options);
@@ -88,6 +83,14 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                     ReservationId = req.ReservationId,
                     Amount = session.AmountTotal
                 };
+
+                // update room_reserved_status
+                Room? room = await _unitOfWork.Rooms.GetRoom(req.RoomId);
+
+                room.IsReserved = true;
+                _unitOfWork.Rooms.Update(room);
+                await _unitOfWork.SaveAsync();
+
                 return Ok(new CreateCheckoutSessionResponse
                 {
                     SessionId = session!.Id,
@@ -96,7 +99,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             }
             catch (StripeException e)
             {
-                //Console.WriteLine(e?.StripeError.Message);
+                Console.WriteLine(e?.StripeError.Message);
                 return BadRequest(new ErrorResponse
                 {
                     ErrorMessage = new ErrorMessage
