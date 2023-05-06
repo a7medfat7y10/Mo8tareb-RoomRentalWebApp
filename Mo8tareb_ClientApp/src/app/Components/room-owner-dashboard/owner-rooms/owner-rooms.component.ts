@@ -29,11 +29,11 @@ export class OwnerRoomsComponent implements OnInit {
           this.AccountService.GetUserById(room.ownerId).subscribe({
             next: (data: any) => {
               room.useremail = data.email;
-          },
-          error: (err) =>{
-            console.log(err);
-          }
-        });
+           },
+           error: (err) =>{
+             console.log(err);
+           }
+         });
         })
 
         console.log(this.rooms);

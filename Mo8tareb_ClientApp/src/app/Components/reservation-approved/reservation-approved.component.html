@@ -9,7 +9,6 @@
   <!-- MATERIAL DESIGN ICONIC FONT -->
   <link rel="stylesheet"
     href="/assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-
   <!-- STYLE CSS -->
   <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
 </head>
@@ -24,8 +23,9 @@
       </div>
     </div>
     <div class="row-3 m-5">
-      <a class="text-center" routerLink="/payment/1">
-        <button class="btn btn-success w-1 h-1 p-2">Proceed to ckeckout</button>
+      <!-- routerLink="/payment/1" -->
+      <a class="text-center" >
+        <button (click)="Pay()" class="btn btn-success w-1 h-1 p-2">Proceed to ckeckout</button>
       </a>
     </div>
   </div>

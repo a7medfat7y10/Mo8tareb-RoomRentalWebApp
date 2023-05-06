@@ -34,11 +34,11 @@
     <div class="container">
       <div class="row ">
           <div class="col-md-6 ">
-            <img style="width: 100%;" [src]="room.images[0]?.imageUrl" alt="">
+            <img [src]="room.images[0]?.imageUrl" alt="">
           </div>
           <div class="col-md-6">
-            <div *ngFor="let img of room?.images" style="display:inline-block; ">
-              <img [src]="img?.imageUrl" alt="" style="width: 300px; height:300px;margin-right:5px">
+            <div *ngFor="let img of room?.images" style="display:inline-block">
+              <img [src]="img?.imageUrl" alt="" style="width: 100px; height:100px">
             </div>
           </div>
       </div>

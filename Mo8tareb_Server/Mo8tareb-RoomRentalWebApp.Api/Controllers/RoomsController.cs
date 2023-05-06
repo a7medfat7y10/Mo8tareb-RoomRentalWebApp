@@ -223,7 +223,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         {
             IQueryable<RoomReadDto>? rooms = await RoomManager.GetRoomsByLocation(location);
 
-            return rooms.Any() ? Ok(rooms) : NotFound();
+            return rooms is not null ? Ok(rooms) : NotFound();
         }
 
         [HttpGet]
@@ -231,8 +231,8 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         public async Task<IActionResult> GetRoomsLocations()
         {
             IQueryable<RoomLocationsDto>? locationsOfRooms = await RoomManager.GetRoomsLocations();
-
-            return locationsOfRooms.Any() ? Ok(locationsOfRooms) : NotFound();
+               
+            return locationsOfRooms is not null? Ok(locationsOfRooms) : NotFound();
         }
     }
 }
