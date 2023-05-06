@@ -14,10 +14,6 @@
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
             <h1 class="title-single">Rooms you have Reserved</h1>
-
-              <button routerLink="/reviews" class="btn btn-primary">Review My Rooms</button>
-
-
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -46,8 +42,8 @@
 
 
 
-        <div class="col-md-4" *ngFor="let room of rooms" >
-          <div class="card-box-a card-shadow" >
+        <div class="col-md-4" *ngFor="let room of rooms">
+          <div class="card-box-a card-shadow">
             <div class="img-box-a">
               <img style="height:600px" [src]="room.images[0].imageUrl" alt="" class="img-a img-fluid">
             </div>
@@ -77,11 +73,11 @@
                     </li> -->
                     <li>
                       <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
+                      <span>{{room.noBeds}}</span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
+                      <h4 class="card-info-title">Location</h4>
+                      <span>{{room.location}}</span>
                     </li>
                     <!-- <li>
                       <h4 class="card-info-title">Garages</h4>

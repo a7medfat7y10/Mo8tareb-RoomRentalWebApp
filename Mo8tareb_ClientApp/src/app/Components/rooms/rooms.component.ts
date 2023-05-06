@@ -41,11 +41,10 @@ export class RoomsComponent {
 
   // }
 
-  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService, private myClient:HttpClient){}
+  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService){}
   // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
   // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
   rooms: any;
-  locations: any;
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     this.myService.getAllRooms().subscribe({
@@ -65,47 +64,10 @@ export class RoomsComponent {
                   }))
         })
         console.log(this.rooms);
-         // Get distinct locations using a Set
-        const locationsSet = new Set<string>(this.rooms.map((room: any) => room.location.toLowerCase()));
-        this.locations = Array.from(locationsSet);
-
-        console.log(this.rooms);
-        console.log(this.locations);
       },
 
       error:()=>{}
     });
-
-    // this.myClient.get("https://localhost:7188/api/Rooms/GetRoomsLocations").subscribe({
-    // next:(data:any)=>{
-    //   this.locations = data.map((loc: string) => loc.toLowerCase()).filter((loc: string, index: number, arr: string[]) => arr.indexOf(loc) === index);
-    // },
-    //   error:()=>{}
-    // });
   }
-  location: any = "All";
-  onChange(location: any) {
-    console.log(location);
-    this.myService.getAllRooms().subscribe({
-      next:(data:any)=>{
 
-        console.log(data)
-        const userRooms = data.filter((room:any)=>{
-          return room.images.length !=0 && room.isReserved == false && room.location.toLowerCase() == location.toLowerCase();
-        });
-
-        this.rooms = userRooms;
-
-        this.rooms.forEach((room:any) => {
-                    room.images = room.images.map((image:any) =>({
-                    id: image.id,
-                    imageUrl: this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + image.imageUrl)
-                  }))
-        })
-        console.log(this.rooms);
-      },
-
-      error:()=>{}
-    });
-}
 }

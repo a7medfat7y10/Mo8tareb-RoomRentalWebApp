@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AccountApiService } from 'src/app/Services/account-api.service';
+import { Component } from '@angular/core';
 import { RoomServiceService } from 'src/app/Services/room-service.service';
 
 @Component({
@@ -7,12 +6,6 @@ import { RoomServiceService } from 'src/app/Services/room-service.service';
   templateUrl: './room-owner-dashboard.component.html',
   styleUrls: ['./room-owner-dashboard.component.css']
 })
-export class RoomOwnerDashboardComponent implements OnInit {
-  constructor(private accountServise: AccountApiService){}
-  myEmail: any;
-
-  ngOnInit(): void {
-    this.myEmail = this.accountServise.GetEmail();
-  }
+export class RoomOwnerDashboardComponent {
 
 }

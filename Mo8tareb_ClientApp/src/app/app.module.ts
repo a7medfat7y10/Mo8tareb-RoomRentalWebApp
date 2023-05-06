@@ -56,6 +56,9 @@ import { ReviewService } from './Services/review-service.service';
 import { Mo8tarebGBTService } from './Services/mo8tareb-gbt.service';
 import { ReservationServiceService } from './Services/reservation-service.service';
 import { AIWelcomePageComponent } from './Components/aiwelcome-page/aiwelcome-page.component';
+import { MyComponentComponent } from './Components/my-component/my-component.component';
+import { PaymentSuccessComponent } from './Components/payment-success/payment-success.component';
+import { PaymentFailureComponent } from './Components/payment-failure/payment-failure.component';
 
 //Translation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -103,7 +106,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     JoinAsOwnerComponent,
     Mo8tarebGBTComponent,
     EditReservationComponent,
-    AIWelcomePageComponent
+    AIWelcomePageComponent,
+    MyComponentComponent,
+    PaymentSuccessComponent,
+    PaymentFailureComponent
   ],
   imports: [
     BrowserModule,
