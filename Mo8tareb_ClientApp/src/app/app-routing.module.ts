@@ -39,8 +39,6 @@ import { EditReservationComponent } from './Components/edit-reservation/edit-res
 import { MyRoomsComponent } from './Components/my-rooms/my-rooms.component';
 import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.component';
 import { AIWelcomePageComponent } from './Components/aiwelcome-page/aiwelcome-page.component';
-import { PaymentSuccessComponent } from './Components/payment-success/payment-success.component';
-import { PaymentFailureComponent } from './Components/payment-failure/payment-failure.component';
 
 
 const routes: Routes = [
@@ -79,8 +77,6 @@ const routes: Routes = [
   {path: "MyRooms", component : MyRoomsComponent,canActivate:[UserIsLogedInGuard]},
   {path: "JoinUsAsOwner", component : JoinAsOwnerComponent,canActivate:[UserIsLogedInGuard]},
   {path: "Mo8tarebGBTWelcomePage", component : AIWelcomePageComponent,canActivate:[UserIsLogedInGuard]},
-  {path: "payment-success", component : PaymentSuccessComponent},
-  {path: "payment-failure/:id", component : PaymentFailureComponent},
   {path: "**", component:Error404Component}
 ];
 

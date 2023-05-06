@@ -17,6 +17,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         {
             string result = string.Empty;
             var openAi = new OpenAIAPI("");
+            //var openAi = new OpenAIAPI("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");
             CompletionRequest completionRequest = new CompletionRequest();
             completionRequest.Prompt = query;
             completionRequest.Model = OpenAI_API.Models.Model.DavinciText;
