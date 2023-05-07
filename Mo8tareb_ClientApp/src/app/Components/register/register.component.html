@@ -24,12 +24,12 @@
       <form
         (ngSubmit)="CreateUser(fname.value,lname.value,userName.value,email.value,phone.value,Gender.value,password.value,confirmPassword.value)"
         action="" method="post" [formGroup]="formValidation">
-        <h3>Registration Form</h3>
+        <h3>{{ 'Registration' | translate }}</h3>
         <div class="form-group">
           <input formControlName="fname" (input)="resetApiError()" name="firstName" #fname type="text"
-            placeholder="First Name" class="form-control">
+            placeholder="{{ 'First Name' | translate }}" class="form-control">
           <input formControlName="lname" (input)="resetApiError()" name="lastName" #lname type="text"
-            placeholder="Last Name" class="form-control">
+            placeholder="{{ 'Last Name' | translate }}" class="form-control">
         </div>
         <div class="row d-flex ">
           <div class="col-6  align-items-start">
@@ -43,14 +43,14 @@
         </div>
         <div class="form-wrapper ">
           <input formControlName="userName" (input)="resetApiError()" name="UserName" #userName type="text"
-            placeholder="Username" class="form-control">
+            placeholder="{{ 'User Name' | translate }}" class="form-control">
           <i class="zmdi zmdi-account"></i>
           <span *ngIf="!validUserName()  && userName.value" id="lnameHelp" class="form-text text-danger text-end">Not a
             Valid User Name !</span>
         </div>
         <div class="form-wrapper ">
           <input formControlName="email" (input)="resetApiError()" name="email" #email type="text"
-            placeholder="Email Address" class="form-control">
+            placeholder="{{ 'Email Address' | translate }}" class="form-control">
           <i class="zmdi zmdi-email"></i>
           <span *ngIf="!validEmail()  && email.value" id="emailHelp" class="form-text text-danger text-end">Not a Valid
             Email !</span>
@@ -58,7 +58,7 @@
         </div>
         <div class="form-wrapper ">
           <input formControlName="phone" (input)="resetApiError()" name="phone" #phone type="text"
-            placeholder="phone Number" class="form-control">
+            placeholder="{{ 'Phone Number' | translate }}" class="form-control">
           <i class="zmdi zmdi-phone"></i>
           <span *ngIf="!validPhone()  && phone.value" id="phoneHelp" class="form-text text-danger text-end">Not a Valid
             phone number !</span>
@@ -66,29 +66,29 @@
         </div>
         <div class="form-wrapper ">
           <select name="Gender" id="" #Gender class="form-control">
-            <option value="Male" disabled>Gender</option>
-            <option value="Male">Male</option>
-            <option value="Femal">Female</option>
+            <option value="Male" disabled>{{ 'Gender' | translate }}</option>
+            <option value="Male">{{ 'Male' | translate }}</option>
+            <option value="Femal">{{ 'Female' | translate }}</option>
           </select>
           <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
         </div>
         <div class="form-wrapper ">
           <input type="password" (input)="resetApiError()" formControlName="Password" name="password" #password
-            placeholder="Password" class="form-control">
+            placeholder="{{ 'Password' | translate }}" class="form-control">
           <i class="zmdi zmdi-lock"></i>
           <span *ngIf="!validPassword() &&  password.value" id="emailHelp" class="form-text text-danger text-end">Not a
             Valid Password !</span>
         </div>
         <div class="form-wrapper ">
           <input type="password" (input)="resetApiError()" formControlName="PasswordConfirm" name="confirmPassword"
-            #confirmPassword placeholder="Confirm Password" class="form-control">
+            #confirmPassword placeholder="{{ 'Confirm Password' | translate }}" class="form-control">
           <i class="zmdi zmdi-lock"></i>
         </div>
         <span *ngIf="!validPasswordConfirm() && confirmPassword.value" id="emailHelp"
           class="form-text text-danger text-end">Not a Valid password confirmation !</span>
         <span *ngIf="getAPIError()" id="APIErrorHelp" class="form-text text-danger text-end">Not a Valid Data Was
           Entered !</span>
-        <button>Register
+        <button>{{ 'Register' | translate }}
           <i class="zmdi zmdi-arrow-right"></i>
         </button>
       </form>

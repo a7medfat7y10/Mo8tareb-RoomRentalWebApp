@@ -1,14 +1,36 @@
 {
-    
+    "Mo8tareb": "مغترب",
     "Home": "الرئيسية",
     "Rooms": "الحجرات",
+    "My Rooms":"حجراتي",
+    "Rent A Room":"مشاركة حجرة",
     "About": "من نحن",
-    "Contact": "التواصل معنا",
-    "Mo8tareb": "مغترب",
+    "Contact": "تواصل معنا",
+    "Register": "تسجيل دخول",
+    "Sign out": "تسجيل خروج",
 
-    "Click Here to View":"اضغط هنا لعرض التفاصيل",
-    "RENT":"السعر"
 
+    "Email": "البريد الالكتروني",
+    "Password": "كلمة السر",
+    "Forgot": "نسيت؟",
+    "Sign In": "دخول",
+    "Not a member": "ليس لديك حساب",
+    "Sign up now": "تسجيل",
+    "Sign In With": "تسجيل الدخول",
+    "Facebook": "فيس بوك",
+    "Google": "جوجل",
+    "Reserved": "جميع الحقوق محفوظة",
     
+
+    "Registration": "انشاء حساب جديد",
+    "First Name": "الاسم",
+    "Last Name": "اللقب",
+    "User Name": "اسم المستخدم",
+    "Email Address": "البريد الالكتروني",
+    "Phone Number": "الهاتف",
+    "Gender": "النوع",
+    "Male": "ذكر",
+    "Female": "انثي",
+    "Confirm Password": "تاكيد الرقم السري"
 
 }

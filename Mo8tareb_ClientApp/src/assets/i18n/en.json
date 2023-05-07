@@ -1,13 +1,45 @@
 {
-    
+    "Mo8tareb": "Mo8tareb",
     "Home": "Home",
     "Rooms": "Rooms",
+    "My Rooms":"My Rooms",
+    "Rent A Room":"Rent A Room",
     "About": "About",
     "Contact": "Contact",
-    "Mo8tareb": "Mo8tareb",
+    "Register": "Register",
+    "Sign out": "Sign out",
+    
 
-    "Click Here to View":"Click here to View",
-    "RENT":"RENT"
+    "Email": "Email",
+    "Password": "Password",
+    "Forgot": "Forgot?",
+    "Sign In": "Sign In",
+    "Not a member": "Sign In",
+    "Sign up now": "Sign up now",
+    "Sign In With": " Sign In With",
+    "Facebook": "Facebook",
+    "Google": "Google",
+    "Reserved": " All Rights Reserved.",
+    
+    
+    "Registration": "Registration Form",
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "User Name": "User Name",
+    "Email Address": "Email Address",
+    "Phone Number": "Phone Number",
+    "Gender": "Gender",
+    "Male": "Male",
+    "Female": "Female",
+    "Confirm Password": "Confirm Password"
+
+
+
+
+
+
+   
+    
 
     
 

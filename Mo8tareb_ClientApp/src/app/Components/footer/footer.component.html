@@ -95,16 +95,16 @@
         <nav class="nav-footer">
           <ul class="list-inline">
             <li class="list-inline-item">
-              <a routerLink="/home">Home</a>
+              <a routerLink="/home">{{ 'Home' | translate }}</a>
             </li>
-            <li routerLink="/about" class="list-inline-item">
-              <a href="#">About</a>
-            </li>
-            <li class="list-inline-item">
-              <a routerLink="/rooms">Rooms</a>
+            <li  class="list-inline-item">
+              <a routerLink="/about">{{ 'About' | translate }}</a>
             </li>
             <li class="list-inline-item">
-              <a routerLink="/contact">Contact</a>
+              <a routerLink="/rooms">{{ 'Rooms' | translate }}</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/contact">{{ 'Contact' | translate }}</a>
             </li>
           </ul>
         </nav>
@@ -135,7 +135,7 @@
         <div class="copyright-footer">
           <p class="copyright color-text-a">
             &copy; Copyright
-            <span class="color-a">Mo8tareb 2023</span> All Rights Reserved.
+            <span class="color-a"> {{ 'Reserved' | translate }}</span>{{ 'Mo8tareb' | translate }}
           </p>
         </div>
         <div class="credits">

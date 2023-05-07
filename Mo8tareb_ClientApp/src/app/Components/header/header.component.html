@@ -113,13 +113,13 @@
             <a class="nav-link" routerLinkActive="active" routerLink="/rooms">{{ 'Rooms' | translate }}</a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" routerLinkActive="active" routerLink="/MyRooms">{{ 'My Rooms'  }}</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/MyRooms">{{ 'My Rooms'| translate  }}</a>
           </li>
           <li class="nav-item">
-            <a  class="nav-link" routerLinkActive="active" routerLink="/JoinUsAsOwner">{{ 'Rent A Room'  }}</a>
+            <a  class="nav-link" routerLinkActive="active" routerLink="/JoinUsAsOwner">{{ 'Rent A Room'| translate   }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" style="color:#18b152" routerLink="/Mo8tarebGBTWelcomePage">{{ 'Mo8tareb GBT'  }}</a>
+            <a class="nav-link" routerLinkActive="active"  routerLink="/Mo8tarebGBTWelcomePage">{{ 'Mo8tareb'| translate  }} GPT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="/about">{{ 'About' | translate }}</a>
@@ -140,20 +140,17 @@
 
 
 <div *ngIf="UserIsLoggedIn() " class="isLoggedIn">
-  <button (click)="SignOut()" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">Sign out</button>
+  <button (click)="SignOut()" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">{{ 'Sign out' | translate }}</button>
   </div>
 
 
   <div *ngIf="!UserIsLoggedIn() " class="NoLogIn">
-    <button routerLink="/login" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">Register</button>
+    <button routerLink="/login" class="btn-lg m-1 btn btn-sm btn-success" style="background-color: #2eca6a; height: 37px; color:white">{{ 'Register' | translate }}</button>
   </div>
 
   <div>
-    <!-- <label for="language-select">{{ 'SELECT_LANGUAGE' | translate }}</label> -->
-
     <select id="language-select" (change)="useLanguage($event)">
       <option value="en" [selected]="translate.currentLang === 'en'">{{ 'ENGLISH' | translate }}</option>
-      <option value="fr" [selected]="translate.currentLang === 'fr'">{{ 'FRENCH' | translate }}</option>
       <option value="ar" [selected]="translate.currentLang === 'ar'">{{ 'ARABIC' | translate }}</option>
     </select>
   </div>

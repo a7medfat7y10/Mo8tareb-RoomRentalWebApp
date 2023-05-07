@@ -4,6 +4,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import { Router } from '@angular/router';
 import { urlencoded } from 'body-parser';
 import { AccountApiService } from 'src/app/Services/account-api.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,14 @@ import { AccountApiService } from 'src/app/Services/account-api.service';
 })
 export class RegisterComponent
 {
-  constructor(private myService:AccountApiService ,private router:Router) {}
+  constructor(private myService:AccountApiService ,private router:Router,private translate: TranslateService) {
+    const storedLang = localStorage.getItem('lang');
+    if (storedLang) {
+      this.translate.use(storedLang);
+    } else {
+      this.translate.setDefaultLang('en');
+    }
+  }
 
   // Custom validator function to compare password and confirm password fields
   passwordMatchValidator(control: AbstractControl): { [key: string]: boolean } | null {

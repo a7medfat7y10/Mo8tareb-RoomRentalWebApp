@@ -12,7 +12,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   showNavbar:any;
   constructor(private ActivatedRoute:ActivatedRoute,private AuthenticationService: AccountApiService,public translate: TranslateService) {
-    this.translate.setDefaultLang('en');
+    // this.translate.setDefaultLang('en');
+    const storedLang = localStorage.getItem('lang');
+    if (storedLang) {
+      this.translate.use(storedLang);
+    } else {
+      this.translate.setDefaultLang('en');
+    }
+
    }
    
 
@@ -30,10 +37,15 @@ export class HeaderComponent {
   }
 
 
+  // useLanguage(event: Event): void {
+  //   const language = (event.target as HTMLSelectElement).value;
+  //   this.translate.use(language);
+  // }
+  
   useLanguage(event: Event): void {
     const language = (event.target as HTMLSelectElement).value;
     this.translate.use(language);
+    localStorage.setItem('lang', language);
   }
-
 
 }
