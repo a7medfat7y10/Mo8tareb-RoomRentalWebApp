@@ -1,33 +1,21 @@
 <main id="main">
 
   <!-- ======= Intro Single ======= -->
-  <section class="intro-single">
+
+  <section class="intro-single" [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
-          <div class="title-single-box">
-            <h1 class="title-single">Contact US</h1>
-            <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia
-              corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui
-              ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic
-              culpa.</span>
+          <div>
+            <h1 class="title-single">{{ 'Contact Us Now' | translate }}</h1>
+            <span class="color-text-a">{{ 'ContactParagraph' | translate }}</span>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Contact
-              </li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>
-  </section><!-- End Intro Single-->
+</section>
+
+  <!-- End Intro Single-->
 
   <!-- ======= Contact Single ======= -->
   <section class="contact">
@@ -43,35 +31,32 @@
           </div>
         </div>
         <div class="col-sm-12 section-t8">
-          <div class="row">
+          <div class="row" [dir]="isRtl() ? 'rtl' : 'ltr'">
             <div class="col-md-7">
-
-
-
               <form (ngSubmit)="collectdata(name.value,email.value,subject.value,message.value)" action="https://formspree.io/f/mzbqyqrd" method="POST" role="form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <input type="text" #name name="name" class="form-control form-control-lg form-control-a"
-                        placeholder="Your Name" required>
+                        placeholder="{{ 'Your Name' | translate }}" required>
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <input name="email" #email type="email" class="form-control form-control-lg form-control-a"
-                        placeholder="Your Email" required>
+                        placeholder="{{ 'Your Email' | translate }}" required>
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
                       <input type="text" #subject name="subject" class="form-control form-control-lg form-control-a"
-                        placeholder="Subject" required>
+                        placeholder="{{ 'Subject' | translate }}" required>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <textarea name="message" #message class="form-control" name="message" cols="45" rows="8"
-                        placeholder="Message" required></textarea>
+                        placeholder="{{ 'Message' | translate }}" required></textarea>
                     </div>
                   </div>
                   <div class="col-md-12 my-3">
@@ -83,7 +68,7 @@
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-a">Send Message</button>
+                    <button type="submit" class="btn btn-a">{{ 'Send Message' | translate }}</button>
                   </div>
                 </div>
               </form>
@@ -91,14 +76,14 @@
 
 
             </div>
-            <div class="col-md-5 section-md-t3">
+            <div class="col-md-5 section-md-t3" [dir]="isRtl() ? 'rtl' : 'ltr'">
               <div class="icon-box section-b2">
                 <div class="icon-box-icon">
                   <span class="bi bi-envelope"></span>
                 </div>
                 <div class="icon-box-content table-cell">
                   <div class="icon-box-title">
-                    <h4 class="icon-title">Say Hello</h4>
+                    <h4 class="icon-title">{{ 'Your Email' | translate }}</h4>
                   </div>
                   <div class="icon-box-content">
                     <p class="mb-1">Email.
@@ -116,7 +101,7 @@
                 </div>
                 <div class="icon-box-content table-cell">
                   <div class="icon-box-title">
-                    <h4 class="icon-title">Find us in</h4>
+                    <h4 class="icon-title">{{ 'Find us in' | translate }}</h4>
                   </div>
                   <div class="icon-box-content">
                     <p class="mb-1">
@@ -132,7 +117,7 @@
                 </div>
                 <div class="icon-box-content table-cell">
                   <div class="icon-box-title">
-                    <h4 class="icon-title">Social networks</h4>
+                    <h4 class="icon-title">{{ 'Social networks' | translate }}</h4>
                   </div>
                   <div class="icon-box-content">
                     <div class="socials-footer">

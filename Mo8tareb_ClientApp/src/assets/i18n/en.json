@@ -31,14 +31,25 @@
     "Gender": "Gender",
     "Male": "Male",
     "Female": "Female",
-    "Confirm Password": "Confirm Password"
+    "Confirm Password": "Confirm Password",
+
+    
+    "Contact Us Now":"Contact Us Now",
+    "ContactParagraph":"We understand the hassle and stress of finding the right rental room that ticks all the boxes. That's why we have created a user-friendly website that makes the process of finding and booking rental rooms seamless and stress-free. With our website, you can search for rental rooms based on your preferred location, budget, and amenities, among other factors.",
+    "Your Name":"Your Name",
+    "Your Email":"Your Email",
+    "Subject":"Subject",
+    "Message":"Message",
+    "Send Message":"Send Message",
+    "Find us in":"Find us in",
+    "Social networks":"Social networks",
 
 
-
-
-
-
-   
+    "WhoWeAre":"Who We Are ?",
+    "contactParagraph":"Our website is designed with one goal in mind: to provide a seamless and stress-free rental experience for our customers. We understand that finding the right rental room can be a daunting task, especially for those who are new to a particular city or country. That's why we have created a website that offers a comprehensive range of rental room options to suit all budgets, preferences, and needs",
+    "contactParagraph1":"One of the standout features of our website is the ease of navigation. We have designed the website with a user-friendly interface, making it easy for customers to search and filter rental rooms based on their desired location, budget, and amenities. Our search algorithm ensures that customers are presented with the most relevant rental room options that meet their requirements.",
+    "contactParagraph2":"We also take pride in the diversity of rental room options available on our website. We understand that every customer has different preferences and needs when it comes to rental rooms. That's why we offer a wide range of options, from private rooms to shared rooms and entire apartments. Customers can choose from a variety of rental room types, sizes, and styles, ensuring that they find the perfect accommodation option that meets their individual needs.",
+    "test":"test"
     
 
     

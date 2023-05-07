@@ -1,45 +1,35 @@
 <main id="main">
 
   <!-- ======= Intro Single ======= -->
-  <section class="intro-single">
+  <section class="intro-single" [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
-          <div class="title-single-box">
-            <h1 class="title-single">We Rent Rooms and Make it easy and quick</h1>
+          <div>
+            <h1 class="title-single">{{ 'WhoWeAre' | translate }}</h1>
+            <span class="color-text-a">{{ 'contactParagraph' | translate }}</span>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a routerLink="/home">Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                About
-              </li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>
-  </section><!-- End Intro Single-->
+</section>
+  <!-- End Intro Single-->
 
   <!-- ======= About Section ======= -->
   <section class="section-about">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 position-relative">
+    <div class="container" >
+      <div class="row" >
+        <div class="col-sm-12 position-relative" >
           <div class="about-img-box">
             <img src="/assets/assets/img/slide-about-1.jpg" alt="" class="img-fluid">
           </div>
-          <div class="sinse-box">
+          <div class="sinse-box" >
             <h3 class="sinse-title">mo8tareb
               <br> 2023
             </h3>
           </div>
         </div>
-        <div class="col-md-12 section-t8 position-relative">
+        <div class="col-md-12 section-t8 position-relative" [dir]="isRtl() ? 'rtl' : 'ltr'">
           <div class="row">
             <div class="col-md-6 col-lg-5">
               <img src="/assets/assets/img/about-1.jpg" alt="" class="img-fluid">
@@ -51,11 +41,17 @@
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">
               <div class="title-box-d">
-                <h3 class="title-d">Who Are We?
+                <h3 class="title-d">{{ 'WhoWeAre' | translate }}
                 </h3>
               </div>
               <p class="color-text-a">
-                M8tareb is a user-friendly web application designed for renting rooms and real estate. It offers a wide range of features to make the process of renting easy and hassle-free. The app uses Google Maps API to locate rooms and provide information about nearby services. It allows users to search for rooms based on their preferred services, proximity to their location, and payment options, among other things. The app has a rating and review system, which helps users make informed decisions about the quality of the rooms they are interested in renting. Overall, M8tareb is a reliable platform for renting rooms and real estate, offering excellent customer service and support.
+                {{ 'contactParagraph' | translate }}
+              </p>
+              <p class="color-text-a">
+                {{ 'contactParagraph1' | translate }}
+              </p>
+              <p class="color-text-a">
+                {{ 'contactParagraph2' | translate }}
               </p>
             </div>
           </div>
@@ -63,7 +59,4 @@
       </div>
     </div>
   </section>
-
-
-
 </main><!-- End #main -->

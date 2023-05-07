@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +10,15 @@ import { Route, Router } from '@angular/router';
 })
 export class ContactComponent {
 
-  constructor(private route:Router,private http:HttpClient) {
+  constructor(private route:Router,private http:HttpClient,private translate: TranslateService) {
 
   }
+
+  isRtl(): boolean {
+    const currentLang = this.translate.currentLang;
+    return currentLang === 'ar';
+  }
+  
   objData: any;
 
   collectdata(name:any,email:any,subject:any,message:any) {
