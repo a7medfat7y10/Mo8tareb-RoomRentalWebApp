@@ -1,52 +1,41 @@
 
 <main id="main">
   <!-- ======= Intro Single ======= -->
-  <section class="intro-single">
+  <section class="intro-single"  [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
-          <div class="title-single-box">
-            <h1 class="title-single">Our Amazing Rooms</h1>
+          <div>
+            <h1 class="title-single">{{ 'OurAmazingRooms' | translate }}</h1>
+            <span class="color-text-a">{{ 'roomParagraph' | translate }}</span>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Rooms
-              </li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>
-  </section><!-- End Intro Single-->
+  </section>
+  <!-- End Intro Single-->
 
   <!-- ======= Property Grid ======= -->
-  <section class="property-grid grid">
-    <div class="container">
+  <section class="property-grid grid" >
+    <div class="container" >
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-lg-8 d-inline-block">
+        </div>
+        <div class="col-sm-12 d-inline-block">
           <div class="grid-option">
             <form>
-              <select name="location" class="custom-select" [ngModel]="location" (ngModelChange)="onChange($event)" >
+              <select name="location" class="custom-select" [ngModel]="location" (ngModelChange)="onChange($event)">
                 <option selected>All</option>
-                <option value="{{l}}" *ngFor="let l of locations"> {{l}} </option>
+                <option value="{{l}}" *ngFor="let l of locations">{{l}}</option>
               </select>
-
             </form>
           </div>
         </div>
 
-
-
         <div class="col-md-4" *ngFor="let room of rooms">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img style="height:600px" [src]="room.images[0]?.imageUrl" alt="" class="img-a img-fluid">
+              <img style="height:400px" [src]="room.images[0]?.imageUrl" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
@@ -58,9 +47,9 @@
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ {{room.price}}</span>
+                    <span class="price-a">{{ 'rent' | translate }} | $ {{room.price}}</span>
                   </div>
-                  <a routerLink="/room/{{room.id}}" class="link-a">Click here to view
+                  <a routerLink="/room/{{room.id}}" class="link-a">{{ 'Click here to view' | translate }}
                     <span class="bi bi-chevron-right"></span>
                   </a>
                 </div>
@@ -73,11 +62,11 @@
                       </span>
                     </li> -->
                     <li>
-                      <h4 class="card-info-title">Beds</h4>
+                      <h4 class="card-info-title">{{ 'Beds' | translate }}</h4>
                       <span>{{room.noBeds}}</span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Location</h4>
+                      <h4 class="card-info-title">{{ 'Location' | translate }}</h4>
                       <span>{{room.location}}</span>
                     </li>
                     <!-- <li>

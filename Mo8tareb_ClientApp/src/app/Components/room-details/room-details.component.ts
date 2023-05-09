@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { RoomServiceService } from 'src/app/Services/room-service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-room-details',
@@ -14,7 +15,7 @@ export class RoomDetailsComponent {
 
 
 
-  constructor(myActivated: ActivatedRoute, private myService: RoomServiceService, private sanitizer: DomSanitizer){
+  constructor(myActivated: ActivatedRoute, private myService: RoomServiceService, private sanitizer: DomSanitizer,private translate: TranslateService){
     this.ID = myActivated.snapshot.params["id"];
   }
   ngOnInit(): void {
@@ -32,5 +33,9 @@ export class RoomDetailsComponent {
 
       error:(err)=>{console.log(err)},
     })
+  }
+  isRtl(): boolean {
+    const currentLang = this.translate.currentLang;
+    return currentLang === 'ar';
   }
 }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AccountApiService } from 'src/app/Services/account-api.service';
 import { RoomServiceService } from 'src/app/Services/room-service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-rooms',
@@ -41,7 +42,7 @@ export class RoomsComponent {
 
   // }
 
-  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService, private myClient:HttpClient){}
+  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService, private myClient:HttpClient,private translate: TranslateService){}
   // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
   // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
   rooms: any;
@@ -108,4 +109,10 @@ export class RoomsComponent {
       error:()=>{}
     });
 }
+
+isRtl(): boolean {
+  const currentLang = this.translate.currentLang;
+  return currentLang === 'ar';
+}
+
 }

@@ -7,17 +7,36 @@
   </div>
 </div> -->
 
+<!-- [dir]="isRtl() ? 'rtl' : 'ltr'" -->
 
 <main id="main">
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single" [dir]="isRtl() ? 'rtl' : 'ltr'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div>
+            <h1 class="title-single">{{ 'Welcome' | translate }}</h1>
+            <span class="color-text-a">{{ 'mainParagraph' | translate }}</span>
+            <span class="color-text-a">{{ 'mainParagraph2' | translate }}</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <img src="/assets/images/logo_transparent - Copy.png" alt="Image description" style="width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+</section>
+  <!-- End Intro Single-->
 
   <!-- ======= Services Section ======= -->
-  <section class="section-services section-t8">
+  <section class="section-services section-t8" [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
-              <h2 class="title-a">Our Services</h2>
+              <h2 class="title-a">{{ 'Our Services' | translate }}</h2>
             </div>
           </div>
         </div>
@@ -30,21 +49,15 @@
                 <span class="bi bi-cart"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Lifestyle</h2>
+                <h2 class="title-c">{{ 'Lifestyle' | translate }}</h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
+                {{ 'MainP1' | translate }}
               </p>
             </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="bi bi-chevron-right"></span>
-              </a>
-            </div>
+            
           </div>
         </div>
         <div class="col-md-4">
@@ -54,21 +67,15 @@
                 <span class="bi bi-calendar4-week"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Easy</h2>
+                <h2 class="title-c">{{ 'Easy' | translate }}</h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                aliquet elit, eget tincidunt
-                nibh pulvinar a.
+                {{ 'MainP2' | translate }}
               </p>
             </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="bi bi-chevron-right"></span>
-              </a>
-            </div>
+            
           </div>
         </div>
         <div class="col-md-4">
@@ -78,21 +85,15 @@
                 <span class="bi bi-card-checklist"></span>
               </div>
               <div class="card-title-c align-self-center">
-                <h2 class="title-c">Rent</h2>
+                <h2 class="title-c">{{ 'Rent' | translate }}</h2>
               </div>
             </div>
             <div class="card-body-c">
               <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
+                {{ 'MainP3' | translate }}
               </p>
             </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="bi bi-chevron-right"></span>
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>

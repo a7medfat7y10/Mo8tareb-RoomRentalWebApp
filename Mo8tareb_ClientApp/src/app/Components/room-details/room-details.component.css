@@ -12,3 +12,12 @@
   color: black;
   font-size: 1.8rem;
 }
+
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
