@@ -11,13 +11,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     [ApiController]
     public class M08tarebGBTController : ControllerBase
     {
-
+        
         [HttpGet]
         public  IActionResult M08tarebGBTAsync([FromQuery] string query)
         {
             string result = string.Empty;
             var openAi = new OpenAIAPI("");
-            //var openAi = new OpenAIAPI("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");
+            //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
             CompletionRequest completionRequest = new CompletionRequest();
             completionRequest.Prompt = query;
             completionRequest.Model = OpenAI_API.Models.Model.DavinciText;

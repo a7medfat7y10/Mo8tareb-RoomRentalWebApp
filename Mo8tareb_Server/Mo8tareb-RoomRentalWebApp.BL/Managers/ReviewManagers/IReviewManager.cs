@@ -10,7 +10,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers
     public interface IReviewManager
     {
         Task<IQueryable<ReviewsReadDtos>> GetAllReviewsWithUsersWithRoomsAsync();
-        Task<ReviewsCreateDtos?>? CreateReviewWithUsersWithRoomsAsync(ReviewsCreateDtos? createReviewDto);
+        Task<CreateReviewPayload?>? CreateReviewWithUsersWithRoomsAsync(CreateReviewPayload? createReviewDto);
         Task<ReviewsUpdateDtos?>? UpdateReviewAsync(ReviewsUpdateDtos review);
         Task<ReviewsToDeleteDtos?>? DeleteReviewAsync(ReviewsToDeleteDtos review);
         Task<dynamic> CreateReviewAsync(CreateReviewPayload payload);

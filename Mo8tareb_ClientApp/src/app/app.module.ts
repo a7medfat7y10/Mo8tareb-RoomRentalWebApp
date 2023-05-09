@@ -23,7 +23,6 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
-import { ReviewsComponent } from './Components/reviews/reviews.component';
 
 
 //Translation
@@ -82,7 +81,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     RoomsComponent,
     RoomDetailsComponent,
-    ReviewsComponent,
     AdminHeaderComponent,
     AdminReviewComponent,
     AdminServicesComponent,

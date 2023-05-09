@@ -61,7 +61,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                             UnitAmount = req.RoomPrice,
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = req.RoomTitle,
+                                Name = req.RoomId.ToString(),
                                 Description =  req.RoomDescription,
                                 Images = req.RoomImages
                             },

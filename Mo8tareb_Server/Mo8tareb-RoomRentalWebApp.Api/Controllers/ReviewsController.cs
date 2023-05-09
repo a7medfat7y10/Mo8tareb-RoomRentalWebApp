@@ -1,9 +1,14 @@
 ﻿using FluentValidation;
+using Google;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos;
 using Mo8tareb_RoomRentalWebApp.BL.Managers.ReviewManagers;
 using Mo8tareb_RoomRentalWebApp.DAL.Context;
+using Mo8tareb_RoomRentalWebApp.DAL.Models;
+using Newtonsoft.Json;
 
 namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
 {
@@ -11,13 +16,19 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
     [ApiController]
     public class ReviewsController : ControllerBase
     {
+        private readonly DAL.Context.ApplicationDbContext context;
         private readonly IReviewManager _ReviewManager;
+        private readonly UserManager<AppUser> _userManager;
         private readonly IValidator<CreateReviewPayload> _createReviewPayloadValidator;
 
-        public ReviewsController(IReviewManager ReviewManager, IValidator<CreateReviewPayload> createReviewPayloadValidator)
+       
+
+        public ReviewsController(ApplicationDbContext context,UserManager<AppUser> userManager,IReviewManager ReviewManager, IValidator<CreateReviewPayload> createReviewPayloadValidator)
         {
+            this.context = context;
             _ReviewManager = ReviewManager;
             _createReviewPayloadValidator = createReviewPayloadValidator;
+            _userManager = userManager;
         }
 
 
@@ -30,6 +41,26 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             return lst.Count() == 0 ? NotFound() : Ok(lst);
         }
 
+        [HttpGet]
+        [Route("GetAllReviewsOfRoom")]
+        public async Task<IActionResult> GetAllReviewsOfRoom(int roomId)
+        {
+
+           var reviewLst= context.Reviews.Include(r => r.Room).Include(r => r.User).Where(r=>r.RoomId==roomId).ToList();
+            List<ReviewsReadDtosV22> newReviewList = new();
+            ReviewsReadDtosV22 obj;
+            foreach (var review in reviewLst)
+            {
+               var user= await _userManager.FindByIdAsync(review.UserId!);
+
+                obj = new(review.Id, review.Comment??"", review.Rating, new BL.Dtos.UserDtos.userReadDtos(user.Email, user.FirstName, user.LastName));
+                newReviewList.Add(obj);
+
+            }
+            return newReviewList.Count() == 0 ? NotFound() : Ok(newReviewList);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> CreateReview(CreateReviewPayload payload)
         {
@@ -39,7 +70,13 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
             if (!validationResult.IsValid)
                 return BadRequest(new { StatusCode = 400, Errors = validationResult.Errors.ToDictionary(i => i.PropertyName, i => i.ErrorMessage) });
 
-            var result = await _ReviewManager.CreateReviewAsync(payload);
+            var result = await _ReviewManager.CreateReviewWithUsersWithRoomsAsync(payload);
+
+            var responseData = new
+            {
+                result = result
+            };
+            var json = JsonConvert.SerializeObject(responseData);
             return result is null ? BadRequest("Error") : Ok("Success");
         }
 

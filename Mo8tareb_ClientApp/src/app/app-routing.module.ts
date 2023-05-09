@@ -17,7 +17,6 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { RoomsComponent } from './Components/rooms/rooms.component';
 import { RoomDetailsComponent } from './Components/room-details/room-details.component';
-import { ReviewsComponent } from './Components/reviews/reviews.component';
 import { AdminReviewComponent } from './Components/admin-dashboard/admin-review/admin-review.component';
 import { AdminServicesComponent } from './Components/admin-dashboard/admin-services/admin-services.component';
 import { ReservationsComponent } from './Components/admin-dashboard/reservations/reservations.component';
@@ -71,7 +70,6 @@ const routes: Routes = [
   {path: "ReservationRejected/:id", component: ReservationRejectedComponent,canActivate:[UserIsLogedInGuard] },
   {path: "CheckingReservation/:id", component: CheckingReservationComponent,canActivate:[UserIsLogedInGuard] },
   {path: "payment/:id", component: PaymentComponent,canActivate:[UserIsLogedInGuard] },
-  {path: "reviews", component : ReviewsComponent},
   {path: "Mo8tarebGBT", component : Mo8tarebGBTComponent,canActivate:[UserIsLogedInGuard]},
   {path: "EditReserveRoom/:id", component : EditReservationComponent,canActivate:[UserIsLogedInGuard]},
   {path: "MyRooms", component : MyRoomsComponent,canActivate:[UserIsLogedInGuard]},

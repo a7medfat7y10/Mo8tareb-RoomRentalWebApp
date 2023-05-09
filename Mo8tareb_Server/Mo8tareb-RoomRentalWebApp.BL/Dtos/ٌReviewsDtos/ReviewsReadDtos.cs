@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos
 {
-    public record ReviewsReadDtos(int id, [MaxLength(100)][MinLength(1)] string comment, [Range(0, 10)] int Rating,userReadDtos User,RoomReadDtos Room);
+    public record ReviewsReadDtos(int id, [MaxLength(100)][MinLength(1)] string comment, [Range(0, 10)] int Rating,userReadDtos User,RoomReadDtos? Room);
+    public record ReviewsReadDtosV22(int id, [MaxLength(100)][MinLength(1)] string comment, [Range(0, 10)] int Rating,userReadDtos User);
 
 
     public class ReviewsReadDtosV2

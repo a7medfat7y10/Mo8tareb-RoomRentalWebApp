@@ -10,41 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.css']
 })
+
 export class RoomsComponent {
 
-  // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
-  // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
+  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService, private myClient:HttpClient, private translate:TranslateService){}
 
-  // constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
-
-  // ngOnInit() {
-  //   this.getRooms();
-  // }
-
-  // getRooms() {
-  //   const apiUrl = 'https://localhost:7188/GetAllRooms';
-  //   this.http.get<any>(apiUrl).subscribe(
-  //     (data) => {
-  //       data.forEach((room:any) => {
-  //         this.rooms.push(room);
-  //       });
-  //       this.rooms.forEach((room:any) => {
-  //         room.images = room.images.map((image:any) =>({
-  //           id: image.id,
-  //           imageUrl: this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + image.imageUrl)
-  //         }))
-  //       })
-  //     },
-  //     error => {
-  //       console.log(error);
-  //     }
-  //   );
-
-  // }
-
-  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer, private AccountService:AccountApiService, private myClient:HttpClient,private translate: TranslateService){}
-  // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
-  // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
   rooms: any;
   locations: any;
   ngOnInit(): void {
@@ -53,6 +23,7 @@ export class RoomsComponent {
       next:(data:any)=>{
 
         console.log(data)
+
         const userRooms = data.filter((room:any)=>{
           return room.images.length !=0 && room.isReserved == false
         });
@@ -76,39 +47,58 @@ export class RoomsComponent {
 
       error:()=>{}
     });
-
-    // this.myClient.get("https://localhost:7188/api/Rooms/GetRoomsLocations").subscribe({
-    // next:(data:any)=>{
-    //   this.locations = data.map((loc: string) => loc.toLowerCase()).filter((loc: string, index: number, arr: string[]) => arr.indexOf(loc) === index);
-    // },
-    //   error:()=>{}
-    // });
   }
+
+
   location: any = "All";
   onChange(location: any) {
     console.log(location);
-    this.myService.getAllRooms().subscribe({
-      next:(data:any)=>{
-
-        console.log(data)
-        const userRooms = data.filter((room:any)=>{
-          return room.images.length !=0 && room.isReserved == false && room.location.toLowerCase() == location.toLowerCase();
+    if(location == "All")
+    {
+        this.myService.getAllRooms().subscribe({
+        next:(data:any)=>{
+          const userRooms = data.filter((room:any)=>{
+          return room.images.length !=0 && room.isReserved == false
         });
 
         this.rooms = userRooms;
 
-        this.rooms.forEach((room:any) => {
-                    room.images = room.images.map((image:any) =>({
-                    id: image.id,
-                    imageUrl: this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + image.imageUrl)
-                  }))
-        })
-        console.log(this.rooms);
-      },
+          this.rooms.forEach((room:any) => {
+                      room.images = room.images.map((image:any) =>({
+                      id: image.id,
+                      imageUrl: this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + image.imageUrl)
+                    }))
+          })
+        },
+        error:()=>{}
+      });
+    }
+    else{
 
-      error:()=>{}
-    });
+      this.myService.getAllRooms().subscribe({
+        next:(data:any)=>{
+
+          console.log(data)
+          const userRooms = data.filter((room:any)=>{
+            return room.images.length !=0 && room.isReserved == false && room.location.toLowerCase() == location.toLowerCase();
+          });
+
+          this.rooms = userRooms;
+
+          this.rooms.forEach((room:any) => {
+                      room.images = room.images.map((image:any) =>({
+                      id: image.id,
+                      imageUrl: this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + image.imageUrl)
+                    }))
+          })
+          console.log(this.rooms);
+        },
+
+        error:()=>{}
+      });
+    }
 }
+
 
 isRtl(): boolean {
   const currentLang = this.translate.currentLang;
@@ -116,3 +106,7 @@ isRtl(): boolean {
 }
 
 }
+
+
+
+

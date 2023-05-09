@@ -15,10 +15,10 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos._ٌReviewsDtos
     public class CreateReviewPayload
     {
         public int Rating { get; set; }
-        public string? UserId { get; set; }
+        public string? UserEmail { get; set; }
         public string? Comments { get; set; }
         public int RoomId { get; set; }
-        public int ReservationId { get; set; }
+        //public int ReservationId { get; set; }
     }
 
 }
