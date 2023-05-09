@@ -36,14 +36,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Join Us As A Room Owner</b></h1>
-    <p>Mo8tareb Room Owner Services, please note that if you Click this button uou will become a Room owner and
-      all your previous Reviews, Reservations, Payment History will be deleted !
-    </p>
+    <h1 class="w3-jumbo"><b>{{ 'Join Us As A Room Owner' | translate }}</b></h1>
+    <p>{{ 'roomOwnerP1' | translate }}</p>
     <img src="../../../assets/images/logo_transparent - Copy.png" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="../../../assets/images/logo_transparent - Copy.png" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
     <button (click)="AssignRole()" class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-home"></i> Rent My Rooms
+      <i class="fa fa-home"></i> {{ 'Rent My Rooms' | translate }}
     </button>
   </header>
 
@@ -73,18 +71,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About</h2>
     <hr class="w3-opacity">
     <p>
-      M8tareb is a user-friendly web application designed for renting rooms and real
-      estate. It offers a wide range of features to make the process of renting easy and
-       hassle-free. The app uses Google Maps API to locate rooms and provide information
-       about nearby services. It allows users to search for rooms based on their preferred
-        services, proximity to their location, and payment options, among other things.
-        The app has a rating and review system, which helps users make informed decisions
-         about the quality of the rooms they are interested in renting. Overall, M8tareb is a reliable
-          platform for renting rooms and real estate, offering excellent customer service
-          and support.
+      {{ 'roomOwnerP2' | translate }}
     </p>
 
 

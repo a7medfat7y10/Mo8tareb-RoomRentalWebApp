@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RoomServiceService } from 'src/app/Services/room-service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-rooms',
@@ -9,7 +10,7 @@ import { RoomServiceService } from 'src/app/Services/room-service.service';
 })
 export class MyRoomsComponent {
 
-  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer){}
+  constructor(private myService: RoomServiceService, private sanitizer: DomSanitizer,private translate: TranslateService){}
   // rooms: { id: number, location: string, price: number, roomType:string , ownerId: string, owner: {},
   // reservations: {}[], reviews: {}[], services:{}[], images:{id:number, imageUrl:string}[]}[] = [];
   rooms: any;
@@ -34,5 +35,8 @@ export class MyRoomsComponent {
       }
     });
   }
-
+  isRtl(): boolean {
+    const currentLang = this.translate.currentLang;
+    return currentLang === 'ar';
+  }
 }

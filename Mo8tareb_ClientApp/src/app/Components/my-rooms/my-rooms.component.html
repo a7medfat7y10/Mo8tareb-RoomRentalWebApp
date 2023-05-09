@@ -1,43 +1,27 @@
 
 <div class="container ">
   <div class="no-rooms" *ngIf="rooms.length === 0; else display">
-    <h1 >You haven't reserved any room yet </h1>
+    <h1 >{{ 'NoRooms' | translate }}</h1>
   </div>
 
   <ng-template #display>
 
 <main id="main" >
   <!-- ======= Intro Single ======= -->
-  <section class="intro-single">
+  <section class="intro-single" [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
-          <div class="title-single-box">
-            <h1 class="title-single">Rooms you have Reserved</h1>
-
-              <button routerLink="/reviews" class="btn btn-primary">Review My Rooms</button>
-
-
+          <div>
+            <h1 class="title-single">{{ 'Rooms you have Reserved' | translate }}</h1>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Rooms
-              </li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>
   </section><!-- End Intro Single-->
 
   <!-- ======= Property Grid ======= -->
-  <section class="property-grid grid">
+  <section class="property-grid grid" [dir]="isRtl() ? 'rtl' : 'ltr'">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -61,9 +45,9 @@
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">rent | $ {{room.price}}</span>
+                    <span class="price-a">{{ 'rent' | translate }} | $ {{room.price}}</span>
                   </div>
-                  <a routerLink="/room/{{room.id}}" class="link-a">Click here to view
+                  <a routerLink="/room/{{room.id}}" class="link-a">{{ 'Click here to view' | translate }}
                     <span class="bi bi-chevron-right"></span>
                   </a>
                 </div>
@@ -95,7 +79,10 @@
         </div>
 
       </div>
-
+      <div>
+        <button routerLink="/reviews" class="btn btn-primary">{{ 'Review My Rooms' | translate }}</button>
+      </div>
+      
       <!-- <div class="row">
         <div class="col-sm-12">
           <nav class="pagination-a">

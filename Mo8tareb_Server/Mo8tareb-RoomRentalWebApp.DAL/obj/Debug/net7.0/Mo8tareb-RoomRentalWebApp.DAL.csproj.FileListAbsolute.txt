@@ -152,3 +152,17 @@ D:\web projects\Temp Repo\Mo8tareb_ServerKarim\Mo8tareb_Server\Mo8tareb-RoomRent
 D:\web projects\Temp Repo\Mo8tareb_ServerKarim\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
 D:\web projects\Temp Repo\Mo8tareb_ServerKarim\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.genruntimeconfig.cache
 D:\web projects\Temp Repo\Mo8tareb_ServerKarim\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.DAL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.deps.json
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.runtimeconfig.json
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.AssemblyReference.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfoInputs.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfo.cs
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.CoreCompileInputs.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\refint\Mo8tareb-RoomRentalWebApp.DAL.dll
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\Mo8tareb-RoomRentalWebApp.DAL.genruntimeconfig.cache
+G:\Github Repo\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Debug\net7.0\ref\Mo8tareb-RoomRentalWebApp.DAL.dll

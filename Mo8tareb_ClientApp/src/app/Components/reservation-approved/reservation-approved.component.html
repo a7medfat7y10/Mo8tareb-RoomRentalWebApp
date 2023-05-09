@@ -19,13 +19,13 @@
       <div class="card d-flex justify-content-center align-items-center" style="width: 18rem;">
         <img src="../../../assets/images/successMark.jpg" class="h-75 card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text text-center">Your Reservation has been<br> <span class="text-center" style="color: green; font-weight: bold;">Approved</span><br>  By Room Owner, You can Proceed to checkout to rent the room</p>
+          <p class="card-text text-center">{{ 'Your Reservation has been' | translate }}<br> <span class="text-center" style="color: green; font-weight: bold;">{{ 'Approved' | translate }}</span><br>  {{ 'By Room Owner, You can Proceed to checkout to rent the room' | translate }}</p>
         </div>
       </div>
     </div>
     <div class="row-3 m-5">
       <a class="text-center" routerLink="/payment/1">
-        <button class="btn btn-success w-1 h-1 p-2">Proceed to ckeckout</button>
+        <button class="btn btn-success w-1 h-1 p-2">{{ 'Proceed to ckeckout' | translate }}</button>
       </a>
     </div>
   </div>

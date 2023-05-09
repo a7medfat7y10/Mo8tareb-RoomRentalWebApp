@@ -24,3 +24,12 @@
     font-size: 1.5rem;
   }
 }
+
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}

@@ -77,10 +77,31 @@
     "Rent":"Support",
     "MainP1":"Comprehensive Search and Filtering Options: Our website provides a comprehensive search and filtering system, which allows users to search for rental rooms based on their preferred location, budget, and amenities, among other factors. This feature ensures that users can easily find the most relevant rental room options that meet their requirements.",
     "MainP2":"Detailed Descriptions and Photos: We provide detailed descriptions and photos of each rental room on our website, allowing users to make an informed decision before booking. This feature ensures that users have a clear understanding of what to expect from the rental room, helping them to avoid any surprises during their stay.",
-    "MainP3":"Customer Support: Our website offers customer support to assist users with any questions or issues they may encounter during the rental process. This feature ensures that users have access to reliable support and guidance, helping them to navigate the rental process smoothly and efficiently."
+    "MainP3":"Customer Support: Our website offers customer support to assist users with any questions or issues they may encounter during the rental process. This feature ensures that users have access to reliable support and guidance, helping them to navigate the rental process smoothly and efficiently.",
 
 
+    "NoRooms":"You haven't reserved any room yet ",
+    "Rooms you have Reserved":"Rooms you have Reserved",
+    "Review My Rooms":"Review My Rooms",
+    "Your Reservation has been":"Your Reservation has been",
+    "Approved":"Approved",
+    "By Room Owner, You can Proceed to checkout to rent the room":"By Room Owner, You can Proceed to checkout to rent the room",
+    "Proceed to ckeckout":"Proceed to ckeckout",
 
+
+    "Join Us As A Room Owner":"Join Us As A Room Owner",
+    "roomOwnerP1":"Mo8tareb Room Owner Services, please note that if you Click this button uou will become a Room owner andall your previous Reviews, Reservations, Payment History will be deleted",
+    "Rent My Rooms":"Rent My Rooms",
+    "roomOwnerP2":"M8tareb is a user-friendly web application designed for renting rooms and real estate. It offers a wide range of features to make the process of renting easy and hassle-free. The app uses Google Maps API to locate rooms and provide information about nearby services. It allows users to search for rooms based on their preferred services, proximity to their location, and payment options, among other things. The app has a rating and review system, which helps users make informed decisions about the quality of the rooms they are interested in renting. Overall, M8tareb is a reliable platform for renting rooms and real estate, offering excellent customer service and support.",
+    
+    
+    "Welcome to the Technology of ":"Welcome to the Technology of test",
+    "AIP0":"Mo8tareb website is the first-of-its-kind renting website that utilizes AI technology to make the search for renting rooms effortless and efficient.",
+    "AIP1":"Mo8tareb is a revolutionary website for renting rooms that uses AI to make the process of finding the perfect room easier and more efficient than ever before. Our website is the first of its kind, powered by advanced artificial intelligence algorithms that provide users with personalized recommendations based on their preferences and needs. With Mo8tareb, you no longer need to spend hours searching through various websites or rely on Google to find the perfect room. Our search engine is designed to provide you with accurate and relevant results in just seconds.",
+    "AIP2":"Mo8tareb also features a user-friendly interface that makes it easy to navigate and find what you need. Whether you're looking for a single room or an entire apartment, our website has everything you need to make your search quick and easy. Our team is dedicated to providing the best possible user experience, and we are constantly working to improve our website and add new features to make the process of renting a room as simple and efficient as possible. So why wait? Start your search today and discover why Mo8tareb is the ultimate destination for anyone looking to rent a room.",
+    "Why US":"Why US",
+    "Next":"Next",
+    "Previous":"Previous"
     
     
 

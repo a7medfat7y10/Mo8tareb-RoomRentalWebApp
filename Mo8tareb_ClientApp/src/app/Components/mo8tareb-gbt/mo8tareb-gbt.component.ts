@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { AccountApiService } from 'src/app/Services/account-api.service';
 import { Mo8tarebGBTService } from 'src/app/Services/mo8tareb-gbt.service';
 import { UserControllerServiceService } from 'src/app/Services/user-controller-service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mo8tareb-gbt',
@@ -30,7 +31,7 @@ export class Mo8tarebGBTComponent implements OnInit {
   private PERSON_NAME = "user";
 
   constructor(private renderer: Renderer2, private AI: Mo8tarebGBTService, private account: AccountApiService
-  ,private user:UserControllerServiceService) {
+  ,private user:UserControllerServiceService,private translate: TranslateService) {
   }
   ngOnInit(): void {
     this.getUserName();
@@ -145,4 +146,10 @@ console.log(date.getMinutes())
   private random(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
+
+  isRtl(): boolean {
+    const currentLang = this.translate.currentLang;
+    return currentLang === 'ar';
+  }
+  
 }

@@ -19,35 +19,32 @@
   </style>
 </head>
 
-<body class="w3-light-grey">
+<body class="w3-light-grey"  [dir]="isRtl() ? 'rtl' : 'ltr'">
 
   <div class="w3-content" style="max-width:1400px;margin-top: 90px;">
 
     <!-- Header -->
     <header class="w3-container w3-center w3-padding-32">
-      <h1><b>Mogtareb GBT</b></h1>
-      <p>Welcome to the Technology of <span class="w3-tag">Mo8tareb</span></p>
+      <h1><b>{{ 'Mo8tareb' | translate }} GBT</b></h1>
+      <p>{{ 'Welcome to the Technology of' | translate }} <span class="w3-tag">Mo8tareb AI</span></p>
     </header>
 
     <!-- Grid -->
-    <div class="w3-row">
+    <div class="w3-row" [dir]="isRtl() ? 'rtl' : 'ltr'">
 
       <!-- Blog entries -->
-      <div class="w3-col l8 s12">
+      <div class="w3-col l8 s12"  >
         <!-- Blog entry -->
         <div class="w3-card-4 w3-margin w3-white">
           <img
             src="https://media.istockphoto.com/id/1384979710/photo/connecting-human-data-to-mindset-of-artificial-intelligence-ai-digital-data-and-machine.jpg?b=1&s=170667a&w=0&k=20&c=z1arLIjiwCUvylkXLQ3_XxC7OvBU7DW1NoZsOPCABfg="
             alt="Nature" style="width:100%">
           <div class="w3-container">
-            <h3><b>Mogtareb GBT</b></h3>
-            <h5>Why our website? <span class="w3-opacity">June 2, 2022</span></h5>
+            <h3><b>{{ 'Mo8tareb' | translate }} GBT</b></h3>
           </div>
 
           <div class="w3-container">
-            <p>Mo8tareb is a revolutionary website for renting rooms that uses AI to make the process of finding the perfect room easier and more efficient than ever before. Our website is the first of its kind, powered by advanced artificial intelligence algorithms that provide users with personalized recommendations based on their preferences and needs.
-
-              With Mo8tareb, you no longer need to spend hours searching through various websites or rely on Google to find the perfect room. Our search engine is designed to provide you with accurate and relevant results in just seconds.</p>
+            <p>{{ 'AIP1' | translate }}</p>
             <div class="w3-row">
               <div class="w3-col m8 s12">
                 <!-- <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p> -->
@@ -64,17 +61,11 @@
         <div class="w3-card-4 w3-margin w3-white">
           <img src="../../../assets/images/Logoimages/LOGO1.jpeg" alt="Norway" style="width:100%">
           <div class="w3-container">
-            <h3><b>Why It is the first of its kind?</b></h3>
-            <h5>Mogtareb GBT
-              , <span class="w3-opacity">June 2, 2022</span></h5>
+            <h3><b>{{ 'Mo8tareb' | translate }} GBT</b></h3>
           </div>
 
           <div class="w3-container">
-            <p> Mo8tareb also features a user-friendly interface that makes it easy to navigate and find what you need. Whether you're looking for a single room or an entire apartment, our website has everything you need to make your search quick and easy.
-
-              Our team is dedicated to providing the best possible user experience, and we are constantly working to improve our website and add new features to make the process of renting a room as simple and efficient as possible.
-
-              So why wait? Start your search today and discover why Mo8tareb is the ultimate destination for anyone looking to rent a room.</p>
+            <p> {{ 'AIP2' | translate }}</p>
             <div class="w3-row">
               <div class="w3-col m8 s12">
                 <!-- <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p> -->
@@ -94,9 +85,9 @@
         <div class="w3-card w3-margin w3-margin-top">
           <img src="../../../assets/images/Logoimages/logo-no-background.png" style="width:100%">
           <div class="w3-container w3-white">
-            <h4><b>Mogtareb
+            <h4><b>{{ 'Mo8tareb' | translate }}
               </b></h4>
-            <p>Mo8tareb website is the first-of-its-kind renting website that utilizes AI technology to make the search for renting rooms effortless and efficient.</p>
+            <p>{{ 'AIP0' | translate }}</p>
           </div>
         </div>
         <hr>
@@ -172,8 +163,9 @@
 
   <!-- Footer -->
   <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-    <button routerLink="/Mo8tarebGBT" class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">{{ 'Previous' | translate }}</button>
+    <button routerLink="/Mo8tarebGBT" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+      {{ 'Next' | translate }}  »</button>
   </footer>
 
 </body>
