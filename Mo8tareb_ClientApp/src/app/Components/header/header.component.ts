@@ -11,6 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   showNavbar:any;
+  isCollapsed:boolean = false;
   constructor(private ActivatedRoute:ActivatedRoute,private AuthenticationService: AccountApiService,public translate: TranslateService) {
     // this.translate.setDefaultLang('en');
     const storedLang = localStorage.getItem('lang');
@@ -21,7 +22,7 @@ export class HeaderComponent {
     }
 
    }
-   
+
 
   SignOut() {
     this.AuthenticationService.SignOut();
@@ -41,11 +42,18 @@ export class HeaderComponent {
   //   const language = (event.target as HTMLSelectElement).value;
   //   this.translate.use(language);
   // }
-  
+
   useLanguage(event: Event): void {
     const language = (event.target as HTMLSelectElement).value;
     this.translate.use(language);
     localStorage.setItem('lang', language);
+  }
+
+  toggleMenu(){
+    if(this.isCollapsed == true)
+      this.isCollapsed = false
+    else
+    this.isCollapsed = true
   }
 
 }

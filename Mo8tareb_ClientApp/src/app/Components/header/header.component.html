@@ -96,14 +96,14 @@
   <!-- ======= Header/Navbar ======= -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-toggler collapsed" (click)="toggleMenu()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
-      </button>
+      </a>
       <a class="navbar-brand text-brand" routerLink="/"><span class="color-b">{{ 'Mo8tareb' | translate }}</span></a>
 
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+      <div *ngIf="!isCollapsed" class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
           <li class="nav-item">
@@ -135,6 +135,36 @@
 
 
 
+
+      <div *ngIf="isCollapsed" class="navbar-collapse show collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/home">{{ 'Home' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/rooms">{{ 'Rooms' | translate }}</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" routerLinkActive="active" routerLink="/MyRooms">{{ 'My Rooms'| translate  }}</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" routerLinkActive="active" routerLink="/JoinUsAsOwner">{{ 'Rent A Room'| translate   }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active"  routerLink="/Mo8tarebGBTWelcomePage">{{ 'Mo8tareb'| translate  }} GPT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/about">{{ 'About' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/contact">{{ 'Contact' | translate }}</a>
+          </li>
+        </ul>
+
+      </div>
       <!-- <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
         <i class="bi bi-search"></i>
       </button> -->

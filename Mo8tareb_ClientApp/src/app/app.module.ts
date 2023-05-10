@@ -110,6 +110,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     HttpClientModule,
 
+
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
