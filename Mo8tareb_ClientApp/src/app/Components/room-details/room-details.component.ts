@@ -209,7 +209,9 @@ console.log(date.getMinutes())
     })
     .then(data => {
       console.log(data);
-      this.appendMessage(this.PERSON_NAME, this.PERSON_IMG, "left",msgText,`${+rangeText/10}`);
+      this.appendMessage(this.PERSON_NAME, this.PERSON_IMG, "left",msgText,`${+rangeText}`);
+
+
       // console.log('Review submitted successfully');
       if (this.msgerInput?.nativeElement) {
         this.msgerInput.nativeElement.value = '';

@@ -16,7 +16,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
         public  IActionResult M08tarebGBTAsync([FromQuery] string query)
         {
             string result = string.Empty;
-            var openAi = new OpenAIAPI("");
+            var openAi = new OpenAIAPI("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");
             //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
             CompletionRequest completionRequest = new CompletionRequest();
             completionRequest.Prompt = query;
