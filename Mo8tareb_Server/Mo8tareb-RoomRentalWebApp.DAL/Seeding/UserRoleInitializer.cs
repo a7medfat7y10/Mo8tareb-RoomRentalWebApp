@@ -61,9 +61,11 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Seeding
                     Email = Authorization.OwnerEmail,
                     UserName = Authorization.OwnerPassword,
                     FirstName = "Ahmed",
-                    LastName = "Saudi",
+                    LastName = "Fathy",
                     EmailConfirmed = true,
-                    PhoneNumberConfirmed = true
+                    PhoneNumberConfirmed = true,
+                    Gender = Enums.Gender.Male,
+                    PhoneNumber = "01004512030"
                 };
 
                 IdentityResult result = userManager.CreateAsync(ownerUser, Authorization.OwnerPassword).Result;

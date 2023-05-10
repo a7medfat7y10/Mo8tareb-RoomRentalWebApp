@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "apis1": {
+      "apiEndpoint": "https://mo8tareb-roomrentalwebapp.azure-api.net/Mo8tarebAPI",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/Mo8tareb-RoomRentalWebApp/apis/Mo8tareb-RoomRentalWebAppApi",
+      "type": "apis.azure"
+    }
+  }
+}

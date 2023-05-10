@@ -19,8 +19,8 @@ namespace Mo8tareb_RoomRentalWebApp.DAL.Constants
         public static readonly string AdminPassword = "Admin1234.";
         public static readonly string Admin = "Admin";
                       
-        public static readonly string OwnerUserName = "Owner@mo8tareb.com";
-        public static readonly string OwnerEmail = "Owner@mo8tareb.com";
+        public static readonly string OwnerUserName = "Ahmedfathy.1074";
+        public static readonly string OwnerEmail = "Ahmedfathy.1074@gmail.com";
         public static readonly string OwnerPassword = "Owner1234.";
         public static readonly string Owner = "Owner";
                       

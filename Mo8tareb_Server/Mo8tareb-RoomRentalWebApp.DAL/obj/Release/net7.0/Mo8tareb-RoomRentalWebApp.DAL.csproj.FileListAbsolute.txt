@@ -1,0 +1,14 @@
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.deps.json
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.runtimeconfig.json
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\bin\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.AssemblyReference.cache
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfoInputs.cache
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.AssemblyInfo.cs
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.csproj.CoreCompileInputs.cache
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\refint\Mo8tareb-RoomRentalWebApp.DAL.dll
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.pdb
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\Mo8tareb-RoomRentalWebApp.DAL.genruntimeconfig.cache
+D:\ITI\Project\Mo8tareb-RoomRentalWebApp\Mo8tareb_Server\Mo8tareb-RoomRentalWebApp.DAL\obj\Release\net7.0\ref\Mo8tareb-RoomRentalWebApp.DAL.dll
