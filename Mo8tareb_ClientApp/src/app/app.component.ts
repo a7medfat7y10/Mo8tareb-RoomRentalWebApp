@@ -26,6 +26,7 @@ export class AppComponent {
                             || event.url === '/Admindashboard/reservations'
                             || event.url === '/OwnerDashboard'
                             || event.url === '/OwnerDashboard/rooms'
+                            || event.url.indexOf('/OwnerDashboard/editroom') != -1
                             || event.url === '/OwnerDashboard/reservations'
                             || event.url === '/OwnerDashboard/AddRoom'
                             || event.url === '/Admindashboard/AddService'

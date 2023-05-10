@@ -38,6 +38,7 @@ import { EditReservationComponent } from './Components/edit-reservation/edit-res
 import { MyRoomsComponent } from './Components/my-rooms/my-rooms.component';
 import { JoinAsOwnerComponent } from './Components/join-as-owner/join-as-owner.component';
 import { AIWelcomePageComponent } from './Components/aiwelcome-page/aiwelcome-page.component';
+import { OwnerEditRoomsComponent } from './Components/room-owner-dashboard/owner-edit-rooms/owner-edit-rooms.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path: "OwnerDashboard", component: RoomOwnerDashboardComponent, canActivate: [IsInRoomOwnerRoleGuard] },
   {path: "OwnerDashboard/reservations", component:OwnerRerservationsComponent,canActivate:[IsInRoomOwnerRoleGuard]},
   {path: "OwnerDashboard/rooms", component:OwnerRoomsComponent,canActivate:[IsInRoomOwnerRoleGuard]},
+  {path: "OwnerDashboard/editroom/:id", component:OwnerEditRoomsComponent,canActivate:[IsInRoomOwnerRoleGuard]},
   {path: "OwnerDashboard/AddRoom", component:OwnerCreateRoomComponent,canActivate:[IsInRoomOwnerRoleGuard]},
   {path: "login", component:LoginComponent},
   {path:  "register", component: RegisterComponent },

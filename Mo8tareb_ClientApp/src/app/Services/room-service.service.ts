@@ -25,7 +25,7 @@ export class RoomServiceService {
   }
 
   UpdateRoomByID(id: any, room:any){
-    return this.myClient.put(this.url + "/" + id, room);
+    return this.myClient.put("https://localhost:7188/api/Rooms/UpdateRoom?id="+ id, room);
   }
 
   DeleteRoomByID(id: any){

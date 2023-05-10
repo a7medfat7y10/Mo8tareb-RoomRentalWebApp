@@ -82,7 +82,7 @@
                             <span class="badge bg-warning" *ngIf="!r.isreserved ">Free</span>
                           </td>
                           <td class="cell">${{r.price}}</td>
-                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">Edit Room</a>&nbsp;<a class="btn-sm app-btn-secondary" href="#">Delete Room</a> </td>
+                          <td class="cell"><a class="btn-sm app-btn-secondary" routerLink="/OwnerDashboard/editroom/{{r.id}}">Edit Room</a>&nbsp;</td>
                         </tr>
 
 
