@@ -160,4 +160,25 @@
   </nav><!-- End Header/Navbar -->
 
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Get the toggle button and collapse menu
+      var toggleButton = $(".navbar-toggler");
+      var collapseMenu = $(".navbar-collapse");
+
+      // When the toggle button is clicked on mobile screens, toggle the collapse menu
+      toggleButton.on("click", function() {
+        collapseMenu.toggleClass("show");
+      });
+
+      // If the collapse menu is open and the window is resized to a larger screen, hide the collapse menu
+      $(window).on("resize", function() {
+        if (collapseMenu.hasClass("show") && $(this).width() > 991) {
+          collapseMenu.removeClass("show");
+        }
+      });
+    });
+  </script>
+
 
