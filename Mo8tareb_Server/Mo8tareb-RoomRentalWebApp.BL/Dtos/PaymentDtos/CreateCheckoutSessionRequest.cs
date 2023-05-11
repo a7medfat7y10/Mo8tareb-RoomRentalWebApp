@@ -11,7 +11,7 @@ namespace Mo8tareb_RoomRentalWebApp.BL.Dtos.PaymentDtos
 
         public string? RoomDescription { get; set; }
 		//public string? RoomTitle { get; set; }
-		public List<string>? RoomImages { get; set; } = new List<string>();
+		//public List<string>? RoomImages { get; set; } = new List<string>();
 
 		[Required]
 		public string? SuccessUrl { get; set; }

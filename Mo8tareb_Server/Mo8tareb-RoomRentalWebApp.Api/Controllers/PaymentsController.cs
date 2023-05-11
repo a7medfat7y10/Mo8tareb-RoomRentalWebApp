@@ -63,7 +63,7 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                             {
                                 Name = req.RoomId.ToString(),
                                 Description =  req.RoomDescription,
-                                Images = req.RoomImages
+                                //Images = req.RoomImages
                             },
                         },
 

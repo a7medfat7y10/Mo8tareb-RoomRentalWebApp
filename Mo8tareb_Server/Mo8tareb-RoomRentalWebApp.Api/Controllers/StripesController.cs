@@ -52,12 +52,12 @@ namespace Mo8tareb_RoomRentalWebApp.Api.Controllers
                         PriceData = new SessionLineItemPriceDataOptions
                         {
                             Currency = "USD",
-                            UnitAmount = req.RoomPrice * 100 / 31,
+                            UnitAmount = req.RoomPrice * 100,
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                //Name = req.RoomTitle,
+                                Name = req.RoomDescription,
                                 Description =  req.RoomDescription,
-                               // Images = req.RoomImages
+                               //Images = req.RoomImages
                             },
                         },
                         Quantity = 1,

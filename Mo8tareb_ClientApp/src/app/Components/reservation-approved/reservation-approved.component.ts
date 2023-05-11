@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-//import { Stripe } from '@stripe/stripe-js';
-//import { Stripe } from '@stripe/stripe-js/dist/Stripe';
+// import { Stripe } from '@stripe/stripe-js';
+// import { Stripe } from '@stripe/stripe-js/dist/Stripe';
 // import { HttpClient } from '@angular/common/http';
 import { CheckoutService } from '../../Services/checkout.service';
 import { CreateCheckoutSessionRequest } from '../../Interfaces/CreateCheckoutSessionRequest';
@@ -46,11 +46,11 @@ console.log("room id", this.roomId);
     const checkoutRequest: CreateCheckoutSessionRequest = {
       roomPrice: this.room.price, // set the room price here
       reservationId: this.room.reservations.id,
+      roomId: this.roomId,
       roomDescription: this.room.description,
-      roomTitle: 'Sample room title',
-      //roomImages: this.room.images,
+      // roomImages: this.room.images,
       successUrl: 'http://localhost:4200/payment-success',
-      failureUrl: 'http://localhost:4200/payment-failure/roomId',
+      failureUrl: 'http://localhost:4200/payment-failure/' + this.roomId,
 
     };
     console.log(checkoutRequest);
