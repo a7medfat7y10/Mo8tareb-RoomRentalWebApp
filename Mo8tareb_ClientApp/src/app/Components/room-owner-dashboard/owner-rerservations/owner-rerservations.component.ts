@@ -29,15 +29,17 @@ export class OwnerRerservationsComponent implements OnInit {
     });
   }
   Approve(id:any){
-    this.myClient.put("https://localhost:7188/api/Reservations/UpdateReservationStatus?id="+ id, {
+    this.myClient.post("https://localhost:7188/api/Owners/ApproveReservationPayment?reservationId="+ id, {
       id: id,
       status: 1 // set status to "approved" (1)
     }).subscribe({
       next: () => {
         console.log('Reservation approved successfully');
+        window.alert("Reservation approved successfully ");
         // refresh reservations
         this.myClient.get("https://localhost:7188/api/Reservations/GetAllReservationsWithUsersWithRoomsAsync").subscribe({
           next:(data:any)=>{
+
             this.reservations = data.filter((res:any)=>{
               return this.AccountService.GetEmail() == res.room.owner.email;
             });
@@ -52,7 +54,7 @@ export class OwnerRerservationsComponent implements OnInit {
   }
 
   Reject(id:any){
-    this.myClient.put("https://localhost:7188/api/Reservations/UpdateReservationStatus?id="+ id, {
+    this.myClient.post("https://localhost:7188/api/Owners/RejectReservationPayment?reservationId="+ id, {
       id: id,
       status: 2 // set status to "rejected" (2)
     }).subscribe({
@@ -61,7 +63,9 @@ export class OwnerRerservationsComponent implements OnInit {
         // refresh reservations
         this.myClient.get("https://localhost:7188/api/Reservations/GetAllReservationsWithUsersWithRoomsAsync").subscribe({
           next:(data:any)=>{
+            window.alert("Reservation rejected successfully ")
             this.reservations = data.filter((res:any)=>{
+
               return this.AccountService.GetEmail() == res.room.owner.email;
             });
           },
